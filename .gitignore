@@ -1,0 +1,21 @@
+.DS_Store
+
+# Diese Dateien werden beim Kompilieren erzeugt:
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.ilg
+*.lof
+*.log
+*.lot
+*.nlo
+*.nls*
+*.out
+*.pdf
+*.run.xml
+*.synctex.gz
+*.toc
+
+# IDEs
+.texpadtmp/
