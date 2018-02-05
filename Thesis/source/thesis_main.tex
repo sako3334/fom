@@ -10,7 +10,7 @@
 \usepackage{fancybox}
 \usepackage[a4paper, left=4cm, right=2cm, top=2.8cm, bottom=2.3cm]{geometry}
 \usepackage{graphicx}
-%\usepackage{svg}
+\usepackage{apacite}
 \usepackage{colortbl}
 \usepackage{array}
 \usepackage{float}      %Positionierung von Abb. und Tabellen mit [H] erzwingen
@@ -248,8 +248,8 @@ sortlocale=de]{biblatex}
 %-----------------------------------
 % Kapitel / Inhalte
 %-----------------------------------
-\input{kapitel/titel/titel}
 \input{kapitel/einleitung/einleitung}
+\input{kapitel/titel/titel}
 %\input{kapitel/kapitel_2/kapitel_2}
 %\input{kapitel/fazit/fazit}
 
@@ -262,6 +262,7 @@ sortlocale=de]{biblatex}
 \pagenumbering{Roman} %Zähler wieder römisch ausgeben
 \setcounter{page}{4}  %Zähler manuell hochsetzen
 
+\bibliographystyle{apacite}
 \printbibliography
 
 % Alternative Darstellung:
