@@ -92,15 +92,26 @@ bibwarn=true, % Warnung bei fehlerhafter bib-Datei
   
 %% Definiert @Article Eintrag
 \DeclareBibliographyDriver{article}{%
-  \printnames{author}%
-  \newunit\newblockpunct
-  \printfield{title}%
-  \setunit*{.\space In:\space}%
-  %\newunit\newblock
-  \usebibmacro{journal}%
-  \setunit*{\space (}%
-  \printfield{year}\newunit{)}%
-  \finentry}  
+	\printnames{author}%
+	\newunit\newblockpunct
+	\printfield{title}%
+	\setunit*{.\space In:\space}%
+	%\newunit\newblock
+	\usebibmacro{journal}%
+	\setunit*{\space (}%
+	\printfield{year}\newunit{)}%
+	\finentry}
+
+%\DeclareBibliographyDriver{article}{%
+%  \printnames{author}%
+%  \newunit\newblockpunct
+%  \printfield{title}%
+%  \setunit*{.\space In:\space}%
+%  %\newunit\newblock
+%  \usebibmacro{journal}%
+%  \setunit*{\space (}%
+%  \printfield{year}\newunit{)}%
+%  \finentry}
 
 %% Definiert @InProceedings Eintrag
 \DeclareBibliographyDriver{inproceedings}{%
