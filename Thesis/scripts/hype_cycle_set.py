@@ -1,4 +1,4 @@
-file = open('C:\\Users\\sko\\Documents\\FOM\\Thesis\\hype_cycles_list.txt', 'r')
+file = open('.\\hype_cycles_list.txt', 'r')
 strFile = file.read()
 
 lines = strFile.split('\n')
@@ -35,9 +35,13 @@ print("Peak of Inflated Expectations 2013:")
 print(peak_of_inflated_expectations_2013)
 
 print("\nIntersection Peak of Inflated Expectations 2017 with past years:")
+year = 2016
 for poie in peak_of_inflated_expectations:
-	print(peak_of_inflated_expectations_2017.intersection(poie))
+	print(str(year) + ": " + str(peak_of_inflated_expectations_2017.intersection(poie)))
+	year -= 1
 
 print("\nIntersection Peak of Inflated Expectations 2017 with Innovation Triggers of past years:")
+year = 2016
 for it in innovation_triggers:
-	print(peak_of_inflated_expectations_2017.intersection(it))
+	print(str(year) + ": " + str(peak_of_inflated_expectations_2017.intersection(it)))
+	year -= 1
