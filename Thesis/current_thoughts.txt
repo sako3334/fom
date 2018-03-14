@@ -3,8 +3,68 @@ Diskrepanzen zwischen Technologietrends in der Wissenschaft und Wirtschaft
 
 Keywords:
 Emerging Technology, Technology commercialization
+Technology life cycle, technological evolution, Hype Cycle
 
 Technologietransfer
 Schnittmenge Technologien Hype Cycle 2017
 
 Zitierhäufigkeit ins expose schreiben
+
+https://www.gartner.com/technology/research/methodologies/hype-cycle.jsp
+https://www.gartner.com/technology/research/methodologies/reach_resources.jsp
+
+https://wiki.harvard.edu/confluence/download/attachments/213389796/Shaffer_Understanding%20Gartners%20Hype%20Cycles.pdf?version=2&modificationDate=1485889905000&api=v2
+
+
+Suchalgortihmen
+Google:
+"academic research" +trend +topic* +technology
+("scientific subjects" OR "academic research") AROUND(5) trends	000
+"academic research" +"emerging technologies" +(forecast OR foresight)
+"(academic OR scientific) research" +"emerging technologies" +market
+"(academic OR scientific) (research OR literature)" +"emerging (technology OR technologies)" +interview
+
+Mögliche weitere Suchbegriffe
+practicing
+
+Hype Cyle Erfinder: Jackie Fenn:
+“Enterprises should evaluate potentially high-impact technologies early in the inevitable cycle of hype and disillusionment, but wait until later to adopt technologies that will deliver only incremental improvements.”
+
+Gartner Hype Cycle ist weit verbreitet und beliebt in management kreisen / Praktikern
+
+Järvenpää S.12
+The academic research has left the phenomenon mostly without detailed theoretical or empirical examination
+
+concept of “marketing hype” described by Wind and Mahajan in 1987
+
+Au and Kauffman, for example, talk about hype creating noise in forecasts of how far the new and emerging technology will go [8]
+
+S.13
+DotCom-Blase als Auswirkung eines Hypes
+Dahlberg and Hørlück relate the stock valuation directly to Hype Cycle since the curves have similar characteristics [13]
+Also the NASDAQ Index from years 1998-2003 resembles the shape of the Hype Cycle [14]
+
+Hype Cycle Muster in anderen Bereichen wiedergefunden:
+A. J. Romiszowski, "How's the E-learning Baby? Factors Leading to Success or Failure of
+an Educational Technology Innovation," Educational Technology, vol. 44, pp. 5-27, 2004.
+
+T. Menzies, "21st-Century AI: Proud, Not Smug," in IEEE Intelligent Systems, 2003, pp. 18-24.
+
+Ähnliche Studie:
+J. Lind, "Convergence: History of Term Usage and Lessons
+for Firm Strategists," presented at ITS 15th Biennial Conference, Berlin, Germany, 2004.
+
+
+Der negative Effekt bei Konfrontation mit der Realität nach überzogenen Erwartungen bleibt unberücksichtigt
+
+Konferenzteilnehmer geben ein Anzeichen über allgemeines Interesse an Technologien.
+
+
+Trends sind gesamtgesellcyhaftlich zu betrachten
+
+IEEE Xplore (http://www.ieee.org/web/publications/xplore/)
+● Science Direct – Elsevier (http://www.elsevier.com)
+● Springer Link (http://www.springerlink.com)
+● Web of Science – Thomson Reuters (http://webofknowledge.com)
+● ACM Guide to Computing Literature (http://dl.acm.org/)
+scholar.google.de
