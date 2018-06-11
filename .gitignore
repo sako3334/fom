@@ -1,5 +1,7 @@
 .DS_Store
 Thesis/source/literatur/NLP.bib
+Thesis/source/literatur/Thesis.bib
+Thesis/source/literatur/literatur.bib
 
 # Diese Dateien werden beim Kompilieren erzeugt:
 *.aux
