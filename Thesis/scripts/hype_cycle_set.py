@@ -19,19 +19,19 @@ innovation_triggers = [innovation_trigger_2016, innovation_trigger_2015, innovat
 
 peak_of_inflated_expectations = [peak_of_inflated_expectations_2016, peak_of_inflated_expectations_2015, peak_of_inflated_expectations_2014, peak_of_inflated_expectations_2013]
 
-print("Peak of Inflated Expectations 2017:")
+print("Peak of Inflated Expectations 2017: " + str(len(peak_of_inflated_expectations_2017)))
 print(peak_of_inflated_expectations_2017)
 
-print("Peak of Inflated Expectations 2016:")
+print("Peak of Inflated Expectations 2016: " + str(len(peak_of_inflated_expectations_2016)))
 print(peak_of_inflated_expectations_2016)
 
-print("Peak of Inflated Expectations 2015:")
+print("Peak of Inflated Expectations 2015: " + str(len(peak_of_inflated_expectations_2015)))
 print(peak_of_inflated_expectations_2015)
 
-print("Peak of Inflated Expectations 2014:")
+print("Peak of Inflated Expectations 2014: " + str(len(peak_of_inflated_expectations_2014)))
 print(peak_of_inflated_expectations_2014)
 
-print("Peak of Inflated Expectations 2013:")
+print("Peak of Inflated Expectations 2013: " + str(len(peak_of_inflated_expectations_2013)))
 print(peak_of_inflated_expectations_2013)
 
 print("\nIntersection Peak of Inflated Expectations 2017 with past years:")
