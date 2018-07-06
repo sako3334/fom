@@ -31,6 +31,15 @@
             "Cognitive Computing",
             "Blockchain",
             "Commercial UAVs (Drones)"
+        ],
+        "Trough of Disillusionment": [
+            "Cognitive Expert Advisors",
+            "Enterprise Taxonomy and Ontology Management",
+            "Software-Defined Security",
+            "Augmented Reality"
+        ],
+        "Slope of Enlightenment": [
+            "Virtual Reality"
         ]
     },
     "2016": {
@@ -68,6 +77,14 @@
             "Autonomous Vehicles",
             "Nanotube Electronics",
             "Software-Defined Anything (SDx)"
+        ],
+        "Trough of Disillusionment": [
+            "Natural-Language Question Answering",
+            "Enterprise Taxonomy and Ontology Management",
+            "Augmented Reality"
+        ],
+        "Slope of Enlightenment": [
+            "Virtual Reality"
         ]
     },
     "2015": {
@@ -82,7 +99,7 @@
             "Brain-Computer Interface",
             "Human Augmentation",
             "Volumetric Displays",
-            "3D Bioprintig Systems for Organ Transplant",
+            "3D Bioprinting Systems for Organ Transplant",
             "Smart Robots",
             "Affective Computing",
             "Connected Home",
@@ -104,6 +121,18 @@
             "Wearables",
             "Cryptocurrencies",
             "Consumer 3D Printing"
+        ],
+        "Trough of Disillusionment": [
+            "Natural-Language Question Answering",
+            "Hybrid Cloud Computing",
+            "Augmented Reality",
+            "Cryptocurrency Exchange",
+            "Autonomous Field Vehicles"
+        ],
+        "Slope of Enlightenment": [
+            "Virtual Reality",
+            "Gesture Control",
+            "Enterprise 3D Printing"
         ]
     },
     "2014": {
@@ -120,7 +149,7 @@
             "Quantum Computing",
             "Software-Defined Anything",
             "Volumetric Holographic Displays",
-            "3D Bioprintig Systems",
+            "3D Bioprinting Systems",
             "Smart Robots",
             "Affective Computing",
             "Biochips",
@@ -138,6 +167,30 @@
             "Consumer 3D Printing",
             "Cryptocurrencies",
             "Complex-Event Processing"
+        ],
+        "Trough of Disillusionment": [
+            "Big Data",
+            "In-Memory Database Management Systems",
+            "Content Analytics",
+            "Hybrid Cloud Computing",
+            "Gamification",
+            "Augmented Reality",
+            "Machine-to-Machine Communication",
+            "Mobile Health Monitoring",
+            "Cloud Computing",
+            "NFC",
+            "Virtual Reality"
+        ],
+        "Slope of Enlightenment": [
+            "Gesture Control",
+            "In-Memory Analytics",
+            "Activity Streams",
+            "Enterprise 3D Printing",
+            "3D Scanners",
+            "Consumer Telematics"
+        ],
+        "Plateau of Productivity": [
+            "Speech Recognition"
         ]
     },
     "2013": {
@@ -147,7 +200,7 @@
             "Smart Dust",
             "Quantum Computing",
             "Quantified Self",
-            "3D Bioprintig",
+            "3D Bioprinting",
             "Brain-Computer Interface",
             "Human Augmentation",
             "Volumetric and Holographic Displays",
@@ -172,6 +225,28 @@
             "Content Analytics",
             "In-Memory Database Management Systems",
             "Virtual Assistants"
+        ],
+        "Trough of Disillusionment": [
+            "Augmented Reality",
+            "Machine-to-Machine Communication Services",
+            "Mobile Health Monitoring",
+            "NFC",
+            "Mesh Networks: Sensor",
+            "Cloud Computing",
+            "Virtual Reality"
+            "In-Memory Analytics",
+            "Gesture Control"
+        ],
+        "Slope of Enlightenment": [
+            "Activity Streams",
+            "Enterprise 3D Printing",
+            "Biometric Authentication Methods",
+            "Consumer Telematics",
+            "Location Intelligence"
+        ],
+        "Plateau of Productivity": [
+            "Speech Recognition",
+            "Predictive Analytics"
         ]
     }
 }
