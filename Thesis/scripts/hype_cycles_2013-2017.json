@@ -1,252 +1,252 @@
 {
-    "2017": {
-        "URL": "https://www.gartner.com/newsroom/id/3784363",
-        "Innovation Trigger": [
-            "Smart Dust",
-            "4D Printing",
-            "Artificial General",
-            "Deep Reinforcement Learning",
-            "Neuromorphic Hardware",
-            "Human Augmentation",
-            "5G",
-            "Serverless PaaS",
-            "Digital Twin",
-            "Quantum Computing",
-            "Volumetric Displays",
-            "Brain-Computer Interface",
-            "Conversational User Interface",
-            "Smart Workspace"
-        ],
-        "Peak of Inflated Expectations": [
-            "Augmented Data Discovery",
-            "Edge Computing",
-            "Smart Robots",
-            "IoT Platform",
-            "Virtual Assistants",
-            "Connected Home",
-            "Deep Learning",
-            "Machine Learning",
-            "Autonomous Vehicles",
-            "Nanotube Electronics",
-            "Cognitive Computing",
-            "Blockchain",
-            "Commercial UAVs (Drones)"
-        ],
-        "Trough of Disillusionment": [
-            "Cognitive Expert Advisors",
-            "Enterprise Taxonomy and Ontology Management",
-            "Software-Defined Security",
-            "Augmented Reality"
-        ],
-        "Slope of Enlightenment": [
-            "Virtual Reality"
-        ]
-    },
-    "2016": {
-        "URL": "https://www.gartner.com/newsroom/id/3412017",
-        "Innovation Trigger": [
-            "Smart Dust",
-            "4D Printing",
-            "General-Purpose Machine Intelligence",
-            "802.11ax",
-            "Context Brokering",
-            "Neuromorphic Hardware",
-            "Data Broker PaaS (dbrPaaS)",
-            "Quantum Computing",
-            "Human Augmentation",
-            "Personal Analytics",
-            "Smart Workspace",
-            "Volumetric Displays",
-            "Conversational User Interfaces",
-            "Brain-Computer Interface",
-            "Virtual Personal Assistants",
-            "Smart Data Discovery",
-            "Affective Computing",
-            "Commercial UAVs (Drones)",
-            "IoT Platform",
-            "Gesture Control Devices"
-        ],
-        "Peak of Inflated Expectations": [
-            "Micro Data Centers",
-            "Smart Robots",
-            "Blockchain",
-            "Connected Home",
-            "Cognitive Expert Advisors",
-            "Machine Learning",
-            "Software-Defined Security",
-            "Autonomous Vehicles",
-            "Nanotube Electronics",
-            "Software-Defined Anything (SDx)"
-        ],
-        "Trough of Disillusionment": [
-            "Natural-Language Question Answering",
-            "Enterprise Taxonomy and Ontology Management",
-            "Augmented Reality"
-        ],
-        "Slope of Enlightenment": [
-            "Virtual Reality"
-        ]
-    },
-    "2015": {
-        "URL": "https://www.gartner.com/newsroom/id/3114217",
-        "Innovation Trigger": [
-            "Smart Dust",
-            "Virtual Personal Assistants",
-            "Digital Security",
-            "People-Literate Technology",
-            "Bioacoustic Sensing",
-            "Quantum Computing",
-            "Brain-Computer Interface",
-            "Human Augmentation",
-            "Volumetric Displays",
-            "3D Bioprinting Systems for Organ Transplant",
-            "Smart Robots",
-            "Affective Computing",
-            "Connected Home",
-            "IoT Platform",
-            "Biochips",
-            "Citizen Data Science",
-            "Neurobusiness",
-            "Software-Defined Security"
-        ],
-        "Peak of Inflated Expectations": [
-            "Digital Dexterity",
-            "Micro Data Centers",
-            "Smart Advisors",
-            "Advanced Analytics With Self-Service Delivery",
-            "Autonomous Vehicles",
-            "Internet of Things",
-            "Speech-to-Speech Translation",
-            "Machine Learning",
-            "Wearables",
-            "Cryptocurrencies",
-            "Consumer 3D Printing"
-        ],
-        "Trough of Disillusionment": [
-            "Natural-Language Question Answering",
-            "Hybrid Cloud Computing",
-            "Augmented Reality",
-            "Cryptocurrency Exchange",
-            "Autonomous Field Vehicles"
-        ],
-        "Slope of Enlightenment": [
-            "Virtual Reality",
-            "Gesture Control",
-            "Enterprise 3D Printing"
-        ]
-    },
-    "2014": {
-        "URL": "https://www.gartner.com/newsroom/id/2819918",
-        "Innovation Trigger": [
-            "Bioacoustic Sensing",
-            "Digital Security",
-            "Virtual Personal Assistants",
-            "Smart Workspace",
-            "Connected Home",
-            "Quantified Self",
-            "Brain-Computer Interface",
-            "Human Augmentation",
-            "Quantum Computing",
-            "Software-Defined Anything",
-            "Volumetric Holographic Displays",
-            "3D Bioprinting Systems",
-            "Smart Robots",
-            "Affective Computing",
-            "Biochips",
-            "Neurobusiness",
-            "Prescriptive Analytics"
-        ],
-        "Peak of Inflated Expectations": [
-            "Data Science",
-            "Smart Advisors",
-            "Autonomous Vehicles",
-            "Speech-to-Speech Translation",
-            "Internet of Things",
-            "Natural-Language Question Answering",
-            "Wearable User Interfaces",
-            "Consumer 3D Printing",
-            "Cryptocurrencies",
-            "Complex-Event Processing"
-        ],
-        "Trough of Disillusionment": [
-            "Big Data",
-            "In-Memory Database Management Systems",
-            "Content Analytics",
-            "Hybrid Cloud Computing",
-            "Gamification",
-            "Augmented Reality",
-            "Machine-to-Machine Communication",
-            "Mobile Health Monitoring",
-            "Cloud Computing",
-            "NFC",
-            "Virtual Reality"
-        ],
-        "Slope of Enlightenment": [
-            "Gesture Control",
-            "In-Memory Analytics",
-            "Activity Streams",
-            "Enterprise 3D Printing",
-            "3D Scanners",
-            "Consumer Telematics"
-        ],
-        "Plateau of Productivity": [
-            "Speech Recognition"
-        ]
-    },
-    "2013": {
-        "URL": "https://www.gartner.com/newsroom/id/2575515",
-        "Innovation Trigger": [
-            "Bioacoustic Sensing",
-            "Smart Dust",
-            "Quantum Computing",
-            "Quantified Self",
-            "3D Bioprinting",
-            "Brain-Computer Interface",
-            "Human Augmentation",
-            "Volumetric and Holographic Displays",
-            "Electrovibration",
-            "Affective Computing",
-            "Prescriptive Analytics",
-            "Autonomous Vehicles",
-            "Biochips",
-            "Neurobusiness"
-        ],
-        "Peak of Inflated Expectations": [
-            "3D Scanners",
-            "Mobile Robots",
-            "Speech-to-Speech Translation",
-            "Internet of Things",
-            "Natural-Language Question Answering",
-            "Big Data",
-            "Consumer 3D Printing",
-            "Gamification",
-            "Wearable User Interfaces",
-            "Complex-Event Processing",
-            "Content Analytics",
-            "In-Memory Database Management Systems",
-            "Virtual Assistants"
-        ],
-        "Trough of Disillusionment": [
-            "Augmented Reality",
-            "Machine-to-Machine Communication Services",
-            "Mobile Health Monitoring",
-            "NFC",
-            "Mesh Networks: Sensor",
-            "Cloud Computing",
-            "Virtual Reality"
-            "In-Memory Analytics",
-            "Gesture Control"
-        ],
-        "Slope of Enlightenment": [
-            "Activity Streams",
-            "Enterprise 3D Printing",
-            "Biometric Authentication Methods",
-            "Consumer Telematics",
-            "Location Intelligence"
-        ],
-        "Plateau of Productivity": [
-            "Speech Recognition",
-            "Predictive Analytics"
-        ]
-    }
+  "2013": {
+    "URL": "https://www.gartner.com/newsroom/id/2575515",
+    "Innovation Trigger": [
+      "Bioacoustic Sensing",
+      "Smart Dust",
+      "Quantum Computing",
+      "Quantified Self",
+      "3D Bioprinting",
+      "Brain-Computer Interface",
+      "Human Augmentation",
+      "Volumetric and Holographic Displays",
+      "Electrovibration",
+      "Affective Computing",
+      "Prescriptive Analytics",
+      "Autonomous Vehicles",
+      "Biochips",
+      "Neurobusiness"
+    ],
+    "Peak of Inflated Expectations": [
+      "3D Scanners",
+      "Mobile Robots",
+      "Speech-to-Speech Translation",
+      "Internet of Things",
+      "Natural-Language Question Answering",
+      "Big Data",
+      "Consumer 3D Printing",
+      "Gamification",
+      "Wearable User Interfaces",
+      "Complex-Event Processing",
+      "Content Analytics",
+      "In-Memory Database Management Systems",
+      "Virtual Assistants"
+    ],
+    "Trough of Disillusionment": [
+      "Augmented Reality",
+      "Machine-to-Machine Communication Services",
+      "Mobile Health Monitoring",
+      "NFC",
+      "Mesh Networks: Sensor",
+      "Cloud Computing",
+      "Virtual Reality",
+      "In-Memory Analytics",
+      "Gesture Control"
+    ],
+    "Slope of Enlightenment": [
+      "Activity Streams",
+      "Enterprise 3D Printing",
+      "Biometric Authentication Methods",
+      "Consumer Telematics",
+      "Location Intelligence"
+    ],
+    "Plateau of Productivity": [
+      "Speech Recognition",
+      "Predictive Analytics"
+    ]
+  },
+  "2014": {
+    "URL": "https://www.gartner.com/newsroom/id/2819918",
+    "Innovation Trigger": [
+      "Bioacoustic Sensing",
+      "Digital Security",
+      "Virtual Personal Assistants",
+      "Smart Workspace",
+      "Connected Home",
+      "Quantified Self",
+      "Brain-Computer Interface",
+      "Human Augmentation",
+      "Quantum Computing",
+      "Software-Defined Anything",
+      "Volumetric Holographic Displays",
+      "3D Bioprinting Systems",
+      "Smart Robots",
+      "Affective Computing",
+      "Biochips",
+      "Neurobusiness",
+      "Prescriptive Analytics"
+    ],
+    "Peak of Inflated Expectations": [
+      "Data Science",
+      "Smart Advisors",
+      "Autonomous Vehicles",
+      "Speech-to-Speech Translation",
+      "Internet of Things",
+      "Natural-Language Question Answering",
+      "Wearable User Interfaces",
+      "Consumer 3D Printing",
+      "Cryptocurrencies",
+      "Complex-Event Processing"
+    ],
+    "Trough of Disillusionment": [
+      "Big Data",
+      "In-Memory Database Management Systems",
+      "Content Analytics",
+      "Hybrid Cloud Computing",
+      "Gamification",
+      "Augmented Reality",
+      "Machine-to-Machine Communication",
+      "Mobile Health Monitoring",
+      "Cloud Computing",
+      "NFC",
+      "Virtual Reality"
+    ],
+    "Slope of Enlightenment": [
+      "Gesture Control",
+      "In-Memory Analytics",
+      "Activity Streams",
+      "Enterprise 3D Printing",
+      "3D Scanners",
+      "Consumer Telematics"
+    ],
+    "Plateau of Productivity": [
+      "Speech Recognition"
+    ]
+  },
+  "2015": {
+    "URL": "https://www.gartner.com/newsroom/id/3114217",
+    "Innovation Trigger": [
+      "Smart Dust",
+      "Virtual Personal Assistants",
+      "Digital Security",
+      "People-Literate Technology",
+      "Bioacoustic Sensing",
+      "Quantum Computing",
+      "Brain-Computer Interface",
+      "Human Augmentation",
+      "Volumetric Displays",
+      "3D Bioprinting Systems for Organ Transplant",
+      "Smart Robots",
+      "Affective Computing",
+      "Connected Home",
+      "IoT Platform",
+      "Biochips",
+      "Citizen Data Science",
+      "Neurobusiness",
+      "Software-Defined Security"
+    ],
+    "Peak of Inflated Expectations": [
+      "Digital Dexterity",
+      "Micro Data Centers",
+      "Smart Advisors",
+      "Advanced Analytics With Self-Service Delivery",
+      "Autonomous Vehicles",
+      "Internet of Things",
+      "Speech-to-Speech Translation",
+      "Machine Learning",
+      "Wearables",
+      "Cryptocurrencies",
+      "Consumer 3D Printing"
+    ],
+    "Trough of Disillusionment": [
+      "Natural-Language Question Answering",
+      "Hybrid Cloud Computing",
+      "Augmented Reality",
+      "Cryptocurrency Exchange",
+      "Autonomous Field Vehicles"
+    ],
+    "Slope of Enlightenment": [
+      "Virtual Reality",
+      "Gesture Control",
+      "Enterprise 3D Printing"
+    ]
+  },
+  "2016": {
+    "URL": "https://www.gartner.com/newsroom/id/3412017",
+    "Innovation Trigger": [
+      "Smart Dust",
+      "4D Printing",
+      "General-Purpose Machine Intelligence",
+      "802.11ax",
+      "Context Brokering",
+      "Neuromorphic Hardware",
+      "Data Broker PaaS (dbrPaaS)",
+      "Quantum Computing",
+      "Human Augmentation",
+      "Personal Analytics",
+      "Smart Workspace",
+      "Volumetric Displays",
+      "Conversational User Interfaces",
+      "Brain-Computer Interface",
+      "Virtual Personal Assistants",
+      "Smart Data Discovery",
+      "Affective Computing",
+      "Commercial UAVs (Drones)",
+      "IoT Platform",
+      "Gesture Control Devices"
+    ],
+    "Peak of Inflated Expectations": [
+      "Micro Data Centers",
+      "Smart Robots",
+      "Blockchain",
+      "Connected Home",
+      "Cognitive Expert Advisors",
+      "Machine Learning",
+      "Software-Defined Security",
+      "Autonomous Vehicles",
+      "Nanotube Electronics",
+      "Software-Defined Anything (SDx)"
+    ],
+    "Trough of Disillusionment": [
+      "Natural-Language Question Answering",
+      "Enterprise Taxonomy and Ontology Management",
+      "Augmented Reality"
+    ],
+    "Slope of Enlightenment": [
+      "Virtual Reality"
+    ]
+  },
+  "2017": {
+    "URL": "https://www.gartner.com/newsroom/id/3784363",
+    "Innovation Trigger": [
+      "Smart Dust",
+      "4D Printing",
+      "Artificial General",
+      "Deep Reinforcement Learning",
+      "Neuromorphic Hardware",
+      "Human Augmentation",
+      "5G",
+      "Serverless PaaS",
+      "Digital Twin",
+      "Quantum Computing",
+      "Volumetric Displays",
+      "Brain-Computer Interface",
+      "Conversational User Interface",
+      "Smart Workspace"
+    ],
+    "Peak of Inflated Expectations": [
+      "Augmented Data Discovery",
+      "Edge Computing",
+      "Smart Robots",
+      "IoT Platform",
+      "Virtual Assistants",
+      "Connected Home",
+      "Deep Learning",
+      "Machine Learning",
+      "Autonomous Vehicles",
+      "Nanotube Electronics",
+      "Cognitive Computing",
+      "Blockchain",
+      "Commercial UAVs (Drones)"
+    ],
+    "Trough of Disillusionment": [
+      "Cognitive Expert Advisors",
+      "Enterprise Taxonomy and Ontology Management",
+      "Software-Defined Security",
+      "Augmented Reality"
+    ],
+    "Slope of Enlightenment": [
+      "Virtual Reality"
+    ]
+  }
 }
