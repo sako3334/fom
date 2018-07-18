@@ -1,0 +1,7 @@
+﻿Publication Years	records	% of 6
+2018	1	16.667
+2017	4	66.667
+2015	1	16.667
+(0 Publication Years {0} {1} value(s) outside display options.)
+(0 records (0.000%){0} records{1} do not contain data in the field being analyzed.)
+TS=("micro data center" OR "micro data centers" OR "microdata center" OR "micro datacenter")

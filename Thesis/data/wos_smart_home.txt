@@ -1,0 +1,34 @@
+﻿Publication Years	records	% of 1873
+2018	231	12.333
+2017	400	21.356
+2016	257	13.721
+2015	220	11.746
+2014	154	8.222
+2013	132	7.048
+2012	105	5.606
+2011	78	4.164
+2010	51	2.723
+2009	54	2.883
+2008	31	1.655
+2007	26	1.388
+2006	49	2.616
+2005	19	1.014
+2004	25	1.335
+2003	7	0.374
+2002	17	0.908
+2001	3	0.160
+2000	5	0.267
+1999	1	0.053
+1998	1	0.053
+1997	3	0.160
+1995	1	0.053
+1994	1	0.053
+1993	1	0.053
+1987	1	0.053
+(1 Publication Years {0} {1} value(s) outside display options.)
+(0 records (0.000%){0} records{1} do not contain data in the field being analyzed.)
+TS=("connected home" OR "connected homes" OR "smart home" OR "smart homes")
+
+TS=("smart home")	1406
+TS=("connected home" OR "smart home")	1435
+TS=("connected home" OR "smart home" OR "smart homes") 1866

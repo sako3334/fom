@@ -1,0 +1,9 @@
+﻿Publication Years	records	% of 9
+2018	2	22.222
+2017	1	11.111
+2016	3	33.333
+2015	2	22.222
+2014	1	11.111
+(0 Publication Years {0} {1} value(s) outside display options.)
+(0 records (0.000%){0} records{1} do not contain data in the field being analyzed.)
+TS=("software defined security")

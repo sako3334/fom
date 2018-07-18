@@ -1,0 +1,70 @@
+WOS:
+TS=("autonomous vehicles")
+TS=("blockchain")
+TS=("micro data center" OR "micro data centers" OR "microdata center" OR "micro datacenter")
+TS=("Nanotube Electronics" OR "semiconductor nanotubes")
+TS=("machine learning")
+TS=("connected home" OR "smart home" OR "smart homes")
+
+ACM:
+acmdlTitle:("autonomous vehicles") OR recordAbstract:("autonomous vehicles") OR keywords.author.keyword:("autonomous vehicles")
+acmdlTitle:("blockchain") OR recordAbstract:("blockchain") OR keywords.author.keyword:("blockchain")
+acmdlTitle:("micro data centers") OR recordAbstract:("micro data centers") OR keywords.author.keyword:("micro data centers")
+(acmdlTitle:("Nanotube Electronics") OR recordAbstract:("Nanotube Electronics") OR keywords.author.keyword:("Nanotube Electronics") OR (acmdlTitle:("semiconductor nanotubes") OR recordAbstract:("semiconductor nanotubes") OR keywords.author.keyword:("semiconductor nanotubes")
+
+IEEE in MetaData:
+("autonomous vehicles")
+("blockchain")
+(((("micro data centers") OR "micro data center") OR "micro datacenter") OR "microdata center")
+(("smart robot") OR "smart robots")
+(("Nanotube Electronics") OR "semiconductor nanotubes")
+((("connected home") OR "smart home") OR "smart homes")
+=============================================================================================================================================================================
+
+=============================================================================================================================================================================
+- Micro Data Centers
+- Smart Robots - 2014
+- Blockchain
+- Connected Home - 2014
+Cognitive Expert Advisors
+- Machine Learning
+- Software-Defined Security - 2015
+- Autonomous Vehicles - 2010
+- Nanotube Electronics
+Software-Defined Anything (SDx) - 2014
+
+-"Autonomous Vehicles"
+-"Blockchain"
+"Cognitive Expert Advisors" -> "Personalized recommendation", "recommender systems"
+"Connected Home"
+-"Machine Learning"
+-"Micro Data Centers"
+-"Nanotube Electronics" -> "semiconductor nanotubes"
+-"Smart Robots" -> "humanoid robot", "Cognitive robotics"
+"Software-Defined Anything (SDx)"
+"Software-Defined Security"
+
+"Augmented Reality"
+"Enterprise Taxonomy and Ontology Management"
+"Natural-Language Question Answering"
+
+["Virtual Reality"]
+
+"3D Bioprinting Systems for Organ Transplant"
+"Affective Computing"
+"Bioacoustic Sensing"
+"Biochips"
+"Brain-Computer Interface"
+"Citizen Data Science"
+"Connected Home"
+"Digital Security"
+"Human Augmentation"
+"IoT Platform"
+"Neurobusiness"
+"People-Literate Technology"
+"Quantum Computing"
+"Smart Dust"
+"Smart Robots"
+"Software-Defined Security"
+"Virtual Personal Assistants"
+"Volumetric Displays"

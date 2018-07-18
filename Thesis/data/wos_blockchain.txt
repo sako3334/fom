@@ -1,0 +1,8 @@
+﻿Publication Years	records	% of 388
+2018	149	38.402
+2017	195	50.258
+2016	40	10.309
+2015	4	1.031
+(0 Publication Years {0} {1} value(s) outside display options.)
+(0 records (0.000%){0} records{1} do not contain data in the field being analyzed.)
+TS=("blockchain")

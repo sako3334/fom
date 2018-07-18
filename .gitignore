@@ -22,3 +22,8 @@ Thesis/source/literatur/literatur.bib
 
 # IDEs
 .texpadtmp/
+
+# BLOB
+Thesis/ext/
+Thesis/literature/Fluechtige_Quellen
+*.csv
