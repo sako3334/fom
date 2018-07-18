@@ -31,7 +31,7 @@ Cognitive Expert Advisors
 - Software-Defined Security - 2015
 - Autonomous Vehicles - 2010
 - Nanotube Electronics
-Software-Defined Anything (SDx) - 2014
+- Software-Defined Anything (SDx) - 2014
 
 -"Autonomous Vehicles"
 -"Blockchain"
