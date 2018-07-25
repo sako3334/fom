@@ -6,4 +6,4 @@
 2014	1	11.111
 (0 Publication Years {0} {1} value(s) outside display options.)
 (0 records (0.000%){0} records{1} do not contain data in the field being analyzed.)
-TS=("software defined security")
+(TS=("software defined security")) AND DOCUMENT TYPES: (Article OR Proceedings Paper)

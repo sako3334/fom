@@ -1,27 +1,27 @@
-﻿Publication Years	records	% of 1295
-2018	53	4.093
-2017	79	6.100
-2016	99	7.645
-2015	73	5.637
-2014	79	6.100
-2013	65	5.019
-2012	89	6.873
-2011	89	6.873
-2010	110	8.494
-2009	130	10.039
-2008	108	8.340
-2007	83	6.409
-2006	82	6.332
-2005	49	3.784
-2004	51	3.938
-2003	23	1.776
-2002	22	1.699
-2001	7	0.541
-2000	2	0.154
-1999	1	0.077
-1998	1	0.077
+﻿Publication Years	records	% of 1240
+2018	56	4.516
+2017	79	6.371
+2016	94	7.581
+2015	71	5.726
+2014	77	6.210
+2013	61	4.919
+2012	86	6.935
+2011	88	7.097
+2010	106	8.548
+2009	124	10.000
+2008	99	7.984
+2007	78	6.290
+2006	76	6.129
+2005	48	3.871
+2004	48	3.871
+2003	23	1.855
+2002	18	1.452
+2001	4	0.323
+2000	2	0.161
+1999	1	0.081
+1998	1	0.081
 (0 Publication Years {0} {1} value(s) outside display options.)
 (0 records (0.000%){0} records{1} do not contain data in the field being analyzed.)
-TS=("CNTFET" OR "nanotube electronics" OR "carbon nanotube field effect" OR "carbon nanotube field-effect" OR "semiconductor nanotubes")
+(TS=("CNTFET" OR "nanotube electronics" OR "carbon nanotube field effect" OR "carbon nanotube field-effect" OR "semiconductor nanotubes")) AND DOCUMENT TYPES: (Article OR Proceedings Paper)
 
-TS=("Nanotube Electronics")	85
+(TS=("Nanotube Electronics")) AND DOCUMENT TYPES: (Article OR Proceedings Paper)	70
