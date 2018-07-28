@@ -56,19 +56,41 @@ Dabei sind folgende Parameter für die Auswertung festzuhalten:
 
 \subsubsection{Literaturdatenbanken}
 Demgegenüber wird die Datenbasis der akademischen Forschung aus Abfragen in relevanten Literaturdatenbanken erhoben. Aufgrund ihrer hohen Abdeckung wissenschaftlich, technologischer Publikationen werden folgende Datenbanken durchsucht:
-\begin{itemize}
-	\item Web of Science Core Collection: \url{http://apps.webofknowledge.com}
-	\item IEEE Xplore Digital Library: \url{https://ieeexplore.ieee.org}
-	\item The ACM Guide to Computing Literature: \url{https://dl.acm.org}
-\end{itemize}
+\begin{description}
+	\item [WoS:] Web of Science Core Collection - \url{http://apps.webofknowledge.com}
+	\item [IEEE:] IEEE Xplore Digital Library - \url{https://ieeexplore.ieee.org}
+	\item [ACM:] The ACM Guide to Computing Literature - \url{https://dl.acm.org}
+\end{description}
 
 Diese enthalten neben den in Abschnitt \ref{sec:acad_pub} genannten Fachzeitschriften und Tagungsbänden weitere Formen von Veröffentlichungen, wie beispielsweise Bücher oder Standards. Daher ist die Suche ausschließlich darauf einzugrenzen.
 
-Alle Datenbanken sind im erweiterten Suchmodus mit vergleichbarer Funktionalität zur Vergabe von Suchkriterien ausgestattet. Diese sind gezielt einzusetzen, damit das Suchergebnis einerseits möglichst vollständig ist und andererseits keine \glqq False Positives\grqq~liefert. Deshalb beschränkt sich die Suche der Technologien auf die Metadaten Titel, Stichwörter und Abstract einer Publikation.
+Alle Suchmaschinen sind im erweiterten Suchmodus mit vergleichbarer Funktionalität zur Vergabe von Suchkriterien ausgestattet. Diese sind gezielt einzusetzen, damit das Suchergebnis einerseits möglichst vollständig ist und andererseits keine \glqq False Positives\grqq~liefert. Deshalb beschränkt sich die Suche der Technologien auf die Metadaten Titel, Stichwörter und Abstract einer Publikation.
 
+Der erweiterte Suchmodus bietet in allen Suchmaschinen die Möglichkeit, Suchanfragen mittels Kommandoanweisungen einzugeben. Die Operatoren zur Verknüpfung von Suchbegriffen sind nahezu identisch, wobei die Syntax einer Suchanweisung teilweise unterschiedlich ist. Somit sind die Querys untereinander nicht beliebig austauschbar. Im IEEE können einige Suchkriterien, wie z.B. Publikationsart oder Veröffentlichungsjahr nicht per Kommando eingegeben werden und müssen durch entsprechende Auswahl von Bedienelementen in der Weboberfläche erfolgen.
 
+Im ersten Schritt werden die Technologien aus Abschnitt \ref{sec:ghcet} unverändert in die Suchmaschine eingegeben, um eine Übersicht der Datenlage zu erhalten. Mit den oben genannten Eingrenzungen ergibt das für den Begriff \glqq Machine Learning\grqq~folgende Suchalgorithmen je Suchmaschine:
 
-Die zuvor ermittelten Technologien aus Abschnitt \ref{sec:ghcet} werden zunächst unverändert in die Suchmaschine eingegeben, um eine Übersicht der Datenlage zu erhalten. Anschließend werden die Suchkriterien verfeinert
+\begin{description}
+	\item [WoS:] \begin{verbatim}
+	(TS=("machine learning")) AND DOCUMENT TYPES:
+	(Article OR Proceedings Paper)
+	\end{verbatim}
+
+	\item [IEEE:] \begin{verbatim}
+	("machine learning")
+	\end{verbatim}
+	Zusätzliche Einstellungen:
+	\begin{itemize}
+		\item Search Context: Metadata only
+		\item Content Types: Conferences, Journals \& Magazines
+	\end{itemize}
+
+	\item [ACM:] \begin{verbatim}
+	acmdlTitle:(+"machine learning") OR
+	recordAbstract:(+"machine learning") OR
+	keywords.author.keyword:(+"machine learning")
+	\end{verbatim}
+\end{description}
 
 Über die Web-Oberfläche aller drei Datenbanken sind komplexe Abfragen sowie das Exportieren der Ergebnisse möglich. Lediglich in Syntax von Suchalgorithmen und Funktionsumfang des Exports unterscheiden sie sich teilweise von einander.
 
@@ -77,7 +99,7 @@ Die Anforderung an die
 Dabei ist zu berücksichtigen, dass Technologiebegriffe aus dem \glqq Hype Cycle\grqq~nicht unbedingt die Benennung in der akademischen Forschung widerspiegeln müssen.
 
 \subsection{Operationalisierung der Daten}
-
+schritt für schritt aktionen. 1. exakte suche,
 
 Verstehen der Technologien
 Synonyme finden
