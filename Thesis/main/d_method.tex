@@ -12,7 +12,7 @@ Die genaue Aufteilung der Technologien in die fünf bekannten Phasen ist wiederu
 
 Für die optimale Ausrichtung der Analyse an die Leitfragen ist es sinnvoll, eine relativ aktuelle Ausgabe des \glqq Hype Cycle\grqq~zu verwenden, nicht jedoch die neuste. Denn für die Leitfrage L3 wird mindestens eine neuere Ausgabe als die analysierte benötigt. Bei zu alten Publikationen besteht wiederum die Gefahr, dass durch gegenseitige Einflussnahme eine Angleichung bspw. der Begrifflichkeiten die Ergebnisse verfälschen könnte.
 
-Die aktuellste Ausgabe des \glqq Gartner Hype Cycle for Emerging Technologies\grqq~ ist im Juli 2017 erschienen.\footnote{\citeNP<Vgl.>[o.S.]{ghc2017}} Deshalb fällt die Wahl auf die unmittelbar vorausgegangene Veröffentlichung aus dem Jahre 2016. In der Phase \glqq Peak of Inflated Expectations\grqq~sind folgende Technologien aufgeführt:\footnote{\citeNP<Vgl.>[o.S.]{ghc2016}}
+Die aktuellste Ausgabe des \glqq Gartner Hype Cycle for Emerging Technologies\grqq~ ist im Juli 2017 erschienen.\footnote{\citeNP<Vgl.>[o.S.]{ghc2017}} Deshalb fällt die Wahl auf die unmittelbar vorausgegangene Veröffentlichung aus dem Jahre 2016. In der Phase \glqq Peak of Inflated Expecta\-tions\grqq~sind folgende Technologien aufgeführt:\footnote{\citeNP<Vgl.>[o.S.]{ghc2016}}
 
 \begin{itemize}
 	\item Gesture Control Devices
@@ -50,8 +50,8 @@ Dabei sind folgende Parameter für die Auswertung festzuhalten:
 
 \begin{enumerate}
 	\item Name der Technologie
-	\item Jahr der Ersterscheinung
 	\item Jahr aller Erscheinungen mit Zuordnung zur jeweiligen Phase
+	\item Position innerhalb der entsprechenden Phase
 \end{enumerate}
 
 \subsubsection{Literaturdatenbanken}
@@ -66,7 +66,7 @@ Diese enthalten neben den in Abschnitt \ref{sec:acad_pub} genannten Fachzeitschr
 
 Alle Suchmaschinen sind im erweiterten Suchmodus mit vergleichbarer Funktionalität zur Vergabe von Suchkriterien ausgestattet. Diese sind gezielt einzusetzen, damit das Suchergebnis einerseits möglichst vollständig ist und andererseits keine \glqq False Positives\grqq~liefert. Deshalb beschränkt sich die Suche der Technologien auf die Metadaten Titel, Stichwörter und Abstract einer Publikation.
 
-Der erweiterte Suchmodus bietet in allen Suchmaschinen die Möglichkeit, Suchanfragen mittels Kommandoanweisungen einzugeben. Die Operatoren zur Verknüpfung von Suchbegriffen sind nahezu identisch, wobei die Syntax einer Suchanweisung teilweise unterschiedlich ist. Somit sind die Querys untereinander nicht wahllos austauschbar. Bei IEEE und ACM können einige Suchkriterien wie beispielsweise die Veröffentlichungsform nicht über das Kommando eingegeben werden, sondern müssen durch entsprechende Auswahl mithilfe von Bedienelementen in der Weboberfläche erfolgen.
+Der erweiterte Suchmodus bietet in allen Suchmaschinen die Möglichkeit, Suchanfragen mittels Kommandoanweisungen einzugeben. Die Operatoren zur Verknüpfung von Suchbegriffen sind nahezu identisch, wobei die Syntax einer Suchanweisung teilweise unterschiedlich ist. Somit sind die Querys untereinander nicht wahllos austauschbar. Bei IEEE und ACM können einige Suchkriterien wie beispielsweise die Veröffentlichungsform nicht über das Kommando eingegeben werden, sondern müssen durch entsprechende Auswahl mithilfe von Bedienelementen in der Web\-oberfläche erfolgen.
 
 Im ersten Schritt werden die Technologien aus Abschnitt \ref{sec:ghcet} unverändert in die Suchmaschine eingegeben, um einen ersten Eindruck der Datenlage im Hinblick auf potentielle Unterschiede bei den Begrifflichkeiten zu erhalten. Mit den oben genannten Eingrenzungen ergibt das für den Begriff \glqq Machine Learning\grqq~in Fachzeitschriften folgende Suchalgorithmen je Suchmaschine:
 
@@ -95,18 +95,63 @@ Im ersten Schritt werden die Technologien aus Abschnitt \ref{sec:ghcet} unverän
 	\end{itemize}
 \end{description}
 
+Für die Ermittlung der idealen Suchalgorithmen ist es wichtig, die im \glqq Hype Cycle\grqq~vorkommenden Technologiebegriffe genau zu verstehen. Dies gilt insbesondere, wenn diese mit der wissenschaftlichen Benennung nicht exakt übereinstimmen. Deshalb werden die Technologien zunächst in Gartners IT-Glossar\footnote{\url{https://www.gartner.com/it-glossary/}} verifiziert.
+
 Im nächsten Schritt gilt es, alternative Bezeichnungen der Technologiebegriffe aus dem \glqq Hype Cycle\grqq~herauszufinden, um eine möglichst vollständige Abdeckung von Publikationen zu den entsprechenden Technologien zu erhalten. Dazu werden die Stichwörter der einzelnen Suchergebnisse stichprobenartig nach Synonymen durchsucht, welche anschließend adjunktiv mit der ursprünglichen Suche verknüpft werden.
 
 Andersherum sind Begriffe auszuschließen, die für eine höhere Evolutionsstufe der ursprünglichen Technologie stehen, diese jedoch signifikant erweitern, so dass ein neuer Begriff einen neuen Kontext rechtfertigt. Ein Beispiel dafür sind die Technologien \glqq Machine Learning\grqq~und \glqq Deep Learning\grqq, welche jeweils ihre eigene Daseinsberechtigung haben und daher in der aktuellen Ausgabe des \glqq Hype Cycle for Emerging Technologies 2017\grqq~im \glqq Peak of Inflated Expectations\grqq~nebeneinander stehen.\footnote{\citeNP<Vgl.>[S.~45.]{ghc2017}} Da es sich bei \glqq Deep Learning\grqq~um die neuere Technologie handelt, wird sie mit dem exkludierenden Operator \glqq NOT\grqq~jeweils herausgenommen.
 
-Für die Auswertung werden die Anzahl der Publikationen pro Jahr für die jeweils definierten Filter benötigt. Dazu werden die entsprechenden Exportfunktionen der jeweiligen Suchmaschinen eingesetzt. Im WoS ist ein Export der Verteilung von Publikationen pro Jahr von maximal 200.000 Datensätzen mit einer einzigen Anweisung im TSV-Format (Tabulator-Seperated Values) möglich. Die anderen beiden Suchmaschinen erlauben lediglich einen Export von maximal 2.000 Datensätzen der Metadaten im CSV-Format (Comma-Seperated Values).
+Für die Auswertung wird die Verteilung der Publikationen pro Jahr und Filter benötigt. Dazu werden die entsprechenden Exportfunktionen der jeweiligen Suchmaschinen eingesetzt. Im WoS ist ein Export der Verteilung von Publikationen pro Jahr von maximal \numprint{200000} Datensätzen mit einer einzigen Anweisung im TSV-Format (Tabulator-Seperated Values) möglich. Die anderen beiden Suchmaschinen erlauben lediglich einen Export von maximal \numprint{2000} Datensätzen der Metadaten im CSV-Format (Comma-Seperated Values). Das bedeutet, dass für Suchergebnisse mit mehr als \numprint{2000} Ergebnissen mehrere Exportanweisungen durchgeführt werden müssen.
 
 \subsection{Operationalisierung der Daten}
-schritt für schritt aktionen. 1. exakte suche,
+Nachdem die Verteilung der Technologien des \glqq Gartner Hype Cycles for Emerging Technologies 2016\grqq~über die Jahre ermittelt ist, wird eine Übersicht darüber inklusive weiterer relevanter Daten erstellt. Aus Gründen der Vergleichbarkeit mit der Verteilung der wissenschaftlichen Publikationen eignet sich dazu eine Tabellenform, in der die Technologien in ihrer ursprünglichen Reihenfolge als Zeilenüberschriften und die Zeitspanne deren Vorkommen als Spaltenüberschriften dienen, wie in Tabelle~\ref{tab:dist_ghc} zu sehen ist.
 
-Verstehen der Technologien
-Synonyme finden
-unterschiedliche Begrifflichkeiten feststellen
-Kurve über die Zeit in Abhängigkeit zu Erwartungen
+Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungsjahr nicht vorkommt. Anderenfalls setzt sich der Eintrag prinzipiell aus zwei Teilen zusammen. Im ersten Teil wird das Kürzel der Phase des \glqq Hype Cyles\grqq~aufgeführt, in der die Technologie vorkommt. Für vorliegende Datenbasis werden folgende Kürzel benutzt:
+
+\begin{description}
+	\item[I:] Innovation Trigger
+	\item[P:] Peak of Inflated Expectations
+	\item[T:] Trough of Disillusionment
+\end{description}
+
+Die anderen beiden Phasen bleiben unberücksichtigt, da sie die zu untersuchenden Technologien in keiner Ausgabe enthalten. Der zweite Teil gibt die Position der Technologie unter allen anderen der jeweiligen Phase wieder.
+
+Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw., dass sie in der Phase \glqq Peak of Inflated Expectations\grqq~erschienen ist, insgesamt elf Technologien in dieser Phase vorkommen und \glqq Machine Learning\grqq~an Position sieben zu finden ist. Zusätzlich ist in der Spalte des zugrundeliegenden Jahres ein Sternchen (*) gesetzt, falls es sich bei der Technologie um den höchsten Punkt der Kurve handelt.
+
+
+\begin{table}
+	\caption{Verteilung der Technologien des \glqq Gartner Hype Cycle\grqq}
+	\label{tab:dist_ghc}
+\begin{tabular}{r|c|c|c|c|c|c|c|}
+	& 2010 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 \\ 
+	\hline 
+	Gesture Control Devices &  &  &  &  &  & P &  \\ 
+	\hline 
+	Micro Data Centers &  &  &  &  & P & P &  \\ 
+	\hline 
+	Smart Robots &  &  &  & I & I & P & P \\ 
+	\hline 
+	Blockchain &  &  &  &  &  & P & P \\ 
+	\hline 
+	Connected Home &  &  &  & I & I & P & P \\ 
+	\hline 
+	Cognitive Expert Advisors &  &  &  &  &  & P & T \\ 
+	\hline 
+	Machine Learning &  &  &  &  & P & P & P \\ 
+	\hline 
+	Software-Defined Security &  &  &  &  & I & P & T \\ 
+	\hline 
+	Autonomous Vehicles & I & I & I & P & P & P & P \\ 
+	\hline 
+	Nanotube Electronics &  &  &  &  &  & P & P \\ 
+	\hline 
+	Software-Defined Anything (SDx) &  &  &  &  &  & P &  \\ 
+	\hline
+\end{tabular}
+\caption*{Quelle: Eigene Darstellung}
+\end{table}
+
+
+
 
 \subsection{Methodik der Analyse}
