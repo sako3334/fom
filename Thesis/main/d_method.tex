@@ -104,6 +104,9 @@ Andersherum sind Begriffe auszuschließen, die für eine höhere Evolutionsstufe
 Für die Auswertung wird die Verteilung der Publikationen pro Jahr und Filter benötigt. Dazu werden die entsprechenden Exportfunktionen der jeweiligen Suchmaschinen eingesetzt. Im WoS ist ein Export der Verteilung von Publikationen pro Jahr von maximal \numprint{200000} Datensätzen mit einer einzigen Anweisung im TSV-Format (Tabulator-Seperated Values) möglich. Die anderen beiden Suchmaschinen erlauben lediglich einen Export von maximal \numprint{2000} Datensätzen der Metadaten im CSV-Format (Comma-Seperated Values). Das bedeutet, dass für Suchergebnisse mit mehr als \numprint{2000} Ergebnissen mehrere Exportanweisungen durchgeführt werden müssen.
 
 \subsection{Operationalisierung der Daten}
+Im nächsten Schritt werden die gewonnenen Daten strukturiert, um die Gegenüberstellung der Technologietrends in Wirtschaft und Wissenschaft im Hinblick auf die Beantwortung der Leitfragen zu ermöglichen.
+
+\subsubsection{Verteilung der Technologietrends in der praktizierenden Wirtschaft}
 Nachdem die Verteilung der Technologien des \glqq Gartner Hype Cycles for Emerging Technologies 2016\grqq~über die Jahre ermittelt ist, wird eine Übersicht darüber inklusive weiterer relevanter Daten erstellt. Aus Gründen der Vergleichbarkeit mit der Verteilung der wissenschaftlichen Publikationen eignet sich dazu eine Tabellenform, in der die Technologien in ihrer ursprünglichen Reihenfolge als Zeilenüberschriften und die Zeitspanne deren Vorkommen als Spaltenüberschriften dienen, wie in Tabelle~\ref{tab:dist_ghc} zu sehen ist.
 
 Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungsjahr nicht vorkommt. Anderenfalls setzt sich der Eintrag prinzipiell aus zwei Teilen zusammen. Im ersten Teil wird das Kürzel der Phase des \glqq Hype Cyles\grqq~aufgeführt, in der die Technologie vorkommt. Für vorliegende Datenbasis werden folgende Kürzel benutzt:
@@ -117,7 +120,6 @@ Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungs
 Die anderen beiden Phasen bleiben unberücksichtigt, da sie die zu untersuchenden Technologien in keiner Ausgabe enthalten. Der zweite Teil gibt die Position der Technologie unter allen anderen der jeweiligen Phase wieder.
 
 Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw., dass sie in der Phase \glqq Peak of Inflated Expectations\grqq~erschienen ist, insgesamt elf Technologien in dieser Phase vorkommen und \glqq Machine Learning\grqq~an Position sieben zu finden ist. Zusätzlich ist in der Spalte des zugrundeliegenden Jahres ein Sternchen (*) gesetzt, falls es sich bei der Technologie um den höchsten Punkt der Kurve handelt.
-
 
 \begin{table}
 	\caption{Verteilung der Technologien des \glqq Gartner Hype Cycle\grqq}
@@ -137,11 +139,11 @@ Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw.,
 	\hline 
 	Cognitive Expert Advisors &  &  &  &  &  & P & T \\ 
 	\hline 
-	Machine Learning &  &  &  &  & P & P & P \\ 
+	Machine Learning &  &  &  &  & P & P* & P \\ 
 	\hline 
 	Software-Defined Security &  &  &  &  & I & P & T \\ 
 	\hline 
-	Autonomous Vehicles & I & I & I & P & P & P & P \\ 
+	Autonomous Vehicles & I & I & I & P & P* & P & P \\ 
 	\hline 
 	Nanotube Electronics &  &  &  &  &  & P & P \\ 
 	\hline 
@@ -151,7 +153,13 @@ Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw.,
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
+\subsubsection{Verteilung der Technologietrends in der wissenschaftlichen Forschung}
+Die Verteilung der wissenschaftlichen Publikationen mit thematischem Schwerpunkt der zu untersuchenden Technologien wird ebenfalls tabellarisch strukturiert. Dabei bilden die Veröffentlichungsjahre die Zeilenüberschriften, da sich deren Zeitspanne teilweise über mehrere Jahrzehnte erstreckt. Die Bezeichnung der Technologien bilden wiederum die Spaltenüberschriften. Der Lesbarkeit halber werden sie durch ihre Akronyme, die in vorliegendem Fall eindeutig sind, abgekürzt.
 
-
+Die Ergebnisse werden pro Suchmaschine festgehalten, so dass zunächst einmal drei Tabellen
 
 \subsection{Methodik der Analyse}
+Klassifizierung der Technologien
+Wo entstehen Trends und wer beeinflusst die Gegenseite stärker?
+Andere Bezeichnung in der Forschung? -> Hinweis auf Diskrepanzen
+Theoretische vs. praktische Technologien. Theoretische Idee hinter einer kommerziellen Technologie herausfinden
