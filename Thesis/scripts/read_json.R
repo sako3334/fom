@@ -1,0 +1,5 @@
+install.packages("rjson")
+library(rjson)
+r <- fromJSON(file="D:\\dev\\fom\\Thesis\\data\\hype_cycles_2010-2017.json")
+jdf <- as.data.frame(r)
+View(r)

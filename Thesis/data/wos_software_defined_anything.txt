@@ -1,5 +1,0 @@
-﻿Publication Years	records	% of 1
-2018	1	100.000
-(0 Publication Years {0} {1} value(s) outside display options.)
-(0 records (0.000%){0} records{1} do not contain data in the field being analyzed.)
-(TS=("software defined anything")) AND DOCUMENT TYPES: (Article OR Proceedings Paper)
