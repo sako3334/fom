@@ -1,0 +1,8 @@
+﻿Publication Years	records	% of 5
+2018	1	20.000
+2015	1	20.000
+2002	1	20.000
+2001	1	20.000
+1997	1	20.000
+(0 Publication Years {0} {1} value(s) outside display options.)
+(0 records (0.000%){0} records{1} do not contain data in the field being analyzed.)
