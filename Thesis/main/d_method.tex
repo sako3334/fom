@@ -54,7 +54,7 @@ Dabei sind folgende Parameter für die Auswertung festzuhalten:
 	\item Position innerhalb der entsprechenden Phase
 \end{enumerate}
 
-\subsubsection{Literaturdatenbanken}
+\subsubsection{Literaturdatenbanken}\label{sec:lit_data}
 Demgegenüber wird die Datenbasis der akademischen Forschung aus Abfragen in relevanten Literaturdatenbanken erhoben. Aufgrund ihrer hohen Abdeckung wissenschaftlich, technologischer Publikationen werden folgende Datenbanken durchsucht:
 \begin{description}
 	\item [WoS:] Web of Science Core Collection - \url{http://apps.webofknowledge.com}
@@ -107,7 +107,7 @@ Für die Auswertung wird die Verteilung der Publikationen pro Jahr und Filter be
 Im nächsten Schritt werden die gewonnenen Daten strukturiert, um die Gegenüberstellung der Technologietrends in Wirtschaft und Wissenschaft im Hinblick auf die Beantwortung der Leitfragen zu ermöglichen.
 
 \subsubsection{Verteilung der Technologietrends in der praktizierenden Wirtschaft}
-Nachdem die Verteilung der Technologien des \glqq Gartner Hype Cycles for Emerging Technologies 2016\grqq~über die Jahre ermittelt ist, wird eine Übersicht darüber inklusive weiterer relevanter Daten erstellt. Aus Gründen der Vergleichbarkeit mit der Verteilung der wissenschaftlichen Publikationen eignet sich dazu eine Tabellenform, in der die Technologien in ihrer ursprünglichen Reihenfolge als Zeilenüberschriften und die Zeitspanne deren Vorkommen als Spaltenüberschriften dienen, wie in Tabelle~\ref{tab:dist_ghc} zu sehen ist.
+Nachdem die zeitliche Verteilung der Technologien aus Abschnitt \ref{sec:ghcet} ermittelt ist, wird eine Übersicht darüber inklusive weiterer relevanter Daten erstellt. Aus Gründen der Vergleichbarkeit mit der Verteilung der wissenschaftlichen Publikationen eignet sich dazu eine Tabellenform, in der die Technologien in ihrer ursprünglichen Reihenfolge als Zeilenüberschriften und die Veröffentlichungsjahre als Spaltenüberschriften dienen, wie in Tabelle~\ref{tab:dist_ghc} zu sehen ist. Die Technologien werden dabei durch ihre Akronyme abgekürzt, da sie in vorliegendem Fall eindeutig sind und die Tabelle dadurch übersichtlicher wird.
 
 Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungsjahr nicht vorkommt. Anderenfalls setzt sich der Eintrag prinzipiell aus zwei Teilen zusammen. Im ersten Teil wird das Kürzel der Phase des \glqq Hype Cyles\grqq~aufgeführt, in der die Technologie vorkommt. Für vorliegende Datenbasis werden folgende Kürzel benutzt:
 
@@ -119,47 +119,189 @@ Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungs
 
 Die anderen beiden Phasen bleiben unberücksichtigt, da sie die zu untersuchenden Technologien in keiner Ausgabe enthalten. Der zweite Teil gibt die Position der Technologie unter allen anderen der jeweiligen Phase wieder.
 
-Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw., dass sie in der Phase \glqq Peak of Inflated Expectations\grqq~erschienen ist, insgesamt elf Technologien in dieser Phase vorkommen und \glqq Machine Learning\grqq~an Position sieben zu finden ist. Zusätzlich ist in der Spalte des zugrundeliegenden Jahres ein Sternchen (*) gesetzt, falls es sich bei der Technologie um den höchsten Punkt der Kurve handelt.
+Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw., dass sie in der Phase \glqq Peak of Inflated Expectations\grqq~erschienen ist, insgesamt elf Technologien in dieser Phase vorkommen und \glqq Machine Learning\grqq~an Position sieben zu finden ist. Zusätzlich wird die Spalte des zugrundeliegenden Jahres mit einem Sternchen (*) gekennzeichnet, falls es sich bei der Technologie um den höchsten Punkt der Kurve handelt.
 
 \begin{table}
 	\caption{Verteilung der Technologien des \glqq Gartner Hype Cycle\grqq}
+	\centering
 	\label{tab:dist_ghc}
-\begin{tabular}{r|c|c|c|c|c|c|c|}
-	& 2010 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 \\ 
-	\hline 
-	Gesture Control Devices &  &  &  &  &  & P &  \\ 
-	\hline 
-	Micro Data Centers &  &  &  &  & P & P &  \\ 
-	\hline 
-	Smart Robots &  &  &  & I & I & P & P \\ 
-	\hline 
-	Blockchain &  &  &  &  &  & P & P \\ 
-	\hline 
-	Connected Home &  &  &  & I & I & P & P \\ 
-	\hline 
-	Cognitive Expert Advisors &  &  &  &  &  & P & T \\ 
-	\hline 
-	Machine Learning &  &  &  &  & P & P* & P \\ 
-	\hline 
-	Software-Defined Security &  &  &  &  & I & P & T \\ 
-	\hline 
-	Autonomous Vehicles & I & I & I & P & P* & P & P \\ 
-	\hline 
-	Nanotube Electronics &  &  &  &  &  & P & P \\ 
-	\hline 
-	Software-Defined Anything (SDx) &  &  &  &  &  & P &  \\ 
+\begin{tabularx}{\linewidth}{X|XXXXXXX}
+	& 2010 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 \\
 	\hline
-\end{tabular}
+	GCD &  &  &  &  &  & P 1/11 &  \\
+	\hline
+	MDC &  &  &  &  & P 2/10 & P 2/11 &  \\
+	\hline
+	SR &  &  &  & I 13/17 & I 11/18 & P 3/11 & P 3/13 \\
+	\hline
+	B &  &  &  &  &  & P 4/11 & P 12/13 \\
+	\hline
+	CH &  &  &  & I 5/17 & I 13/18 & P 5/11 & P 6/13 \\
+	\hline
+	CEA &  &  &  &  &  & P 6/11 & T 1/4 \\
+	\hline
+	ML &  &  &  &  & P 8/10 & P 7/11* & P 8/13 \\
+	\hline
+	SDS &  &  &  &  & I 18/18 & P 8/11 & T 3/4 \\
+	\hline
+	AV & I 7/12 & I 7/9 & I 12/14 & P 3/10 & P 5/10* & P 9/11 & P 9/13 \\
+	\hline
+	NE &  &  &  &  &  & P 10/11 & P 10/13 \\
+	\hline
+	SDx &  &  &  &  &  & P 11/11 &  \\
+\end{tabularx}
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
 \subsubsection{Verteilung der Technologietrends in der wissenschaftlichen Forschung}
-Die Verteilung der wissenschaftlichen Publikationen mit thematischem Schwerpunkt der zu untersuchenden Technologien wird ebenfalls tabellarisch strukturiert. Dabei bilden die Veröffentlichungsjahre die Zeilenüberschriften, da sich deren Zeitspanne teilweise über mehrere Jahrzehnte erstreckt. Die Bezeichnung der Technologien bilden wiederum die Spaltenüberschriften. Der Lesbarkeit halber werden sie durch ihre Akronyme, die in vorliegendem Fall eindeutig sind, abgekürzt.
+Die Übersicht der Verteilung zu vergleichender Technologien wird ebenfalls tabellarisch aufgebaut. Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglichst identisch zur Vergleichsbasis aus Tabelle \ref{tab:dist_ghc} gehalten. Um dabei die Lesbarkeit zu wahren, werden zusätzliche Veröffentlichungsjahre der Vergangenheit an dieser Stelle kumuliert. Da die Zeitspanne der Veröffentlichungsjahre sich teilweise über mehrere Jahrzehnte erstreckt, wäre andernfalls ihre Darstellung in einer Zeile nicht möglich. Für die Analyse werden jedoch die Rohdaten verwendet, die auch im Anhang wiederzufinden sind. Die Zeilenüberschriften bedürfen hingegen keiner Anpassung. Die Tabellenzellen wiederum beinhalten die Anzahl an Publikationen zu einer Technologie in dem entsprechenden Jahr.
 
-Die Ergebnisse werden pro Suchmaschine festgehalten, so dass zunächst einmal drei Tabellen
+Zusätzlich werden die nach dem in Abschnitt \ref{sec:lit_data} beschriebenen Vorgehen ermittelten Suchalgorithmen erfasst, um eine Reproduzierbarkeit der Analyse zu gewährleisten. Zudem wird die Anzahl der Treffer bei einer exakten Suche der Technologie festgehalten.
+
+Da die Ergebnisse der einzelnen Suchmaschinen im ersten Schritt nicht kumuliert werden, entstehen zunächst einmal sechs Tabellen -- eine Tabelle pro Suchmaschine und Veröffentlichungsform.
+
+TODO: Ermittlung der Suchalgorithmen detailliert beschreiben
+
+In Tabelle \ref{tab:dist_wos_art} ist die entsprechende Mengenverteilung der Publikationen in Fachzeitschriften des \glqq Gartner Hype Cycle for Emerging Technologies 2016\grqq~aus Abschnitt \ref{sec:ghcet} zu entnehmen.
+
+\begin{table}
+	\caption{Verteilung der Publikationen in Fachzeitschriften im \glqq Web of Science\grqq}
+	\centering
+	\label{tab:dist_wos_art}
+\begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
+	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
+	\hline
+	GCD & 8 & - & 1 & 5 & 3 & 11 & 16 & 23 & 16 & 6 \\
+	\hline
+	MDC & - & - & - & - & - & - & 1 & - & 4 & 3 \\
+	\hline
+	SR & 609 & 93 & 137 & 160 & 207 & 169 & 250 & 279 & 287 & 164 \\
+	\hline
+	B & - & - & - & - & - & - & 1 & 28 & 155 & 152 \\
+	\hline
+	CH & 219 & 48 & 72 & 96 & 120 & 140 & 203 & 244 & 370 & 242 \\
+	\hline
+	CEA & 2 & - & - & - & - & - & - & - & - & - \\
+	\hline
+	ML & \numprint{7241} & \numprint{1154} & \numprint{1366} & \numprint{1547} & \numprint{1990} & \numprint{2353} & \numprint{3232} & \numprint{4212} & \numprint{5580} & \numprint{4467} \\
+	\hline
+	SDS & - & - & - & - & - & 1 & 2 & 3 & 1 & 2 \\
+	\hline
+	AV & 587 & 80 & 80 & 113 & 91 & 117 & 176 & 237 & 361 & 260 \\
+	\hline
+	NE & 522 & 106 & 88 & 86 & 61 & 77 & 71 & 94 & 79 & 57 \\
+	\hline
+	SDx & - & - & - & - & - & - & - & - & - & 1 \\
+\end{tabularx}
+	\caption*{Quelle: Eigene Darstellung}
+\end{table}
+
+\begin{table}
+\caption{Verteilung der Publikationen in Tagungsbänden im \glqq Web of Science\grqq}
+\centering
+\label{tab:dist_wos_proc}
+\begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
+	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
+	\hline
+	GCD & 3 & - & - & - & - & 1 & - & - & - & 1 \\
+	\hline
+	MDC & - & - & - & - & - & - & - & - & - & - \\
+	\hline
+	SR & 202 & 3 & 7 & 4 & 1 & 4 & 10 & 7 & 5 & 8 \\
+	\hline
+	B & - & - & - & - & - & - & - & - & 5 & 1 \\
+	\hline
+	CH & 59 & 3 & 3 & 1 & 1 & 2 & 7 & 7 & 16 & 6 \\
+	\hline
+	CEA & - & - & - & - & - & - & - & - & - & - \\
+	\hline
+	ML & \numprint{2042} & 64 & 57 & 35 & 61 & 59 & 132 & 164 & 126 & 126 \\
+	\hline
+	SDS & - & - & - & - & - & 1 & - & - & - & - \\
+	\hline
+	AV & 103 & 4 & 3 & 5 & 1 & 1 & 4 & 4 & 8 & 9 \\
+	\hline
+	NE & 65 & 16 & 9 & 1 & 3 & 2 & 4 & 2 & - & - \\
+	\hline
+	SDx & - & - & - & - & - & - & - & - & - & \\
+\end{tabularx}
+\caption*{Quelle: Eigene Darstellung}
+\end{table}
+
+Die dazugehörigen Suchalgorithmen sind wie folgt:
+
+\begin{description}
+	\item[GCD:] \begin{verbatim}(TS=("natural user interface"
+	OR "gesture control device"
+	OR "gesture control devices")) AND DOCUMENT TYPES: (Article)\end{verbatim}
+	\item[MDC:] \begin{verbatim}(TS=("micro data center"
+	OR "micro data centers"
+	OR "microdata center"
+	OR "micro datacenter")) AND DOCUMENT TYPES: (Article)\end{verbatim}
+	\item[SR:] \begin{verbatim}(TS=("smart robot"
+	OR "smart robots"
+	OR "Cognitive robotics"
+	OR "Cognitive robotic"
+	OR "humanoid robot"
+	OR "humanoid robots")) AND DOCUMENT TYPES: (Article) \end{verbatim}
+	\item[B:] \begin{verbatim}(TS=("blockchain")) AND DOCUMENT TYPES: (Article)\end{verbatim}
+	\item[CH:] \begin{verbatim}(TS=("connected home"
+	OR "connected homes"
+	OR "smart home"
+	OR "smart homes")) AND DOCUMENT TYPES: (Article)\end{verbatim}
+	\item[CEA:] \begin{verbatim}()TS=("cognitive expert system"
+	OR "cognitive expert systems"
+	OR "cognitive expert advisor"
+	OR "cognitive expert advisors")) AND DOCUMENT TYPES: (Article)\end{verbatim}
+	\item[ML:] \begin{verbatim}(TS=("machine learning"
+	NOT "deep learning")) AND DOCUMENT TYPES: (Article)\end{verbatim}
+	\item[SDS:] \begin{verbatim}(TS=("software defined security"
+	OR "software-defined security")) AND DOCUMENT TYPES: (Article)\end{verbatim}
+	\item[AV:] \begin{verbatim}(TS=("autonomous vehicle"
+	OR "autonomous vehicles")) AND DOCUMENT TYPES: (Article)\end{verbatim}
+	\item[NE:] \begin{verbatim}(TS=("software defined anything"
+	OR "software-defined anything")) AND DOCUMENT TYPES: (Article)\end{verbatim}
+	\item[SDx:] \begin{verbatim}\end{verbatim}
+\end{description}
+
+Die exakte Suche nach der Technologie ergibt:
+
+\begin{table}
+	\caption{Verteilung der Publikationen bei exakter Suche im \glqq Web of Science\grqq}
+	\centering
+	\label{tab:dist_wos_exact}
+	\begin{tabularx}{\linewidth}{X|X|X|X|X|X|X}
+	& A WoS & TB WoS & A IEEE & TB IEEE & A ACM & TB ACM \\
+	\hline
+	GCD & 1 & 0 &  &  &  &  \\
+	\hline
+	MDC & 6 & 0 &  &  &  &  \\
+	\hline
+	SR & 38 & 3 &  &  &  &  \\
+	\hline
+	B & 336 & 6 &  &  &  &  \\
+	\hline
+	CH & 42 & 7 &  &  &  &  \\
+	\hline
+	CEA & 0 & 0 &  &  &  &  \\
+	\hline
+	ML & \numprint{33967} & \numprint{2893} &  &  &  &  \\
+	\hline
+	SDS & 9 & 1 &  &  &  &  \\
+	\hline
+	AV & \numprint{2102} & 142 &  &  &  &  \\
+	\hline
+	NE & 143 & 17 &  &  &  &  \\
+	\hline
+	SDx & 1 & 0 &  &  &  &  \\
+\end{tabularx}
+	\caption*{Quelle: Eigene Darstellung}
+\end{table}
 
 \subsection{Methodik der Analyse}
 Klassifizierung der Technologien
 Wo entstehen Trends und wer beeinflusst die Gegenseite stärker?
 Andere Bezeichnung in der Forschung? -> Hinweis auf Diskrepanzen
 Theoretische vs. praktische Technologien. Theoretische Idee hinter einer kommerziellen Technologie herausfinden
+
+CEA: machine learning, artificial intelligence
