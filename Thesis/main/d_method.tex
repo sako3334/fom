@@ -101,17 +101,23 @@ Im nächsten Schritt gilt es, alternative Bezeichnungen der Technologiebegriffe 
 
 Andersherum sind Begriffe auszuschließen, die für eine höhere Evolutionsstufe der ursprünglichen Technologie stehen, diese jedoch signifikant erweitern, so dass ein neuer Begriff einen neuen Kontext rechtfertigt. Ein Beispiel dafür sind die Technologien \glqq Machine Learning\grqq~und \glqq Deep Learning\grqq, welche jeweils ihre eigene Daseinsberechtigung haben und daher in der aktuellen Ausgabe des \glqq Hype Cycle for Emerging Technologies 2017\grqq~im \glqq Peak of Inflated Expectations\grqq~nebeneinander stehen.\footnote{\citeNP<Vgl.>[S.~45.]{ghc2017}} Da es sich bei \glqq Deep Learning\grqq~um die neuere Technologie handelt, wird sie mit dem exkludierenden Operator \glqq NOT\grqq~jeweils herausgenommen.
 
+TODO: Suchalgorithmen
+
 Für die Auswertung wird die Verteilung der Publikationen pro Jahr und Filter benötigt. Dazu werden die entsprechenden Exportfunktionen der jeweiligen Suchmaschinen eingesetzt. Im WoS ist ein Export der Verteilung von Publikationen pro Jahr von maximal \numprint{200000} Datensätzen mit einer einzigen Anweisung im TSV-Format (Tabulator-Seperated Values) möglich.
 
 Die anderen beiden Suchmaschinen erlauben lediglich einen Export von maximal \numprint{2000} Datensätzen der Metadaten -- inklusive Abstracts, Stichwörter etc. -- im CSV-Format (Comma-Seperated Values). Das bedeutet, dass für Suchergebnisse mit mehr als \numprint{2000} Ergebnissen mehrere Exportanweisungen mit jeweils abgrenzbaren Filterkriterien durchzuführen sind, um Redundanzen in einzelnen Exportvorgängen auszuschließen. Ein geeignetes Mittel dazu ist die Eingrenzung der Suchergebnisse nach Veröffentlichungs\-zeiträumen mit jeweils kleiner gleich \numprint{2000} Ergebnissen. Die einzelnen Dateien sind anschließend zusammenzuführen.
 
-Für Technologien mit mehreren Tausend Such\-ergebnissen bedeutet dies allerdings, dass die zusammengeführten Dateien sehr groß werden. Der Export einer Datei mit \numprint{2000} Einträgen aus dem IEEE ist beispielsweise um die 4 Megabyte groß und dauert knapp eine Minute. Für den Begriff \glqq Machine Learning\grqq~mit mehr als \numprint{50000} Ergebnissen ist daher die genannte Vorgehensweise nicht praktikabel, zudem dem Export nur die Veröffentlichungsjahre entnommen werden. In solchen Fällen wird die Suche für jedes Veröffentlichungsjahr eingegrenzt und die Anzahl der Ergebnisse festgehalten.
+Für Technologien mit mehreren Tausend Such\-ergebnissen bedeutet dies allerdings, dass die zusammengeführten Dateien sehr groß werden. Der Export einer Datei mit \numprint{2000} Einträgen aus dem IEEE ist beispielsweise um die 4 Megabyte groß und dauert knapp eine Minute. Für den Begriff \glqq Machine Learning\grqq~mit mehr als \numprint{50000} Ergebnissen ist daher die genannte Vorgehensweise nicht praktikabel. Insbesondere auch deshalb, da aus den exportierten Daten allein die Veröffentlichungsjahre für die Analyse verwendet werden. In solchen Fällen wird die Filterfunktion der Suchmaschine eingesetzt, um die Suche auf einzelne Jahre einzugrenzen und die Anzahl der Publikationen pro Jahr ermittelt.
 
 \subsection{Operationalisierung der Daten}
 Im nächsten Schritt werden die gewonnenen Daten strukturiert, um die Gegenüberstellung der Technologietrends in Wirtschaft und Wissenschaft im Hinblick auf die Beantwortung der Leitfragen zu ermöglichen.
 
+Die Export-Dateien werden bereits in einem maschinenlesbaren Format erstellt, so dass die relevanten Kennzahlen prinzipiell ohne weitere Bearbeitung mit einem R-Skript ausgewertet werden können. Für den Fall, dass ein Export nicht möglich ist, werden die Daten im CSV-Format abgespeichert.
+
+Für die Darstellung im Text werden entsprechende Repräsentationsformen wie Kurven und Tabellen verwendet.
+
 \subsubsection{Verteilung der Technologietrends in der praktizierenden Wirtschaft}
-Nachdem die zeitliche Verteilung der Technologien aus Abschnitt \ref{sec:ghcet} ermittelt ist, wird eine Übersicht darüber inklusive weiterer relevanter Daten erstellt. Aus Gründen der Vergleichbarkeit mit der Verteilung der wissenschaftlichen Publikationen eignet sich dazu eine Tabellenform, in der die Technologien in ihrer ursprünglichen Reihenfolge als Zeilenüberschriften und die Veröffentlichungsjahre als Spaltenüberschriften dienen, wie in Tabelle~\ref{tab:dist_ghc} zu sehen ist. Die Technologien werden dabei durch ihre Akronyme abgekürzt, da sie in vorliegendem Fall eindeutig sind und die Tabelle dadurch übersichtlicher wird.
+Nachdem die zeitliche Verteilung der Technologien aus Abschnitt \ref{sec:ghcet} ermittelt ist, wird eine Übersicht darüber inklusive weiterer relevanter Daten erstellt. Aus Gründen der Vergleichbarkeit mit der Verteilung der wissenschaftlichen Publikationen eignet sich dazu eine Tabellenform, in der die Technologien in ihrer ursprünglichen Reihenfolge als Zeilenüberschriften und die Veröffentlichungsjahre als Spaltenüberschriften dienen, wie in Tabelle~\ref{tab:dist_ghc} zu sehen ist. Die Technologien werden dabei durch ihre Akronyme abgekürzt, da sie in vorliegendem Fall eindeutig sind und die Übersichtlichkeit der Tabelle erhöhen.
 
 Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungsjahr nicht vorkommt. Anderenfalls setzt sich der Eintrag prinzipiell aus zwei Teilen zusammen. Im ersten Teil wird das Kürzel der Phase des \glqq Hype Cyles\grqq~aufgeführt, in der die Technologie vorkommt. Für vorliegende Datenbasis werden folgende Kürzel benutzt:
 
@@ -158,19 +164,54 @@ Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw.,
 \end{table}
 
 \subsubsection{Verteilung der Technologietrends in der wissenschaftlichen Forschung}
-Die Übersicht der Verteilung zu vergleichender Technologien wird ebenfalls tabellarisch aufgebaut. Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglichst identisch zur Vergleichsbasis aus Tabelle \ref{tab:dist_ghc} gehalten. Um dabei die Lesbarkeit zu wahren, werden zusätzliche Veröffentlichungsjahre der Vergangenheit an dieser Stelle kumuliert. Da die Zeitspanne der Veröffentlichungsjahre sich teilweise über mehrere Jahrzehnte erstreckt, wäre andernfalls ihre Darstellung in einer Zeile nicht möglich. Für die Analyse werden jedoch die Rohdaten verwendet, die auch im Anhang wiederzufinden sind. Die Zeilenüberschriften bedürfen hingegen keiner Anpassung. Die Tabellenzellen wiederum beinhalten die Anzahl an Publikationen zu einer Technologie in dem entsprechenden Jahr.
+Die Übersicht der Verteilung zu vergleichender Technologien wird ebenfalls tabellarisch dargestellt. Eine Tabelle enthält Informationen zur eingesetzten Suchmaschine, Form der Veröffentlichung (Artikel oder Konferenzbericht) sowie der Anzahl an Veröffentlichungen.
 
-Zusätzlich werden die nach dem in Abschnitt \ref{sec:lit_data} beschriebenen Vorgehen ermittelten Suchalgorithmen erfasst, um eine Reproduzierbarkeit der Analyse zu gewährleisten. Zudem wird die Anzahl der Treffer bei einer exakten Suche der Technologie festgehalten.
+Zunächst einmal wird Anzahl der Treffer bei einer exakten Suche der Technologie ermittelt und tabellarisch aufbereitet. Anschließend werden die Suchergebnisse mithilfe des in Abschnitt \ref{sec:lit_data} beschriebenen Vorgehens ermittelten Suchalgorithmen abgebildet. Die verwendeten Suchalgorithmen werden ebenfalls gesichert, um eine Reproduzierbarkeit der Analyse zu gewährleisten.
 
-Da die Ergebnisse der einzelnen Suchmaschinen im ersten Schritt nicht kumuliert werden, entstehen zunächst einmal sechs Tabellen -- eine Tabelle pro Suchmaschine und Veröffentlichungsform.
+Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglichst identisch zur Vergleichsbasis aus Tabelle \ref{tab:dist_ghc} gehalten. Um dabei die Lesbarkeit zu wahren, werden zusätzliche Veröffentlichungsjahre der Vergangenheit an dieser Stelle kumuliert. Da die Zeitspanne der Veröffentlichungsjahre sich teilweise über mehrere Jahrzehnte erstreckt, wäre andernfalls ihre Darstellung in einer Zeile nicht möglich. Für die Analyse werden jedoch die Rohdaten verwendet, die in Anhang \ref{sec:sci_raw_dist} wiederzufinden sind. Die Zeilenüberschriften mit den abgekürzten Technologien bedürfen keiner Anpassung. In den Tabellenzellen wird die Anzahl der Suchergebnisse festgehalten.
 
-TODO: Ermittlung der Suchalgorithmen detailliert beschreiben
-Verarbeitung beschreiben. Export, Auswertung der Verteilung aus cvs-dateien
+\begin{table}[ht]
+	\caption{Verteilung der Publikationen bei unveränderten Technologiebegriffen}
+	\centering
+	\label{tab:dist_wos_exact}
+	\begin{tabularx}{\linewidth}{X|X|X|X|X|X|X}
+		& WoS/A & WoS/KB & IEEE/A & IEEE/KB & ACM/A & ACM/KB \\
+		\hline
+		GCD & 1 & 0 & 0 & 2 &  &  \\
+		\hline
+		MDC & 6 & 0 & 0 & 13 &  &  \\
+		\hline
+		SR & 38 & 3 & 5 & 63 &  &  \\
+		\hline
+		B & 336 & 6 & 147 & 524 &  &  \\
+		\hline
+		CH & 42 & 7 & 9 & 72 &  &  \\
+		\hline
+		CEA & 0 & 0 & 0 & 0 &  &  \\
+		\hline
+		ML & \numprint{33967} & \numprint{2893} & \numprint{5602} & \numprint{42172} &  &  \\
+		\hline
+		SDS & 9 & 1 & 1 & 23 &  &  \\
+		\hline
+		AV & \numprint{2102} & 142 & 714 & \numprint{3733} &  &  \\
+		\hline
+		NE & 143 & 17 & 11 & 27 &  &  \\
+		\hline
+		SDx & 1 & 0 & 1 & 1 &  &  \\
+	\end{tabularx}
+	\caption*{Quelle: Eigene Darstellung}
+\end{table}
 
-In Tabelle \ref{tab:dist_wos_art} ist die entsprechende Mengenverteilung der Publikationen in Fachzeitschriften des \glqq Gartner Hype Cycle for Emerging Technologies 2016\grqq~aus Abschnitt \ref{sec:ghcet} zu entnehmen.
+Somit entstehen zunächst einmal sieben Tabellen. Eine für die Gesamtübersicht der Suchergebnisse bei einer exakten Suche der Technologien sowie sechs zu den erweiterten Suchbegriffen, jeweils eine pro Suchmaschine und Veröffentlichungsform.
 
-\begin{table}
-	\caption{Verteilung der Publikationen in Fachzeitschriften im \glqq Web of Science\grqq}
+Die Tabelle \ref{tab:dist_wos_exact} zeigt die Gesamtsumme der Publikationen für eine exakte Suche des Suchbegriffes inkl. etwaiger Pluralformen, wie er im entsprechenden \glqq Hype Cycle\grqq~erschienen ist. Bei den Spaltenüberschriften handelt es sich um die Abkürzungen der jeweiligen Suchmaschinen sowie die Aufteilung in Artikel (A) und Konferenzberichte~(KB).
+
+In den folgenden sechs Tabellen ist die Mengenverteilung der jährlichen Publikationen von Artikeln bzw. Konferenzbeiträgen zu den entsprechenden Technologien zu sehen, die in der jeweiligen Suchmaschine gelistet wird.
+
+Die Suchergebnisse des \glqq Web of Science\grqq~zu wissenschaftlichen Fachartikeln sind in Tabelle \ref{tab:dist_wos_art} sowie zu Konferenzbeiträgen in Tabelle \ref{tab:dist_wos_proc} abgebildet.
+
+\begin{table}[ht]
+	\caption{Verteilung der Publikationen in Fachartikeln im \glqq Web of Science\grqq}
 	\centering
 	\label{tab:dist_wos_art}
 \begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
@@ -233,87 +274,141 @@ In Tabelle \ref{tab:dist_wos_art} ist die entsprechende Mengenverteilung der Pub
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
-Die dazugehörigen Suchalgorithmen sind wie folgt:
+In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind in der gleichen Reihenfolge die Ergebnisse der Suche im IEEE dargestellt.
 
-\begin{description}
-	\item[GCD:] \begin{verbatim}(TS=("natural user interface"
-	OR "gesture control device"
-	OR "gesture control devices")) AND DOCUMENT TYPES: (Article)\end{verbatim}
-	\item[MDC:] \begin{verbatim}(TS=("micro data center"
-	OR "micro data centers"
-	OR "microdata center"
-	OR "microdata centers"
-	OR "micro datacenter"
-	OR "micro datacenters")) AND DOCUMENT TYPES: (Article / Proceedings Paper)\end{verbatim}
-	\item[SR:] \begin{verbatim}(TS=("smart robot"
-	OR "smart robots"
-	OR "cognitive robotics"
-	OR "cognitive robotic"
-	OR "humanoid robot"
-	OR "humanoid robots"
-	OR "android robot"
-	OR "android robots")) AND DOCUMENT TYPES: (Article) \end{verbatim}
-	\item[B:] \begin{verbatim}(TS=("blockchain")) AND DOCUMENT TYPES: (Article)\end{verbatim}
-	\item[CH:] \begin{verbatim}(TS=("connected home"
-	OR "connected homes"
-	OR "smart home"
-	OR "smart homes")) AND DOCUMENT TYPES: (Article)\end{verbatim}
-	\item[CEA:] \begin{verbatim}(TS=("cognitive expert system"
-	OR "cognitive expert systems"
-	OR "cognitive expert advisor"
-	OR "cognitive expert advisors")) AND DOCUMENT TYPES: (Article)\end{verbatim}
-	\item[ML:] \begin{verbatim}(TS=("machine learning"
-	NOT "deep learning")) AND DOCUMENT TYPES: (Article)\end{verbatim}
-	\item[SDS:] \begin{verbatim}(TS=("software defined security"
-	OR "software-defined security")) AND DOCUMENT TYPES: (Article)\end{verbatim}
-	\item[AV:] \begin{verbatim}(TS=("autonomous vehicle"
-	OR "autonomous vehicles")) AND DOCUMENT TYPES: (Article)\end{verbatim}
-	\item[NE:] \begin{verbatim}(TS=("CNTFET"
-	OR "nanotube electronic"
-	OR "nanotube electronics"
-	OR "carbon nanotube field effect"
-	OR "carbon nanotube field-effect"
-	OR "semiconductor nanotubes")) AND DOCUMENT TYPES: (Article)
-	\end{verbatim}
-	\item[SDx:] \begin{verbatim}(TS=("software defined anything"
-	OR "software-defined anything")) AND DOCUMENT TYPES: (Article)\end{verbatim}
-\end{description}
-
-Die exakte Suche nach der Technologie ergibt:
-
-\begin{table}
-	\caption{Verteilung der Publikationen bei exakter Suche im \glqq Web of Science\grqq}
-	\centering
-	\label{tab:dist_wos_exact}
-	\begin{tabularx}{\linewidth}{X|X|X|X|X|X|X}
-	& A WoS & TB WoS & A IEEE & TB IEEE & A ACM & TB ACM \\
+\begin{table}[ht]
+\caption{Verteilung der Publikationen in Fachartikeln im \glqq IEEE\grqq}
+\centering
+\label{tab:dist_ieee_art}
+\begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
+	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
 	\hline
-	GCD & 1 & 0 & 0 & 2 &  &  \\
+	GCD & 8 & - & 1 & 5 & 3 & 11 & 16 & 23 & 16 & 6 \\
 	\hline
-	MDC & 6 & 0 & 0 & 13 &  &  \\
+	MDC & - & - & - & - & - & - & 2 & - & 4 & 4 \\
 	\hline
-	SR & 38 & 3 & 5 & 63 &  &  \\
+	SR & 611 & 94 & 138 & 160 & 210 & 171 & 252 & 282 & 291 & 170 \\
 	\hline
-	B & 336 & 6 & 147 & 524 &  &  \\
+	B & - & - & - & - & - & - & 1 & 28 & 155 & 152 \\
 	\hline
-	CH & 42 & 7 & 9 & 72 &  &  \\
+	CH & 219 & 48 & 72 & 96 & 120 & 140 & 203 & 244 & 370 & 242 \\
 	\hline
-	CEA & 0 & 0 & 0 & 0 &  &  \\
+	CEA & 2 & - & - & - & - & - & - & - & - & - \\
 	\hline
-	ML & \numprint{33967} & \numprint{2893} & \numprint{5602} & \numprint{42172} &  &  \\
+	ML & \numprint{7241} & \numprint{1154} & \numprint{1366} & \numprint{1547} & \numprint{1990} & \numprint{2353} & \numprint{3232} & \numprint{4212} & \numprint{5580} & \numprint{4467} \\
 	\hline
-	SDS & 9 & 1 & 1 & 23 &  &  \\
+	SDS & - & - & - & - & - & 1 & 2 & 3 & 1 & 2 \\
 	\hline
-	AV & \numprint{2102} & 142 & 714 & \numprint{3733} &  &  \\
+	AV & 587 & 80 & 80 & 113 & 91 & 117 & 176 & 237 & 361 & 260 \\
 	\hline
-	NE & 143 & 17 & 11 & 27 &  &  \\
+	NE & 565 & 111 & 92 & 88 & 66 & 79 & 72 & 97 & 81 & 60 \\
 	\hline
-	SDx & 1 & 0 & 1 & 1 &  &  \\
+	SDx & - & - & - & - & - & - & - & - & - & 1 \\
 \end{tabularx}
-	\caption*{Quelle: Eigene Darstellung}
+\caption*{Quelle: Eigene Darstellung}
 \end{table}
 
+\begin{table}
+\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq IEEE\grqq}
+\centering
+\label{tab:dist_ieee_proc}
+\begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
+	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
+	\hline
+	GCD & 3 & - & - & - & - & 1 & - & - & - & 1 \\
+	\hline
+	MDC & - & - & - & - & - & - & - & - & - & - \\
+	\hline
+	SR & 203 & 3 & 7 & 4 & 1 & 4 & 10 & 7 & 5 & 8 \\
+	\hline
+	B & - & - & - & - & - & - & - & - & 5 & 1 \\
+	\hline
+	CH & 59 & 3 & 3 & 1 & 1 & 2 & 7 & 7 & 16 & 6 \\
+	\hline
+	CEA & - & - & - & - & - & - & - & - & - & - \\
+	\hline
+	ML & \numprint{2042} & 64 & 57 & 35 & 61 & 59 & 132 & 164 & 126 & 126 \\
+	\hline
+	SDS & - & - & - & - & - & 1 & - & - & - & - \\
+	\hline
+	AV & 103 & 4 & 3 & 5 & 1 & 1 & 4 & 4 & 8 & 9 \\
+	\hline
+	NE & 76 & 18 & 9 & 1 & 3 & 2 & 4 & 2 & - & - \\
+	\hline
+	SDx & - & - & - & - & - & - & - & - & - & - \\
+\end{tabularx}
+\caption*{Quelle: Eigene Darstellung}
+\end{table}
+
+Schließlich sind nach gleichem Muster in den Tabellen \ref{tab:dist_acm_art} und \ref{tab:dist_acm_proc} die Ergebnisse der Suche im ACM zu finden.
+
+\begin{table}
+\caption{Verteilung der Publikationen in Fachartikeln im \glqq ACM\grqq}
+\centering
+\label{tab:dist_acm_art}
+\begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
+	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
+	\hline
+	GCD & 8 & - & 1 & 5 & 3 & 11 & 16 & 23 & 16 & 6 \\
+	\hline
+	MDC & - & - & - & - & - & - & 2 & - & 4 & 4 \\
+	\hline
+	SR & 611 & 94 & 138 & 160 & 210 & 171 & 252 & 282 & 291 & 170 \\
+	\hline
+	B & - & - & - & - & - & - & 1 & 28 & 155 & 152 \\
+	\hline
+	CH & 219 & 48 & 72 & 96 & 120 & 140 & 203 & 244 & 370 & 242 \\
+	\hline
+	CEA & 2 & - & - & - & - & - & - & - & - & - \\
+	\hline
+	ML & \numprint{7241} & \numprint{1154} & \numprint{1366} & \numprint{1547} & \numprint{1990} & \numprint{2353} & \numprint{3232} & \numprint{4212} & \numprint{5580} & \numprint{4467} \\
+	\hline
+	SDS & - & - & - & - & - & 1 & 2 & 3 & 1 & 2 \\
+	\hline
+	AV & 587 & 80 & 80 & 113 & 91 & 117 & 176 & 237 & 361 & 260 \\
+	\hline
+	NE & 565 & 111 & 92 & 88 & 66 & 79 & 72 & 97 & 81 & 60 \\
+	\hline
+	SDx & - & - & - & - & - & - & - & - & - & 1 \\
+\end{tabularx}
+\caption*{Quelle: Eigene Darstellung}
+\end{table}
+
+\begin{table}
+\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq ACM\grqq}
+\centering
+\label{tab:dist_acm_proc}
+\begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
+	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
+	\hline
+	GCD & 3 & - & - & - & - & 1 & - & - & - & 1 \\
+	\hline
+	MDC & - & - & - & - & - & - & - & - & - & - \\
+	\hline
+	SR & 203 & 3 & 7 & 4 & 1 & 4 & 10 & 7 & 5 & 8 \\
+	\hline
+	B & - & - & - & - & - & - & - & - & 5 & 1 \\
+	\hline
+	CH & 59 & 3 & 3 & 1 & 1 & 2 & 7 & 7 & 16 & 6 \\
+	\hline
+	CEA & - & - & - & - & - & - & - & - & - & - \\
+	\hline
+	ML & \numprint{2042} & 64 & 57 & 35 & 61 & 59 & 132 & 164 & 126 & 126 \\
+	\hline
+	SDS & - & - & - & - & - & 1 & - & - & - & - \\
+	\hline
+	AV & 103 & 4 & 3 & 5 & 1 & 1 & 4 & 4 & 8 & 9 \\
+	\hline
+	NE & 76 & 18 & 9 & 1 & 3 & 2 & 4 & 2 & - & - \\
+	\hline
+	SDx & - & - & - & - & - & - & - & - & - & - \\
+\end{tabularx}
+\caption*{Quelle: Eigene Darstellung}
+\end{table}
+
+
 \subsection{Methodik der Analyse}
+Aus den ermittelten Daten sind nun 
 
 
 Klassifizierung der Technologien
@@ -322,3 +417,4 @@ Andere Bezeichnung in der Forschung? -> Hinweis auf Diskrepanzen
 Theoretische vs. praktische Technologien. Theoretische Idee hinter einer kommerziellen Technologie herausfinden
 
 CEA: machine learning, artificial intelligence
+Verarbeitung beschreiben. Export, Auswertung der Verteilung aus cvs-dateien
