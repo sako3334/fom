@@ -16,6 +16,7 @@
 \usepackage{enumitem}
 \usepackage{numprint}
 \usepackage[multiple]{footmisc}
+\usepackage[title,toc,page]{appendix}
 
 % Layout Einstellungen
 %% Seitennummerierung oben mitte ohne durchgezogene Linie
@@ -49,6 +50,7 @@
 	\singlespacing
 	\hypersetup{pageanchor=true}
 	\tableofcontents
+	\clearpage
 	\listoffigures
 	\listoftables
 	\onehalfspacing
@@ -58,9 +60,11 @@
 	\include{b_econ_trends}
 	\include{c_science_trends}
 	\include{d_method}
+	\include{z_appendix}
+	\clearpage
+	\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 	\renewcommand{\refname}{Literaturverzeichnis}
 	\pagenumbering{roman}
-	\lhead{}
 	\singlespacing
 	\bibliography{lit}
 	\onehalfspacing
