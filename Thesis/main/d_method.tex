@@ -129,7 +129,7 @@ Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungs
 
 Die anderen beiden Phasen bleiben unberücksichtigt, da sie die zu untersuchenden Technologien in keiner Ausgabe enthalten. Der zweite Teil gibt die Position der Technologie unter allen anderen der jeweiligen Phase wieder.
 
-Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw., dass sie in der Phase \glqq Peak of Inflated Expectations\grqq~erschienen ist, insgesamt elf Technologien in dieser Phase vorkommen und \glqq Machine Learning\grqq~an Position sieben zu finden ist. Zusätzlich wird die Spalte des zugrundeliegenden Jahres mit einem Sternchen (*) gekennzeichnet, falls es sich bei der Technologie um den höchsten Punkt der Kurve handelt.
+Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw., dass sie in der Phase \glqq Peak of Inflated Expectations\grqq~erschienen ist, insgesamt elf Technologien in dieser Phase vorkommen und \glqq Machine Learning\grqq~an Position sieben zu finden ist. Zusätzlich wird die Spalte des zugrundeliegenden Jahres mit einem Sternchen~(*) gekennzeichnet, falls es sich bei der Technologie um den höchsten Punkt der Kurve handelt.
 
 \begin{table}
 	\caption{Verteilung der Technologien des \glqq Gartner Hype Cycle\grqq}
@@ -166,7 +166,7 @@ Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw.,
 \subsubsection{Verteilung der Technologietrends in der wissenschaftlichen Forschung}
 Die Übersicht der Verteilung zu vergleichender Technologien wird ebenfalls tabellarisch dargestellt. Eine Tabelle enthält Informationen zur eingesetzten Suchmaschine, Form der Veröffentlichung (Artikel oder Konferenzbericht) sowie der Anzahl an Veröffentlichungen.
 
-Zunächst einmal wird Anzahl der Treffer bei einer exakten Suche der Technologie ermittelt und tabellarisch aufbereitet. Anschließend werden die Suchergebnisse mithilfe des in Abschnitt \ref{sec:lit_data} beschriebenen Vorgehens ermittelten Suchalgorithmen abgebildet. Die verwendeten Suchalgorithmen werden ebenfalls gesichert, um eine Reproduzierbarkeit der Analyse zu gewährleisten.
+Zunächst einmal wird die Anzahl der Treffer bei einer exakten Suche der Technologie ermittelt und tabellarisch aufbereitet. Anschließend werden die Suchergebnisse mithilfe des in Abschnitt \ref{sec:lit_data} beschriebenen Vorgehens ermittelten Suchalgorithmen abgebildet. Die verwendeten Suchalgorithmen werden ebenfalls gesichert, um eine Reproduzierbarkeit der Analyse zu gewährleisten.
 
 Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglichst identisch zur Vergleichsbasis aus Tabelle \ref{tab:dist_ghc} gehalten. Um dabei die Lesbarkeit zu wahren, werden zusätzliche Veröffentlichungsjahre der Vergangenheit an dieser Stelle kumuliert. Da die Zeitspanne der Veröffentlichungsjahre sich teilweise über mehrere Jahrzehnte erstreckt, wäre andernfalls ihre Darstellung in einer Zeile nicht möglich. Für die Analyse werden jedoch die Rohdaten verwendet, die in Anhang \ref{sec:sci_raw_dist} wiederzufinden sind. Die Zeilenüberschriften mit den abgekürzten Technologien bedürfen keiner Anpassung. In den Tabellenzellen wird die Anzahl der Suchergebnisse festgehalten.
 
@@ -408,13 +408,20 @@ Schließlich sind nach gleichem Muster in den Tabellen \ref{tab:dist_acm_art} un
 
 
 \subsection{Methodik der Analyse}
-Aus den ermittelten Daten sind nun 
+Aus den ermittelten Daten sind nun weitere Informationen zu extrahieren, um Erkenntnisse für die Beantwortung der Leitfragen zu erlangen.
 
+\subsubsection{Klassifizierung der Technologien}
+Deshalb findet im ersten Ansatz eine Klassifizierung der Technologien anhand relevanter Kriterien statt.
 
-Klassifizierung der Technologien
-Wo entstehen Trends und wer beeinflusst die Gegenseite stärker?
-Andere Bezeichnung in der Forschung? -> Hinweis auf Diskrepanzen
-Theoretische vs. praktische Technologien. Theoretische Idee hinter einer kommerziellen Technologie herausfinden
+Dazu erfordert es zum einen die Betrachtung des Verlaufes einer Technologie aus den Perspektiven der Wirtschaft und Wissenschaft, vom initialen Erscheinen bis zum aktuellen Trendstatus. Zum anderen ist die Einordnung der Technologien in übergeordnete Fachbereiche nützlich, da sich diverse Technologiebegriffe des \glqq Gartner Hype Cycle\grqq~auf spezielle Anwendungen beziehen und in dem engeren Sinne kein direktes Pendant in der Wissenschaft zu besitzen scheinen.
 
-CEA: machine learning, artificial intelligence
-Verarbeitung beschreiben. Export, Auswertung der Verteilung aus cvs-dateien
+Die Klassifizierung soll letztlich Aufschluss darüber geben, welcher Domäne eine Technologie ursprünglich zuzurechnen ist und wo der Trend primär wahrzunehmen war. Daraus lassen sich wiederum Anhaltspunkte darüber ableiten, ob eine Beeinflussung in Richtung eines Trends stattgefunden hat.
+
+\subsubsection{Zeitreihenanalyse der Mengenverteilung von wissenschaftlichen Publikationen}
+Trendkomponente
+
+%Andere Bezeichnung in der Forschung? -> Hinweis auf Diskrepanzen
+%Theoretische vs. praktische Technologien. Theoretische Idee hinter einer kommerziellen Technologie herausfinden
+%
+%CEA: machine learning, artificial intelligence
+%Verarbeitung beschreiben. Export, Auswertung der Verteilung aus cvs-dateien
