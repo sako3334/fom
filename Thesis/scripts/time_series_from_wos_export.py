@@ -30,7 +30,7 @@ for wos_file in data_file_pattern_wos:
 	# for k in sorted(dict_year_record.keys()):
 		# print(k + ": " + dict_year_record[k])
 
-	with open(wos_file.lower().replace(".txt", "_ts.txt"), 'a+') as data_file_ts:
+	with open(wos_file.lower().replace(".txt", "_ts.csv"), 'w+') as data_file_ts:
 		data_file_ts.write("years,records\n")
 		for k in sorted(dict_year_record.keys()):
 			data_file_ts.write("%s,%s\n" % (k, dict_year_record[k]))
