@@ -1,14 +1,20 @@
-library(readr)
-ieee_autonomous_vehicles <- read_csv("D:/dev/fom/Thesis/data/ieee_autonomous_vehicles.csv")
-#View(ieee_autonomous_vehicles)
-
+library(TTR)
 library(mosaic)
 library(readr)
-wos_autonomous_vehicles <- read_delim("D:/dev/fom/Thesis/data/wos_autonomous_vehicles.txt", 
-                                      "\t", escape_double = FALSE, trim_ws = TRUE)
-#View(wos_autonomous_vehicles)
+wos_av_art <- read.csv("D:/dev/fom/Thesis/data/structured/wos_autonomous_vehicles_art_ts.csv")
 
-library(readr)
-acm_autonomous_vehicles <- read_csv("D:/dev/fom/Thesis/data/acm_autonomous_vehicles.csv")
-#View(acm_autonomous_vehicles)
+plot(wos_av_art)
+inspect(wos_av_art)
 
+lm(years~records,data=wos_av_art)
+cor(years~records,data = wos_av_art)
+
+#boxplot(wos_av_art$records)
+#xyplot(records~years,data = wos_av_art)
+
+count<-ts(wos_av_art$records,start = 1982,end = 2018)
+
+plot.ts(count)
+
+av_wos <- SMA(count,n=3)
+plot.ts(av_wos)
