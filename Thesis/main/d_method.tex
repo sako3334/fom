@@ -103,7 +103,7 @@ Andersherum sind Begriffe auszuschließen, die für eine höhere Evolutionsstufe
 
 TODO: Suchalgorithmen
 
-Für die Auswertung wird die Verteilung der Publikationen pro Jahr und Filter benötigt. Dazu werden die entsprechenden Exportfunktionen der jeweiligen Suchmaschinen eingesetzt. Im WoS ist ein Export der Verteilung von Publikationen pro Jahr von maximal \numprint{200000} Datensätzen mit einer einzigen Anweisung im TSV-Format (Tabulator-Seperated Values) möglich.
+Für die Auswertung wird die Menge der Publikationen pro Jahr und Filter benötigt. Dazu werden die entsprechenden Exportfunktionen der jeweiligen Suchmaschinen eingesetzt. Im WoS ist ein Export der Verteilung von Publikationen pro Jahr von maximal \numprint{200000} Datensätzen mit einer einzigen Anweisung im TSV-Format (Tabulator-Seperated Values) möglich.
 
 Die anderen beiden Suchmaschinen erlauben lediglich einen Export von maximal \numprint{2000} Datensätzen der Metadaten -- inklusive Abstracts, Stichwörter etc. -- im CSV-Format (Comma-Seperated Values). Das bedeutet, dass für Suchergebnisse mit mehr als \numprint{2000} Ergebnissen mehrere Exportanweisungen mit jeweils abgrenzbaren Filterkriterien durchzuführen sind, um Redundanzen in einzelnen Exportvorgängen auszuschließen. Ein geeignetes Mittel dazu ist die Eingrenzung der Suchergebnisse nach Veröffentlichungs\-zeiträumen mit jeweils kleiner gleich \numprint{2000} Ergebnissen. Die einzelnen Dateien sind anschließend zusammenzuführen.
 
@@ -112,7 +112,9 @@ Für Technologien mit mehreren Tausend Such\-ergebnissen bedeutet dies allerding
 \subsection{Operationalisierung der Daten}
 Im nächsten Schritt werden die gewonnenen Daten strukturiert, um die Gegenüberstellung der Technologietrends in Wirtschaft und Wissenschaft im Hinblick auf die Beantwortung der Leitfragen zu ermöglichen.
 
-Die Export-Dateien werden bereits in einem maschinenlesbaren Format erstellt, so dass die relevanten Kennzahlen prinzipiell ohne weitere Bearbeitung mit einem R-Skript ausgewertet werden können. Für den Fall, dass ein Export nicht möglich ist, werden die Daten im CSV-Format abgespeichert.
+Da zur Trendbestimmung auf wissenschaftlicher Seite die Anzahl an Publikationen verwendet wird, sind auf Seiten des \glqq Hype Cycles\grqq~alle Indikatoren einzubeziehen, die das Skalenniveau daran angleichen.
+
+Der Trendverlauf in der akademischen Forschung wird maschinell ausgewertet, daher werden die Export-Dateien mithilfe von Python-Skripten in ein einheitliches CSV-Format überführt, welches aus den beiden Spalten \glqq Veröffentlichungsjahr\grqq~und \glqq Anzahl der Veröffentlichungen\grqq~besteht.
 
 Für die Darstellung im Text werden entsprechende Repräsentationsformen wie Kurven und Tabellen verwendet.
 
@@ -128,6 +130,8 @@ Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungs
 \end{description}
 
 Die anderen beiden Phasen bleiben unberücksichtigt, da sie die zu untersuchenden Technologien in keiner Ausgabe enthalten. Der zweite Teil gibt die Position der Technologie unter allen anderen der jeweiligen Phase wieder.
+
+Durch Hinzunahme von Indikatoren zur Gewichtung wird somit das Skalenniveau der Daten erhöht, um sie mit den Daten der Forschung besser vergleichen zu können.
 
 Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw., dass sie in der Phase \glqq Peak of Inflated Expectations\grqq~erschienen ist, insgesamt elf Technologien in dieser Phase vorkommen und \glqq Machine Learning\grqq~an Position sieben zu finden ist. Zusätzlich wird die Spalte des zugrundeliegenden Jahres mit einem Sternchen~(*) gekennzeichnet, falls es sich bei der Technologie um den höchsten Punkt der Kurve handelt.
 
@@ -409,6 +413,8 @@ Schließlich sind nach gleichem Muster in den Tabellen \ref{tab:dist_acm_art} un
 
 \subsection{Methodik der Analyse}
 Aus den ermittelten Daten sind nun weitere Informationen zu extrahieren, um Erkenntnisse für die Beantwortung der Leitfragen zu erlangen.
+
+kardinalskaliert
 
 \subsubsection{Klassifizierung der Technologien}
 Deshalb findet im ersten Ansatz eine Klassifizierung der Technologien anhand relevanter Kriterien statt.
