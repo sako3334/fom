@@ -3,17 +3,17 @@ import glob
 import os
 from collections import Counter
 
-data_dir = r'D:\dev\fom\Thesis\data'
+data_dir = r'D:\dev\fom\Thesis\data\unstructured\ieee'
 
 os.chdir(data_dir)
 
-data_file_pattern_acm = glob.glob(data_dir + r'./ieee*ART.csv')
-data_file_pattern_acm.extend(glob.glob(data_dir + r'./ieee*PROC.csv'))
+data_file_pattern_ieee = glob.glob(data_dir + r'./ieee*ART.csv')
+data_file_pattern_ieee.extend(glob.glob(data_dir + r'./ieee*PROC.csv'))
 
-#print(data_file_pattern_acm)
+# print(data_file_pattern_ieee)
 
-for acm_file in data_file_pattern_acm:
-    print(acm_file)
+for acm_file in data_file_pattern_ieee:
+    # print(acm_file)
     dict_year_record = {}
     lst_years = []
 

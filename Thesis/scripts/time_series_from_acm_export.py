@@ -3,7 +3,7 @@ import glob
 import os
 from collections import Counter
 
-data_dir = r'D:\dev\fom\Thesis\data'
+data_dir = r'D:\dev\fom\Thesis\data\unstructured\acm'
 
 os.chdir(data_dir)
 
