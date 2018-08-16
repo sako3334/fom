@@ -25,6 +25,7 @@ Thesis/source/literatur/literatur.bib
 
 # BLOB
 Thesis/ext/
+Thesis/basis/
 Thesis/main/doc
 Thesis/literature/Fluechtige_Quellen
-*.csv
+Thesis/data/unstructured

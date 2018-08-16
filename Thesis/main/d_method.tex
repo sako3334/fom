@@ -68,6 +68,8 @@ Alle Suchmaschinen sind im erweiterten Suchmodus mit vergleichbarer Funktionalit
 
 Der erweiterte Suchmodus bietet in allen Suchmaschinen die Möglichkeit, Suchanfragen mittels Kommandoanweisungen einzugeben. Die Operatoren zur Verknüpfung von Suchbegriffen sind nahezu identisch, wobei die Syntax einer Suchanweisung teilweise unterschiedlich ist. Somit sind die Querys untereinander nicht wahllos austauschbar. Bei IEEE und ACM können einige Suchkriterien wie beispielsweise die Veröffentlichungsform nicht über das Kommando eingegeben werden, sondern müssen durch entsprechende Auswahl mithilfe von Bedienelementen in der Web\-oberfläche erfolgen.
 
+TODO: ACM URL-Modifikation, GET-Methode Query-Parameter
+
 Im ersten Schritt werden die Technologien aus Abschnitt \ref{sec:ghcet} unverändert in die Suchmaschine eingegeben, um einen ersten Eindruck der Datenlage im Hinblick auf potentielle Unterschiede bei den Begrifflichkeiten zu erhalten. Mit den oben genannten Eingrenzungen ergibt das für den Begriff \glqq Machine Learning\grqq~in Fachzeitschriften folgende Suchalgorithmen je Suchmaschine:
 
 \begin{description}
@@ -287,25 +289,25 @@ In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind
 \begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
 	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
 	\hline
-	GCD & 8 & - & 1 & 5 & 3 & 11 & 16 & 23 & 16 & 6 \\
+	GCD & - & - & - & 2 & - & 4 & 3 & 1 & 3 & - \\
 	\hline
-	MDC & - & - & - & - & - & - & 2 & - & 4 & 4 \\
+	MDC & - & - & - & - & - & - & - & - & 2 & 2 \\
 	\hline
-	SR & 611 & 94 & 138 & 160 & 210 & 171 & 252 & 282 & 291 & 170 \\
+	SR & 311 & 58 & 39 & 43 & 51 & 70 & 72 & 92 & 121 & 104 \\
 	\hline
-	B & - & - & - & - & - & - & 1 & 28 & 155 & 152 \\
+	B & - & - & - & - & - & - & 5 & 9 & 42 & 93 \\
 	\hline
-	CH & 219 & 48 & 72 & 96 & 120 & 140 & 203 & 244 & 370 & 242 \\
+	CH & 53 & 9 & 18 & 27 & 27 & 17 & 42 & 49 & 66 & 49 \\
 	\hline
-	CEA & 2 & - & - & - & - & - & - & - & - & - \\
+	CEA & - & - & - & - & - & - & - & - & - & - \\
 	\hline
-	ML & \numprint{7241} & \numprint{1154} & \numprint{1366} & \numprint{1547} & \numprint{1990} & \numprint{2353} & \numprint{3232} & \numprint{4212} & \numprint{5580} & \numprint{4467} \\
+	ML & \numprint{1551} & 246 & 222 & 246 & 318 & 381 & 513 & 626 & 781 & 805 \\
 	\hline
-	SDS & - & - & - & - & - & 1 & 2 & 3 & 1 & 2 \\
+	SDS & - & - & - & - & - & - & - & 1 & - & - \\
 	\hline
-	AV & 587 & 80 & 80 & 113 & 91 & 117 & 176 & 237 & 361 & 260 \\
+	AV & 193 & 17 & 29 & 37 & 21 & 36 & 43 & 73 & 139 & 134 \\
 	\hline
-	NE & 565 & 111 & 92 & 88 & 66 & 79 & 72 & 97 & 81 & 60 \\
+	NE & 90 & 11 & 33 & 15 & 17 & 19 & 28 & 20 & 22 & 20 \\
 	\hline
 	SDx & - & - & - & - & - & - & - & - & - & 1 \\
 \end{tabularx}
@@ -319,27 +321,27 @@ In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind
 \begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
 	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
 	\hline
-	GCD & 3 & - & - & - & - & 1 & - & - & - & 1 \\
+	GCD & 23 & 4 & 11 & 23 & 27 & 22 & 21 & 25 & 14 & 6 \\
 	\hline
-	MDC & - & - & - & - & - & - & - & - & - & - \\
+	MDC & - & - & - & - & 1 & 3 & 10 & 12 & 9 & 3 \\
 	\hline
-	SR & 203 & 3 & 7 & 4 & 1 & 4 & 10 & 7 & 5 & 8 \\
+	SR & \numprint{4288} & 647 & 685 & 833 & 910 & \numprint{1132} & \numprint{1233} & \numprint{1320} & \numprint{1274} & \numprint{199} \\
 	\hline
-	B & - & - & - & - & - & - & - & - & 5 & 1 \\
+	B & - & - & - & - & 2 & 1 & 9 & 46 & 267 & 220 \\
 	\hline
-	CH & 59 & 3 & 3 & 1 & 1 & 2 & 7 & 7 & 16 & 6 \\
+	CH & 383 & 152 & 155 & 208 & 222 & 249 & 363 & 403 & 446 & 139 \\
 	\hline
-	CEA & - & - & - & - & - & - & - & - & - & - \\
+	CEA & 2 & - & - & - & - & - & - & - & - & - \\
 	\hline
-	ML & \numprint{2042} & 64 & 57 & 35 & 61 & 59 & 132 & 164 & 126 & 126 \\
+	ML & \numprint{16354} & \numprint{2685} & \numprint{2166} & \numprint{2326} & \numprint{2252} & \numprint{2387} & \numprint{3155} & \numprint{4118} & \numprint{5395} & \numprint{1415} \\
 	\hline
-	SDS & - & - & - & - & - & 1 & - & - & - & - \\
+	SDS & - & - & - & - & - & 1 & 3 & 7 & 10 & 2 \\
 	\hline
-	AV & 103 & 4 & 3 & 5 & 1 & 1 & 4 & 4 & 8 & 9 \\
+	AV & \numprint{1251} & 168 & 188 & 171 & 190 & 262 & 266 & 403 & 675 & 177 \\
 	\hline
-	NE & 76 & 18 & 9 & 1 & 3 & 2 & 4 & 2 & - & - \\
+	NE & 316 & 96 & 95 & 83 & 85 & 92 & 74 & 86 & 70 & 19 \\
 	\hline
-	SDx & - & - & - & - & - & - & - & - & - & - \\
+	SDx & - & - & - & - & - & - & - & - & 1 & - \\
 \end{tabularx}
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
@@ -353,27 +355,27 @@ Schließlich sind nach gleichem Muster in den Tabellen \ref{tab:dist_acm_art} un
 \begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
 	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
 	\hline
-	GCD & 8 & - & 1 & 5 & 3 & 11 & 16 & 23 & 16 & 6 \\
+	GCD & 7 & 1 & 5 & 4 & 9 & 8 & 8 & 15 & 15 & 5 \\
 	\hline
-	MDC & - & - & - & - & - & - & 2 & - & 4 & 4 \\
+	MDC & - & - & - & - & - & - & 2 & 1 & 1 & 1 \\
 	\hline
-	SR & 611 & 94 & 138 & 160 & 210 & 171 & 252 & 282 & 291 & 170 \\
+	SR & 256 & 55 & 54 & 58 & 58 & 49 & 71 & 70 & 76 & 16 \\
 	\hline
-	B & - & - & - & - & - & - & 1 & 28 & 155 & 152 \\
+	B & - & - & - & - & - & - & - & 8 & 18 & 32 \\
 	\hline
-	CH & 219 & 48 & 72 & 96 & 120 & 140 & 203 & 244 & 370 & 242 \\
+	CH & 131 & 40 & 43 & 43 & 56 & 35 & 60 & 73 & 87 & 42 \\
 	\hline
-	CEA & 2 & - & - & - & - & - & - & - & - & - \\
+	CEA & 1 & - & - & - & - & - & - & - & - & - \\
 	\hline
-	ML & \numprint{7241} & \numprint{1154} & \numprint{1366} & \numprint{1547} & \numprint{1990} & \numprint{2353} & \numprint{3232} & \numprint{4212} & \numprint{5580} & \numprint{4467} \\
+	ML & \numprint{5245} & 788 & 916 & 974 & 934 & 968 & \numprint{1160} & \numprint{1507} & \numprint{1615} & 611 \\
 	\hline
 	SDS & - & - & - & - & - & 1 & 2 & 3 & 1 & 2 \\
 	\hline
-	AV & 587 & 80 & 80 & 113 & 91 & 117 & 176 & 237 & 361 & 260 \\
+	AV & 210 & 30 & 32 & 31 & 22 & 20 & 30 & 53 & 62 & 23 \\
 	\hline
-	NE & 565 & 111 & 92 & 88 & 66 & 79 & 72 & 97 & 81 & 60 \\
+	NE & 44 & 10 & 11 & 11 & 14 & 11 & 10 & 14 & 11 & 7 \\
 	\hline
-	SDx & - & - & - & - & - & - & - & - & - & 1 \\
+	SDx & - & - & - & - & - & - & - & - & - & - \\
 \end{tabularx}
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
@@ -385,25 +387,25 @@ Schließlich sind nach gleichem Muster in den Tabellen \ref{tab:dist_acm_art} un
 \begin{tabularx}{\linewidth}{X|X|X|X|X|X|X|X|X|X|X}
 	& $\leq$~'09 & '10 & '11 & '12 & '13 & '14 & '15 & '16 & '17 & '18 \\
 	\hline
-	GCD & 3 & - & - & - & - & 1 & - & - & - & 1 \\
+	GCD & 28 & 9 & 25 & 28 & 51 & 56 & 29 & 28 & 18 & 10 \\
 	\hline
-	MDC & - & - & - & - & - & - & - & - & - & - \\
+	MDC & - & - & 2 & 1 & 2 & - & 2 & 2 & 2 & - \\
 	\hline
-	SR & 203 & 3 & 7 & 4 & 1 & 4 & 10 & 7 & 5 & 8 \\
+	SR & 433 & 85 & 75 & 94 & 99 & 70 & 72 & 65 & 40 & 38 \\
 	\hline
-	B & - & - & - & - & - & - & - & - & 5 & 1 \\
+	B & - & - & - & - & - & 1 & 4 & 29 & 103 & 126 \\
 	\hline
-	CH & 59 & 3 & 3 & 1 & 1 & 2 & 7 & 7 & 16 & 6 \\
+	CH & 477 & 151 & 138 & 160 & 112 & 119 & 165 & 133 & 99 & 59 \\
 	\hline
-	CEA & - & - & - & - & - & - & - & - & - & - \\
+	CEA & - & - & - & - & - & 1 & - & - & - & - \\
 	\hline
-	ML & \numprint{2042} & 64 & 57 & 35 & 61 & 59 & 132 & 164 & 126 & 126 \\
+	ML & \numprint{11620} & \numprint{2027} & \numprint{1996} & \numprint{2350} & \numprint{2136} & \numprint{1854} & \numprint{2261} & \numprint{1536} & \numprint{1466} & 946 \\
 	\hline
-	SDS & - & - & - & - & - & 1 & - & - & - & - \\
+	SDS & - & - & - & - & - & 2 & 1 & - & 1 & 1 \\
 	\hline
-	AV & 103 & 4 & 3 & 5 & 1 & 1 & 4 & 4 & 8 & 9 \\
+	AV & 225 & 31 & 28 & 45 & 19 & 40 & 59 & 54 & 101 & 49 \\
 	\hline
-	NE & 76 & 18 & 9 & 1 & 3 & 2 & 4 & 2 & - & - \\
+	NE & 24 & 16 & 18 & 11 & 5 & 6 & 2 & 2 & - & 2 \\
 	\hline
 	SDx & - & - & - & - & - & - & - & - & - & - \\
 \end{tabularx}
@@ -414,7 +416,10 @@ Schließlich sind nach gleichem Muster in den Tabellen \ref{tab:dist_acm_art} un
 \subsection{Methodik der Analyse}
 Aus den ermittelten Daten sind nun weitere Informationen zu extrahieren, um Erkenntnisse für die Beantwortung der Leitfragen zu erlangen.
 
-kardinalskaliert
+Die erhobenen Daten werden als Nächstes 
+
+\subsubsection{Zeitreihenanalyse der Mengenverteilung von wissenschaftlichen Publikationen}
+Trendkomponente
 
 \subsubsection{Klassifizierung der Technologien}
 Deshalb findet im ersten Ansatz eine Klassifizierung der Technologien anhand relevanter Kriterien statt.
@@ -423,11 +428,6 @@ Dazu erfordert es zum einen die Betrachtung des Verlaufes einer Technologie aus 
 
 Die Klassifizierung soll letztlich Aufschluss darüber geben, welcher Domäne eine Technologie ursprünglich zuzurechnen ist und wo der Trend primär wahrzunehmen war. Daraus lassen sich wiederum Anhaltspunkte darüber ableiten, ob eine Beeinflussung in Richtung eines Trends stattgefunden hat.
 
-\subsubsection{Zeitreihenanalyse der Mengenverteilung von wissenschaftlichen Publikationen}
-Trendkomponente
-
 %Andere Bezeichnung in der Forschung? -> Hinweis auf Diskrepanzen
 %Theoretische vs. praktische Technologien. Theoretische Idee hinter einer kommerziellen Technologie herausfinden
-%
 %CEA: machine learning, artificial intelligence
-%Verarbeitung beschreiben. Export, Auswertung der Verteilung aus cvs-dateien
