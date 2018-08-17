@@ -66,9 +66,9 @@ Diese enthalten neben den in Abschnitt \ref{sec:acad_pub} genannten Fachzeitschr
 
 Alle Suchmaschinen sind im erweiterten Suchmodus mit vergleichbarer Funktionalität zur Vergabe von Suchkriterien ausgestattet. Diese sind gezielt einzusetzen, damit das Suchergebnis einerseits möglichst vollständig ist und andererseits keine \glqq False Positives\grqq~liefert. Deshalb beschränkt sich die Suche der Technologien auf die Metadaten Titel, Stichwörter und Abstract einer Publikation.
 
-Der erweiterte Suchmodus bietet in allen Suchmaschinen die Möglichkeit, Suchanfragen mittels Kommandoanweisungen einzugeben. Die Operatoren zur Verknüpfung von Suchbegriffen sind nahezu identisch, wobei die Syntax einer Suchanweisung teilweise unterschiedlich ist. Somit sind die Querys untereinander nicht wahllos austauschbar. Bei IEEE und ACM können einige Suchkriterien wie beispielsweise die Veröffentlichungsform nicht über das Kommando eingegeben werden, sondern müssen durch entsprechende Auswahl mithilfe von Bedienelementen in der Web\-oberfläche erfolgen.
+Der erweiterte Suchmodus bietet in allen Suchmaschinen die Möglichkeit, Suchanfragen mittels Kommandoanweisungen einzugeben. Die Operatoren zur Verknüpfung von Suchbegriffen sind nahezu identisch, wobei die Syntax einer Suchanweisung teilweise unterschiedlich ist. Somit sind die Querys untereinander nicht wahllos austauschbar.
 
-TODO: ACM URL-Modifikation, GET-Methode Query-Parameter
+Bei IEEE und ACM können einige Suchkriterien wie beispielsweise die Veröffentlichungsform nicht als Teil des Querys formuliert werden. Es werden alternativ Bedienelemente in der Web\-oberfläche angeboten, mit denen die Suche entsprechend eingegrenzt werden kann. Da die Auswahl dieser Suchkriterien bei einem HTTP-Request als \glqq Query Strings\grqq~an die GET-Methode übergeben werden, ist die Eingrenzung auch über die Modifikation der URL möglich.
 
 Im ersten Schritt werden die Technologien aus Abschnitt \ref{sec:ghcet} unverändert in die Suchmaschine eingegeben, um einen ersten Eindruck der Datenlage im Hinblick auf potentielle Unterschiede bei den Begrifflichkeiten zu erhalten. Mit den oben genannten Eingrenzungen ergibt das für den Begriff \glqq Machine Learning\grqq~in Fachzeitschriften folgende Suchalgorithmen je Suchmaschine:
 
@@ -109,7 +109,9 @@ Für die Auswertung wird die Menge der Publikationen pro Jahr und Filter benöti
 
 Die anderen beiden Suchmaschinen erlauben lediglich einen Export von maximal \numprint{2000} Datensätzen der Metadaten -- inklusive Abstracts, Stichwörter etc. -- im CSV-Format (Comma-Seperated Values). Das bedeutet, dass für Suchergebnisse mit mehr als \numprint{2000} Ergebnissen mehrere Exportanweisungen mit jeweils abgrenzbaren Filterkriterien durchzuführen sind, um Redundanzen in einzelnen Exportvorgängen auszuschließen. Ein geeignetes Mittel dazu ist die Eingrenzung der Suchergebnisse nach Veröffentlichungs\-zeiträumen mit jeweils kleiner gleich \numprint{2000} Ergebnissen. Die einzelnen Dateien sind anschließend zusammenzuführen.
 
-Für Technologien mit mehreren Tausend Such\-ergebnissen bedeutet dies allerdings, dass die zusammengeführten Dateien sehr groß werden. Der Export einer Datei mit \numprint{2000} Einträgen aus dem IEEE ist beispielsweise um die 4 Megabyte groß und dauert knapp eine Minute. Für den Begriff \glqq Machine Learning\grqq~mit mehr als \numprint{50000} Ergebnissen ist daher die genannte Vorgehensweise nicht praktikabel. Insbesondere auch deshalb, da aus den exportierten Daten allein die Veröffentlichungsjahre für die Analyse verwendet werden. In solchen Fällen wird die Filterfunktion der Suchmaschine eingesetzt, um die Suche auf einzelne Jahre einzugrenzen und die Anzahl der Publikationen pro Jahr ermittelt.
+Für Technologien mit mehreren Tausend Such\-ergebnissen bedeutet dies allerdings, dass die zusammengeführten Dateien sehr groß werden. Der Export einer Datei mit \numprint{2000} Einträgen aus dem IEEE ist beispielsweise um die 4 Megabyte groß und dauert knapp eine Minute. Für den Begriff \glqq Machine Learning\grqq~mit mehr als \numprint{50000} Ergebnissen ist daher die genannte Vorgehensweise nicht praktikabel. Insbesondere auch deshalb, da aus den exportierten Daten allein die Veröffentlichungsjahre für die Analyse verwendet werden. In solchen Fällen wird der \glqq Query String\grqq~der URL des \glqq HTTP-Requests\grqq~modifiziert, um die Suche auf einzelne Jahre einzugrenzen und die Anzahl der Publikationen pro Jahr direkt abzulesen.
+
+Demgegenüber wird die Anzahl aller Publikationen in dem Betrachtungszeitreim pro Suchmaschine und Veröffentlichungsform ermittelt, um eine Vorstellung über die Dimension der Publikations\-aktivitäten zu gewinnen. Dies geschieht ebenfalls über URL-Modifikationen; das Ergebnis wird tabellarisch aufbereitet.
 
 \subsection{Operationalisierung der Daten}
 Im nächsten Schritt werden die gewonnenen Daten strukturiert, um die Gegenüberstellung der Technologietrends in Wirtschaft und Wissenschaft im Hinblick auf die Beantwortung der Leitfragen zu ermöglichen.
@@ -142,7 +144,7 @@ Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw.,
 	\centering
 	\label{tab:dist_ghc}
 \begin{tabularx}{\linewidth}{X|XXXXXXX}
-	& 2010 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 \\
+	Techn. & 2010 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 \\
 	\hline
 	GCD &  &  &  &  &  & P 1/11 &  \\
 	\hline
@@ -170,6 +172,31 @@ Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw.,
 \end{table}
 
 \subsubsection{Verteilung der Technologietrends in der wissenschaftlichen Forschung}
+Um die Dimension der Kennzahlen von wissenschaftlichen Veröffentlichungen besser einordnen zu können, wird zunächst einmal eine tabellarische Übersicht über alle Veröffentlichungen des Betrachtungszeitraumes erstellt. Tabelle \ref{tab:dist_full_pub} stellt die Veröffentlichungsjahre mit den Suchmaschinen sowie Veröffentlichungsformen gegenüber und listet dazu die jeweilige Anzahl auf.
+
+\begin{table}
+	\caption{Gesamtveröffentlichungen von Artikeln und Konferenzbeiträgen der Jahre 2010-2018}
+	\centering
+	\label{tab:dist_full_pub}
+\begin{tabularx}{\linewidth}{XXXXXXX}
+	\hline 
+	\multirow{2}{*}{Jahr} & \multicolumn{2}{c}{WoS} &  \multicolumn{2}{c}{IEEE}  &  \multicolumn{2}{c}{ACM}  \\ 
+	& Artikel & Konf. & Artikel & Konf. & Artikel & Konf. \\ 
+	\hline 
+	2010 & \numprint{1186641} & \numprint{49975} & \numprint{36936} & \numprint{219692} & \numprint{57422} & \numprint{91322} \\ 
+	2011 & \numprint{1262629} & \numprint{37324} & \numprint{39922} & \numprint{209425} & \numprint{56329} & \numprint{83948} \\ 
+	2012 & \numprint{1322862} & \numprint{27633} & \numprint{42104} & \numprint{188042} & \numprint{55872} & \numprint{80413} \\ 
+	2013 & \numprint{1396999} & \numprint{25583} & \numprint{44864} & \numprint{179732} & \numprint{53039} & \numprint{61839} \\ 
+	2014 & \numprint{1436384} & \numprint{21879} & \numprint{46983} & \numprint{186662} & \numprint{53174} & \numprint{54270} \\ 
+	2015 & \numprint{1673986} & \numprint{31740} & \numprint{50212} & \numprint{195474} & \numprint{58006} & \numprint{58235} \\ 
+	2016 & \numprint{1743515} & \numprint{35747} & \numprint{53082} & \numprint{203381} & \numprint{63321} & \numprint{35803} \\ 
+	2017 & \numprint{1796767} & \numprint{33951} & \numprint{58098} & \numprint{202134} & \numprint{55052} & \numprint{28942} \\ 
+	2018 & \numprint{1082773} & \numprint{20702} & \numprint{42094} & \numprint{47429} & \numprint{21483} & \numprint{15720} \\ 
+	\hline 
+\end{tabularx}
+\caption*{Quelle: Eigene Darstellung}
+\end{table}
+
 Die Übersicht der Verteilung zu vergleichender Technologien wird ebenfalls tabellarisch dargestellt. Eine Tabelle enthält Informationen zur eingesetzten Suchmaschine, Form der Veröffentlichung (Artikel oder Konferenzbericht) sowie der Anzahl an Veröffentlichungen.
 
 Zunächst einmal wird die Anzahl der Treffer bei einer exakten Suche der Technologie ermittelt und tabellarisch aufbereitet. Anschließend werden die Suchergebnisse mithilfe des in Abschnitt \ref{sec:lit_data} beschriebenen Vorgehens ermittelten Suchalgorithmen abgebildet. Die verwendeten Suchalgorithmen werden ebenfalls gesichert, um eine Reproduzierbarkeit der Analyse zu gewährleisten.
@@ -208,7 +235,7 @@ Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglic
 	\caption*{Quelle: Eigene Darstellung}
 \end{table}
 
-Somit entstehen zunächst einmal sieben Tabellen. Eine für die Gesamtübersicht der Suchergebnisse bei einer exakten Suche der Technologien sowie sechs zu den erweiterten Suchbegriffen, jeweils eine pro Suchmaschine und Veröffentlichungsform.
+Somit entstehen zunächst einmal acht Tabellen. Eine für die Gesamtanzahl an Publikationen im Betrachtungszeitraum, eine Gesamtübersicht der Suchergebnisse bei einer exakten Suche der Technologien sowie sechs Tabellen zu den erweiterten Suchbegriffen, jeweils eine pro Suchmaschine und Veröffentlichungsform.
 
 Die Tabelle \ref{tab:dist_wos_exact} zeigt die Gesamtsumme der Publikationen für eine exakte Suche des Suchbegriffes inkl. etwaiger Pluralformen, wie er im entsprechenden \glqq Hype Cycle\grqq~erschienen ist. Bei den Spaltenüberschriften handelt es sich um die Abkürzungen der jeweiligen Suchmaschinen sowie die Aufteilung in Artikel (A) und Konferenzberichte~(KB).
 
@@ -346,7 +373,7 @@ In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
-Schließlich sind nach gleichem Muster in den Tabellen \ref{tab:dist_acm_art} und \ref{tab:dist_acm_proc} die Ergebnisse der Suche im ACM zu finden.
+Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{tab:dist_acm_proc} die Ergebnisse der Suche im ACM zu finden.
 
 \begin{table}
 \caption{Verteilung der Publikationen in Fachartikeln im \glqq ACM\grqq}
@@ -418,6 +445,7 @@ Aus den ermittelten Daten sind nun weitere Informationen zu extrahieren, um Erke
 Die erhobenen Daten werden als Nächstes 
 
 \subsubsection{Zeitreihenanalyse der Mengenverteilung von wissenschaftlichen Publikationen}
+Um das Verhältnis 
 Trendkomponente
 
 \subsubsection{Klassifizierung der Technologien}
