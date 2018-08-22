@@ -30,7 +30,7 @@ Die aktuellste Ausgabe des \glqq Gartner Hype Cycle for Emerging Technologies\gr
 
 In Abbildung \ref{fig:ghc2016} ist der dazugehörige Graph zu sehen, dem zusätzlich die Erwartungen an die Technologie in Abhängigkeit zum Reifegrad sowie die voraussichtliche Dauer bis zur Erreichung des \glqq Plateau of Productivity\grqq~entnommen werden können.
 
-\begin{figure}[ht]
+\begin{figure}
 	\centering
 	\caption{Gartner Hype Cycle for Emerging Technologies, 2016}
 	\includegraphics[width=\linewidth,trim=2cm 3.8cm 3.3cm 4cm,page=65,clip]{pdf/ghc_2016}
@@ -392,25 +392,21 @@ Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{ta
 \end{table}
 
 \subsection{Methodik der Analyse}
-Für die Analyse der Leitfragen ist es wichtig, eine Übersicht über die vorliegenden Daten zu erhalten. Anschließend werden die Daten des \glqq Hype Cycles\grqq~mit denen der Suchergebnisse aus den wissenschaftlichen Datenbanken für jede Technologie einzeln miteinander verglichen. Dazu ist es zum einen wichtig, den vergangenen Trendverlauf der Technologien sowie mögliche Zukunftsszenarien festzustellen. Zum anderen ist darauf aufbauend eine Klassifizierung der Technologien vorzunehmen, um die Qualität der Analyse zu erhöhen.
+Für die Analyse der Leitfragen ist es wichtig, eine Übersicht über die vorliegenden Daten zu erhalten. Anschließend werden die Technologien klassifiziert, um schließlich die Daten des \glqq Hype Cycles\grqq~mit denen der Suchergebnisse aus den wissenschaftlichen Datenbanken miteinander zu vergleichen.
 
-\subsubsection{TODO Gartner}
-Die aus dem \glqq Gartner Hype Cycle for Emerging Technology\grqq~ermittelten Daten bieten eine Reihe von Informationen über die Entwicklung einer Technologie über die Zeit.
+\subsubsection{Deskriptive Auswertung der Daten}
+Die aus dem \glqq Gartner Hype Cycle for Emerging Technology\grqq~ermittelten Daten sind in ihrer ursprünglichen Form nicht metrisch skaliert. Den Technologien im Graphen sind keine Koordinaten zugeordnet und eine mathematische Formel für die Kurve ist nicht veröffentlicht.
 
-Die Position in einem einzelnen Diagramm gibt Aufschluss darüber, wie hoch die Erwartungen der Wirtschaftsunternehmen an die Technologie sind und welche zeitliche Entfernung bis zur Marktreife vorliegt. Wird diese Information mit der Verteilung über alle Ausgaben kombiniert, sind weitere Schlüsse, wie die Geschwindigkeit der Entwicklung in Richtung Marktreife oder ein potentiell vorzeitiges Ausscheiden aus der Trendkurve möglich.
+Um eine Übersicht über den Trendverlauf zu erhalten sowie die Daten für eine Gegenüberstellung mit den Veröffentlichungen der wissenschaftlichen Forschung vorzubereiten, ist eine Visualisierung im Koordinatensystem hilfreich. Dazu werden die Phase und Position in geeignete Koeffizienten umgewandelt und jeder Technologie kartesische Koordinaten zugeordnet. 
 
-Auf Basis dieser Erkenntnis werden den Technologien weitere Attribute, wie  zugeordnet und klassifiziert.
+In dem ursprünglichen Kurvendiagramm sind Abszisse und Ordinate sinngemäß mit \glqq Zeit\grqq~und \glqq Erwartungen\grqq~angegeben. Die Zeit ist gleichbedeutend mit der technologischen Reife und die Erwartungen sind äquivalent zur Trendstärke. Die Kurve unmittelbar um die Phase \glqq Peak of Inflated Expectations\grqq~ist parabelförmig aufgebaut, wobei sie in die angrenzenden Phasen hineinragt.
 
-Für eine bessere Übersicht des Verlaufes werden die Technologien in einem Kurvendiagramm abgebildet, um eine Gegenüberstellung hinsichtlich Gemeinsamkeiten und Unterschieden besser erkennen zu können. Dazu werden die Gewichtungsfaktoren, Phase und Position in geeignete Koeffizienten überführt, um so einen stetigen Trendverlauf abbilden zu können. Hierbei ist es umso vorteilhafter, je häufiger die Technologie in vergangenen bzw. späteren Ausgaben vorhanden ist. Jedoch kurzlebige Trends.
+Das resultierende Kurvendiagramm stellt das Verhältnis der Jahre von Vorkommen einer Technologie im \glqq Hype Cyle\grqq~zur entsprechenden Trendstärke dar. Somit lautet die Abszisse \glqq Veröffentlichungsjahr\grqq~und die Ordinate \glqq Trendstärke\grqq. Die Technologien der zu untersuchenden Daten befinden sich ausschließlich auf der genannten Parabel. Für die Ermittlung der Ordinate wird deshalb für jedes Jahr eine Parabel geformt, von der die jeweilige Koordinate unter Zuhilfenahme der Gewichtungsfaktoren übernommen wird. Die Punkte werden zum Schluss interpoliert.
 
-Letzte Ausgabe folgende Technologien herausgefallen
-GCD, MDC
 
-\subsubsection{Zeitreihenanalyse der Mengenverteilung von wissenschaftlichen Publikationen}
-Die Daten 
+% Jede Technologie ist zusätzlich mit einem Symbol gekennzeichnet, das angibt, wie viel die voraussichtliche Dauer bis zum Erreichen der Produktivität beträgt. Diese Information wird allerdings nicht berücksichtigt, da sie keine Erkenntnisse über die Trendstärke liefert. Die Position in einem einzelnen Diagramm gibt Aufschluss darüber, wie hoch die Erwartungen der Wirtschaftsunternehmen an die Technologie sind und welche zeitliche Entfernung bis zur Marktreife vorliegt. Wird diese Information mit der Verteilung über alle Ausgaben kombiniert, sind weitere Schlüsse, wie die Geschwindigkeit der Entwicklung in Richtung Marktreife oder ein potentiell vorzeitiges Ausscheiden aus der Trendkurve möglich.
 
-einfacher gleitender mittelwert
-Trendkomponente
+% Letzte Ausgabe folgende Technologien herausgefallen. GCD, MDC 
 
 \subsubsection{Klassifizierung der Technologien}
 Deshalb findet im ersten Ansatz eine Klassifizierung der Technologien anhand relevanter Kriterien statt.
@@ -422,3 +418,9 @@ Die Klassifizierung soll letztlich Aufschluss darüber geben, welcher Domäne ei
 %Andere Bezeichnung in der Forschung? -> Hinweis auf Diskrepanzen
 %Theoretische vs. praktische Technologien. Theoretische Idee hinter einer kommerziellen Technologie herausfinden
 %CEA: machine learning, artificial intelligence
+
+%\subsubsection{Zeitreihenanalyse der Mengenverteilung von wissenschaftlichen Publikationen}
+% Die Daten 
+
+%einfacher gleitender mittelwert
+%Trendkomponente
