@@ -7,7 +7,7 @@ Der \glqq Gartner Hype Cycle for Emerging Technologies\grqq~repräsentiert als m
 
 Eine komplette Ausgabe inklusive der Erläuterungen einzelner Phasen sowie der aufgeführten Technologien ist kostenpflichtig über den Webauftritt des Unternehmens: \url{https://www.gartner.com} erhältlich. Für die vorliegende Untersuchung ist sie jedoch nicht erforderlich, da die notwendigen Informationen in Unterpfaden der Webseite frei erhältlich sind.
 
-Die graphische Darstellung des \glqq Hype Cycle for Emerging Technologies \grqq~wird jährlich in Form eines Nachrichtenartikels frei veröffentlicht.\footnote{\citeNP<Vgl.>[o.S.]{ghcet2016}}
+Die graphische Darstellung des \glqq Hype Cycle for Emerging Technologies\grqq~wird jährlich in Form eines Nachrichtenartikels frei veröffentlicht.\footnote{\citeNP<Vgl.>[o.S.]{ghcet2016}}
 Die genaue Aufteilung der Technologien in die fünf bekannten Phasen ist wiederum der Webseite, wo der Artikel gekauft und heruntergeladen werden kann, aus dem dort aufgeführten Inhaltsverzeichnis zu entnehmen.\footnote{\citeNP<Vgl.>[o.S.]{ghc2016}}
 
 Für die optimale Ausrichtung der Analyse an die Leitfragen ist es sinnvoll, eine relativ aktuelle Ausgabe des \glqq Hype Cycle\grqq~zu verwenden, nicht jedoch die neuste. Denn für die Leitfrage L3 wird mindestens eine neuere Ausgabe als die analysierte benötigt. Bei zu alten Publikationen besteht wiederum die Gefahr, dass durch gegenseitige Einflussnahme eine Angleichung bspw. der Begrifflichkeiten die Ergebnisse verfälschen könnte.
@@ -395,21 +395,37 @@ Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{ta
 Für die Analyse der Leitfragen ist es wichtig, eine Übersicht über die vorliegenden Daten zu erhalten. Anschließend werden die Technologien klassifiziert, um schließlich die Daten des \glqq Hype Cycles\grqq~mit denen der Suchergebnisse aus den wissenschaftlichen Datenbanken miteinander zu vergleichen.
 
 \subsubsection{Deskriptive Auswertung der Daten}
-Die aus dem \glqq Gartner Hype Cycle for Emerging Technology\grqq~ermittelten Daten sind in ihrer ursprünglichen Form nicht metrisch skaliert. Den Technologien im Graphen sind keine Koordinaten zugeordnet und eine mathematische Formel für die Kurve ist nicht veröffentlicht.
+Die aus dem \glqq Gartner Hype Cycle for Emerging Technology\grqq~ermittelten Daten sind in ihrer ursprünglichen Form nicht metrisch skaliert. Den Technologien im Graphen sind keine Koordinaten zugeordnet und eine mathematische Formel für die Kurve wird von Gartner nicht veröffentlicht.
 
 Um eine Übersicht über den Trendverlauf zu erhalten sowie die Daten für eine Gegenüberstellung mit den Veröffentlichungen der wissenschaftlichen Forschung vorzubereiten, ist eine Visualisierung im Koordinatensystem hilfreich. Dazu werden die Phase und Position in geeignete Koeffizienten umgewandelt und jeder Technologie kartesische Koordinaten zugeordnet. 
 
-In dem ursprünglichen Kurvendiagramm sind Abszisse und Ordinate sinngemäß mit \glqq Zeit\grqq~und \glqq Erwartungen\grqq~angegeben. Die Zeit ist gleichbedeutend mit der technologischen Reife und die Erwartungen sind äquivalent zur Trendstärke. Die Kurve unmittelbar um die Phase \glqq Peak of Inflated Expectations\grqq~ist parabelförmig aufgebaut, wobei sie in die angrenzenden Phasen hineinragt.
+In dem ursprünglichen Kurvendiagramm sind Abszisse und Ordinate sinngemäß mit \glqq Zeit\grqq~und \glqq Erwartungen\grqq~angegeben. Die Zeit ist gleichbedeutend mit der technologischen Reife und die Erwartungen sind äquivalent zur Trendstärke. Die Position in einem einzelnen Diagramm gibt Aufschluss darüber, wie hoch die Erwartungen der Wirtschaftsunternehmen an die Technologie sind und welche zeitliche Entfernung bis zur Marktreife vorliegt. Die Kurve unmittelbar um die Phase \glqq Peak of Inflated Expectations\grqq~ist parabelförmig aufgebaut, wobei sie weit in die angrenzenden Phasen hineinragt.
 
-Das resultierende Kurvendiagramm stellt das Verhältnis der Jahre von Vorkommen einer Technologie im \glqq Hype Cyle\grqq~zur entsprechenden Trendstärke dar. Somit lautet die Abszisse \glqq Veröffentlichungsjahr\grqq~und die Ordinate \glqq Trendstärke\grqq. Die Technologien der zu untersuchenden Daten befinden sich ausschließlich auf der genannten Parabel. Für die Ermittlung der Ordinate wird deshalb für jedes Jahr eine Parabel geformt, von der die jeweilige Koordinate unter Zuhilfenahme der Gewichtungsfaktoren übernommen wird. Die Punkte werden zum Schluss interpoliert.
+Das resultierende Kurvendiagramm stellt das Verhältnis der Jahre von Vorkommen einer Technologie im \glqq Hype Cyle\grqq~zur entsprechenden Trendstärke dar. Somit lautet die Abszisse \glqq Veröffentlichungsjahr\grqq~und die Ordinate \glqq Trendstärke\grqq. Die Technologien der zu untersuchenden Daten befinden sich ausschließlich auf der genannten Parabel. Für die Ermittlung der Ordinate wird deshalb für jedes Jahr eine Parabel geformt, von der die jeweilige Koordinate unter Zuhilfenahme der Gewichtungsfaktoren übernommen wird. Die Berechnung der Koordinaten ist nicht exakt und dient allein dem Zwecke der Veranschaulichung der Position im ursprünglichen \glqq Hype Cycle\grqq. Bei mehrjährigen Vorkommen einer Technologie werde die jeweiligen Punkte interpoliert.
 
+In Abbildung \ref{fig:ghc_plot} ist das Grundgerüst für die Ermittlung der Position einer Technologie im entsprechenden Jahr der Veröffentlichung zu sehen. Für jedes Veröffentlichungsjahr, das für die Analyse von Bedeutung ist, wird eine Parabel geformt, die grob den \glqq Hype Cycle\grqq~der ersten drei Phasen abbildet. Sie schneidet die Abszisse im Veröffentlichungsjahr und dem Folgejahr. Die Skalierung der Trendstärke (Ordinate) befindet sich im Intervall $\interval{0}{100}$, wobei der Bereich $\interval{75}{100}$ den \glqq Peak of Inflated Expectations\grqq~darstellt. Das Intervall $\interval[open]{0}{75}$ links vom Scheitelpunkt bildet die Phase \glqq Innovation Trigger\grqq, das Intervall $\interval[open]{75}{0}$ rechts vom Scheitelpunkt die Phase \glqq Trough of Disillusionment\grqq~ab. Die Formel für die erste Parabel für das Jahr 2010 lautet:
 
-% Jede Technologie ist zusätzlich mit einem Symbol gekennzeichnet, das angibt, wie viel die voraussichtliche Dauer bis zum Erreichen der Produktivität beträgt. Diese Information wird allerdings nicht berücksichtigt, da sie keine Erkenntnisse über die Trendstärke liefert. Die Position in einem einzelnen Diagramm gibt Aufschluss darüber, wie hoch die Erwartungen der Wirtschaftsunternehmen an die Technologie sind und welche zeitliche Entfernung bis zur Marktreife vorliegt. Wird diese Information mit der Verteilung über alle Ausgaben kombiniert, sind weitere Schlüsse, wie die Geschwindigkeit der Entwicklung in Richtung Marktreife oder ein potentiell vorzeitiges Ausscheiden aus der Trendkurve möglich.
+\begin{align}
+	f(x)=-400 \cdot (x-2010,5)^2+100
+\end{align}
 
-% Letzte Ausgabe folgende Technologien herausgefallen. GCD, MDC 
+\begin{figure}
+	\centering
+	\caption{Grundgerüst für die Trenddarstellung der Technologien im \glqq Gartner Hype Cycle\grqq}
+	\includegraphics[width=\linewidth]{pdf/ghc_plot.pdf}
+	\caption*{Quelle: Eigene Darstellung}
+	\label{fig:ghc_plot}
+\end{figure}
+
+Jede Technologie ist zusätzlich mit einem Symbol gekennzeichnet, das angibt, wie viel die voraussichtliche Dauer bis zum Erreichen der Produktivität beträgt. Diese Information wird allerdings in der deskriptiven Auswertung nicht berücksichtigt, da sie keine unmittelbare Erkenntnis über die Trendstärke liefert.
+
+Die Daten der Häufigkeiten von wissenschaftlichen Publikationen sind per se kardinalskaliert und müssen somit nicht umgeformt werden.
+
+Für die deskriptive Auswertung wird für jede Technologie ein eigenes Kurvendiagramm erstellt. Die Abszisse stellt die Veröffentlichungsjahre und die Ordinate die Anzahl der Veröffentlichungen dar. Pro Suchmaschine und Veröffentlichungstyp wird eine Kurve erstellt, die sich durch Interpolation der jeweiligen Koordinatenpunkte ergibt. Dabei wird für jede Suchmaschine ein eigener Linientyp sowie für jede Veröffentlichungsform eine eigene Punktform verwendet. Damit die Kurven sich auch bei einer Überlagerung voneinander abheben, haben sie jeweils eine eigene Farbe, die jedoch keine zusätzliche Bedeutung, wie beim Linientyp bzw. der Punktform, haben.
 
 \subsubsection{Klassifizierung der Technologien}
-Deshalb findet im ersten Ansatz eine Klassifizierung der Technologien anhand relevanter Kriterien statt.
+Durch die deskriptive Auswertung sind Erkenntnisse zu erwarten, die eine Klassifizierung der Technologien in unterschiedliche Kategorien ermöglichen.
+
 
 Dazu erfordert es zum einen die Betrachtung des Verlaufes einer Technologie aus den Perspektiven der Wirtschaft und Wissenschaft, vom initialen Erscheinen bis zum aktuellen Trendstatus. Zum anderen ist die Einordnung der Technologien in übergeordnete Fachbereiche nützlich, da sich diverse Technologiebegriffe des \glqq Gartner Hype Cycle\grqq~auf spezielle Anwendungen beziehen und in dem engeren Sinne kein direktes Pendant in der Wissenschaft zu besitzen scheinen.
 

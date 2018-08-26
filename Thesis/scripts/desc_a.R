@@ -4,15 +4,12 @@ all_data_raw <- read.csv("D:/dev/fom/Thesis/data/structured/time_series_all.csv"
 #str(all_data_raw)
 
 START <- 2010
-SCHLUSS <- 2018
+SCHLUSS <- 2017
 
 all_data <- all_data_raw[which(all_data_raw$years >= START & all_data_raw$years <= SCHLUSS),]
 
-
-
 for(i in unique(all_data[, "technology"])){
-
-#i <- "ML"
+#i <- "SDS"
 
 zeilen <- which(all_data[,"technology"] == i)
 teildatensatz <- all_data[zeilen,]
@@ -48,10 +45,10 @@ for(k in unique(teildatensatz[, "search_engine"])){
       points(x = teildatensatz_h[, "years"], y = teildatensatz_h[, "records"], type = "p", col = zaehler, pch = ifelse(teildatensatz_h[, "publication"] == "A", 20, 2), cex = ifelse(teildatensatz_h[, "publication"] == "A", 1, 1.5))
     }
   }
-  
 }
 legend("topleft", legend = legendentext, bty = "n", lwd = 1:length(legendentext), lty = 1:length(legendentext))
-legend("topright", legend = c("A", "KB"), bty = "n", pch = c(20, 2))
-
+legend("top", legend = c("A", "KB"), bty = "n", pch = c(20, 2))
+# axis(side = 1, xaxp=c(2014, 2017, 3), las=2)
+# abline(v=c(2010,2017), col=c("grey", "grey"), lty=c(2,2), lwd=c(1,1))
 }
 
