@@ -10,12 +10,53 @@ ieee_av_proc <- read.csv("D:/dev/fom/Thesis/data/structured/ieee/ieee_autonomous
 acm_av_art <- read.csv("D:/dev/fom/Thesis/data/structured/acm/acm_autonomous_vehicles_art_ts.csv")
 acm_av_proc <- read.csv("D:/dev/fom/Thesis/data/structured/acm/acm_autonomous_vehicles_proc_ts.csv")
 
-plot(all_data)
+ss <- subset(all_data, all_data$search_engine == 'WOS' & all_data$publication == 'A' & all_data$technology != 'ML')
 
-ggplot(all_data, aes(x = years, y = count)) + 
+x <- all_data[all_data$search_engine == 'WOS' & all_data$publication == 'A',]
+
+sum(all_data[all_data$technology == 'ML',]$records)
+
+attach(x)
+names(x)
+class(x)
+
+glm(years~records,family = poisson)
+
+table(x$technology)
+
+aggregate(records~technology,x,sum)
+
+tapply(all_data$records,all_data$technology, sum)
+
+pie(aggregate(records ~ technology, x, sum)$records,labels = technology,)
+
+ts.plot(years,records)
+
+plot(years,records,col=1)
+
+all_data[sum(all_data$records)]
+
+abline(lm(records~years))
+lines(years,records)
+
+summary(ss)
+View(ss)
+
+
+ggplot(ss, aes(x=years,y=records)) + 
   geom_line(aes(color = technology), size = 1) +
-  scale_color_manual(values = c("#00AFBB", "#E7B800","#00AFBB", "#E7B800","#00AFBB", "#E7B800","#00AFBB", "#E7B800","#00AFBB", "#E7B800","#00AFBB")) +
+  scale_color_manual(values = c(1:11)) +
   theme_minimal()
+
+ggplot(all_data, aes(x = years, y = records)) + 
+  geom_line(aes(color = technology), size = 1) +
+  scale_color_manual(values = c(1:11)) +
+  theme_minimal()
+
+ggplot(data = all_data,  aes(x=years, y=records) )   +   # store it
+  ylab('Anzahl Publikationen')             +
+  geom_line(col="blue")                      +
+  geom_point(col="blue", pch=1)
 
 cor(wos_conf~wos_art,data = all_data)
 lm(wos_conf~wos_art,data = all_data)

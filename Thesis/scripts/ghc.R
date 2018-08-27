@@ -1,16 +1,25 @@
-# -400(x-2010,5)^2+100
-# -400(x-2011,5)^2+100
-# -400(x-2012,5)^2+100
-# -400(x-2013,5)^2+100
-# -400(x-2014,5)^2+100
-# -400(x-2015,5)^2+100
-# -400(x-2016,5)^2+100
-# -400(x-2017,5)^2+100
+ghc_trend <- read.csv("D:/dev/fom/Thesis/data/structured/ghc_trend.csv")
 
-# 2009,-10,2019,110
+plot(xaxt='n', yaxt='n', x = ghc_trend[, "year"], y = ghc_trend[, "trend"], xlab = "Veröffentlichungsjahr", ylab = "Trendstärke", type = "n", ylim = c(0,100), xlim = c(2010,2019))
+axis(side = 1, xaxp=c(2010, 2018, 8))
+axis(side = 2, yaxp=c(0, 100, 10))
+grid()
 
-#x <- seq(2009,2019,1)
-#y <- -400*(x-2010.5)^2+100
-#y <- -400*x^2+1608400*x-1616844000
-#plot(x,y, type = 'l')
-curve(-400*x^2+1608400*x-1616844000, from = 2009, to = 2019)
+sym <- rep(c(21,22,24),c(4,4,3))
+bcol <- c(c(2:4,8),c(2:4,8),2:4)
+
+i <- 1
+legend_text <- character(0)
+
+for(t in unique(ghc_trend[, "technology"])){
+  rows <- which(ghc_trend[,"technology"] == t)
+  technologies <- ghc_trend[rows,]
+
+  lines(x = technologies[, "year"], y = technologies[, "trend"], type = "l", col = 'gray')
+  points(x = technologies[, "year"], y = technologies[, "trend"], col = 1, pch = sym[i], bg=bcol[i])
+  
+  legend_text <- c(legend_text, paste(t, sep = ""))
+  i <- i+1
+}
+
+legend("topright", legend = legend_text, bty = "n", pch = sym, pt.bg = bcol)
