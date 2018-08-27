@@ -397,16 +397,18 @@ Für die Analyse der Leitfragen ist es wichtig, eine Übersicht über die vorlie
 \subsubsection{Deskriptive Auswertung der Daten}
 Die aus dem \glqq Gartner Hype Cycle for Emerging Technology\grqq~ermittelten Daten sind in ihrer ursprünglichen Form nicht metrisch skaliert. Den Technologien im Graphen sind keine Koordinaten zugeordnet und eine mathematische Formel für die Kurve wird von Gartner nicht veröffentlicht.
 
-Um eine Übersicht über den Trendverlauf zu erhalten sowie die Daten für eine Gegenüberstellung mit den Veröffentlichungen der wissenschaftlichen Forschung vorzubereiten, ist eine Visualisierung im Koordinatensystem hilfreich. Dazu werden die Phase und Position in geeignete Koeffizienten umgewandelt und jeder Technologie kartesische Koordinaten zugeordnet. 
+Um eine Übersicht über den Trendverlauf zu erhalten sowie die Daten für eine Gegenüberstellung mit den Veröffentlichungen der wissenschaftlichen Forschung vorzubereiten, ist eine Visualisierung im Koordinatensystem hilfreich. Dazu werden die Phase und Position in geeignete Parameter umgewandelt und jeder Technologie kartesische Koordinaten zugeordnet.
 
 In dem ursprünglichen Kurvendiagramm sind Abszisse und Ordinate sinngemäß mit \glqq Zeit\grqq~und \glqq Erwartungen\grqq~angegeben. Die Zeit ist gleichbedeutend mit der technologischen Reife und die Erwartungen sind äquivalent zur Trendstärke. Die Position in einem einzelnen Diagramm gibt Aufschluss darüber, wie hoch die Erwartungen der Wirtschaftsunternehmen an die Technologie sind und welche zeitliche Entfernung bis zur Marktreife vorliegt. Die Kurve unmittelbar um die Phase \glqq Peak of Inflated Expectations\grqq~ist parabelförmig aufgebaut, wobei sie weit in die angrenzenden Phasen hineinragt.
 
-Das resultierende Kurvendiagramm stellt das Verhältnis der Jahre von Vorkommen einer Technologie im \glqq Hype Cyle\grqq~zur entsprechenden Trendstärke dar. Somit lautet die Abszisse \glqq Veröffentlichungsjahr\grqq~und die Ordinate \glqq Trendstärke\grqq. Die Technologien der zu untersuchenden Daten befinden sich ausschließlich auf der genannten Parabel. Für die Ermittlung der Ordinate wird deshalb für jedes Jahr eine Parabel geformt, von der die jeweilige Koordinate unter Zuhilfenahme der Gewichtungsfaktoren übernommen wird. Die Berechnung der Koordinaten ist nicht exakt und dient allein dem Zwecke der Veranschaulichung der Position im ursprünglichen \glqq Hype Cycle\grqq. Bei mehrjährigen Vorkommen einer Technologie werde die jeweiligen Punkte interpoliert.
+Das resultierende Kurvendiagramm stellt das Verhältnis der Jahre von Vorkommen einer Technologie im \glqq Hype Cyle\grqq~zur entsprechenden Trendstärke dar. Somit lautet die Abszisse \glqq Veröffentlichungsjahr\grqq~und die Ordinate \glqq Trendstärke\grqq. Die Technologien der zu untersuchenden Daten befinden sich ausschließlich auf der genannten Parabel. Für die Ermittlung der Ordinate wird deshalb für jedes Jahr eine Parabel geformt, von der die jeweilige Koordinate unter Zuhilfenahme der Gewichtungsfaktoren übernommen wird. Die Berechnung der Koordinaten ist mathematisch nicht exakt und dient allein dem Zwecke der Veranschaulichung der Position im ursprünglichen \glqq Hype Cycle\grqq. Dies genügt jedoch für die Analyse, da dem \glqq Hype Cycle\grqq~keine genaueren Daten zu entnehmen sind und solange sich die Differenzen zwischen den Technologien ausreichend voneinander abheben. Ist eine Technologie in mehreren Ausgaben vertreten, werden die jeweiligen Punkte interpoliert.
 
-In Abbildung \ref{fig:ghc_plot} ist das Grundgerüst für die Ermittlung der Position einer Technologie im entsprechenden Jahr der Veröffentlichung zu sehen. Für jedes Veröffentlichungsjahr, das für die Analyse von Bedeutung ist, wird eine Parabel geformt, die grob den \glqq Hype Cycle\grqq~der ersten drei Phasen abbildet. Sie schneidet die Abszisse im Veröffentlichungsjahr und dem Folgejahr. Die Skalierung der Trendstärke (Ordinate) befindet sich im Intervall $\interval{0}{100}$, wobei der Bereich $\interval{75}{100}$ den \glqq Peak of Inflated Expectations\grqq~darstellt. Das Intervall $\interval[open]{0}{75}$ links vom Scheitelpunkt bildet die Phase \glqq Innovation Trigger\grqq, das Intervall $\interval[open]{75}{0}$ rechts vom Scheitelpunkt die Phase \glqq Trough of Disillusionment\grqq~ab. Die Formel für die erste Parabel für das Jahr 2010 lautet:
+In Abbildung \ref{fig:ghc_plot} ist das Grundgerüst für die Ermittlung der Position einer Technologie im entsprechenden Jahr der Veröffentlichung zu sehen. Für jedes Veröffentlichungsjahr, das für die Analyse von Bedeutung ist, wird eine Parabel geformt, die grob den \glqq Hype Cycle\grqq~der ersten drei Phasen abbildet. Sie schneidet die Abszisse im Veröffentlichungsjahr und dem Folgejahr. Die Skalierung der Trendstärke (Ordinate) befindet sich im Intervall $\interval{0}{100}$, wobei der Bereich $\interval[open left]{75}{100}$ beidseitig den \glqq Peak of Inflated Expectations\grqq~darstellt. Das Intervall $\interval[open left]{0}{75}$ links vom Scheitelpunkt bildet die Phase \glqq Innovation Trigger\grqq, das Intervall $\interval[open left]{75}{0}$ rechts vom Scheitelpunkt die Phase \glqq Trough of Disillusionment\grqq~ab. Die Formel für die Erzeugung der einzelnen Parabeln lautet wie folgt:
 
 \begin{align}
-	f(x)=-400 \cdot (x-2010,5)^2+100
+f(x) &= -400 \cdot \left( x - V_j - \frac{1}{2} \right)^2+100 \label{eq:parabel}\\
+\text{mit:}\nonumber\\
+V_j &= \text{Veröffentlichungsjahr}\nonumber
 \end{align}
 
 \begin{figure}
@@ -416,6 +418,21 @@ In Abbildung \ref{fig:ghc_plot} ist das Grundgerüst für die Ermittlung der Pos
 	\caption*{Quelle: Eigene Darstellung}
 	\label{fig:ghc_plot}
 \end{figure}
+
+Als nächstes sind die Werte der Definitionsmenge zu bestimmen, welche für die einzelnen Technologien eine geeignete Trendstärke ergeben und gleichzeitig das richtige Verhältnis zueinander wahren. Dazu werden die in Tabelle \ref{tab:dist_ghc} aufgeführten Parameter verwendet.
+
+Die Abszissenwerte sind so zu wählen, dass sich die dazugehörigen Ordinatenwerte im vorgesehenen Intervall befinden und dem Verhältnis ihrer Position in der jeweiligen Phase entsprechen. Daraus resultieren drei Gleichungen für jeweils eine Phase. Die Technologien in der Phase \glqq Innovation Trigger\grqq~befinden sich links vom Scheitelpunkt und können nach der Gleichung~\ref{eq:parabel} und dem definierten Wertebereich ein Viertel des Jahresintervalls als Abszissenwerte annehmen. Daraus ergibt sich die Gleichung~\ref{eq:pos_i} für deren Ermittlung. Mit den nötigen Anpassungen zur Begrenzung auf das definierte Intervall der jeweiligen Phasen ergeben sich für \glqq Peak of Inflated Expectations\grqq~die Gleichung~\ref{eq:pos_p} und für \glqq Trough of Disillusionment\grqq~die Gleichung~\ref{eq:pos_t}.
+
+\begin{align}
+x &= \frac{1}{4}I_p+V_j \label{eq:pos_i}\\
+x &= \frac{1}{2}P_p+V_j+\frac{1}{4} \label{eq:pos_p}\\
+x &= \frac{1}{4}T_p+V_j+\frac{3}{4} \label{eq:pos_t}\\
+\text{mit:}\nonumber\\
+V_j &= \text{Veröffentlichungsjahr}\nonumber\\
+I_p &= \text{Position im \glqq Innovation Trigger\grqq}\nonumber\\
+P_p &= \text{Position im \glqq Peak of Inflated Expectations\grqq}\nonumber\\
+T_p &= \text{Position im \glqq Trough of Disillusionment\grqq}\nonumber
+\end{align}
 
 Jede Technologie ist zusätzlich mit einem Symbol gekennzeichnet, das angibt, wie viel die voraussichtliche Dauer bis zum Erreichen der Produktivität beträgt. Diese Information wird allerdings in der deskriptiven Auswertung nicht berücksichtigt, da sie keine unmittelbare Erkenntnis über die Trendstärke liefert.
 
