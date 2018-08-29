@@ -57,9 +57,9 @@ Dabei sind folgende Parameter für die Auswertung festzuhalten:
 \subsubsection{Literaturdatenbanken}\label{sec:lit_data}
 Demgegenüber wird die Datenbasis der akademischen Forschung aus Abfragen in relevanten Literaturdatenbanken erhoben. Aufgrund ihrer hohen Abdeckung wissenschaftlich, technologischer Publikationen werden folgende Datenbanken durchsucht:
 \begin{description}
-	\item [WoS:] Web of Science Core Collection - \url{http://apps.webofknowledge.com}
-	\item [IEEE:] IEEE Xplore Digital Library - \url{https://ieeexplore.ieee.org}
-	\item [ACM:] The ACM Guide to Computing Literature - \url{https://dl.acm.org}
+	\item [\acs{WoS}:] Web of Science Core Collection - \url{http://apps.webofknowledge.com}
+	\item [\acs{IEEE}:] IEEE Xplore Digital Library - \url{https://ieeexplore.ieee.org}
+	\item [\acs{ACM}:] The ACM Guide to Computing Literature - \url{https://dl.acm.org}
 \end{description}
 
 Diese enthalten neben den in Abschnitt \ref{sec:acad_pub} genannten Fachzeitschriften und Konferenzbeiträgen weitere Formen von Veröffentlichungen, wie beispielsweise Bücher oder Standards. Daher ist die Suche ausschließlich darauf einzugrenzen, wobei die Ergebnisse nach Veröffentlichungsform getrennt voneinander gehalten werden, da dies genauere Rückschlüsse über den tatsächliche Verlauf ermöglicht.
@@ -68,16 +68,16 @@ Alle Suchmaschinen sind im erweiterten Suchmodus mit vergleichbarer Funktionalit
 
 Der erweiterte Suchmodus bietet in allen Suchmaschinen die Möglichkeit, Suchanfragen mittels Kommandoanweisungen einzugeben. Die Operatoren zur Verknüpfung von Suchbegriffen sind nahezu identisch, wobei die Syntax einer Suchanweisung teilweise unterschiedlich ist. Somit sind die Querys untereinander nicht wahllos austauschbar.
 
-Bei IEEE und ACM können einige Suchkriterien wie beispielsweise die Veröffentlichungsform nicht als Teil des Querys formuliert werden. Es werden alternativ Bedienelemente in der Web\-oberfläche angeboten, mit denen die Suche entsprechend eingegrenzt werden kann. Da die Auswahl dieser Suchkriterien bei einem HTTP-Request als \glqq Query Strings\grqq~an die GET-Methode übergeben werden, ist die Eingrenzung auch über die Modifikation der URL möglich.
+Bei \ac{IEEE} und \ac{ACM} können einige Suchkriterien wie beispielsweise die Veröffentlichungsform nicht als Teil des Querys formuliert werden. Es werden alternativ Bedienelemente in der Web\-oberfläche angeboten, mit denen die Suche entsprechend eingegrenzt werden kann. Da die Auswahl dieser Suchkriterien bei einem \glqq\acs{HTTP}-Request\grqq~(\acl{HTTP}) als \glqq Query Strings\grqq~an die \glqq GET-Methode\grqq~übergeben werden, ist die Eingrenzung auch über die Modifikation des \ac{URL} möglich.
 
 Im ersten Schritt werden die Technologien aus Abschnitt \ref{sec:ghcet} unverändert in die Suchmaschine eingegeben, um einen ersten Eindruck der Datenlage im Hinblick auf potentielle Unterschiede bei den Begrifflichkeiten zu erhalten. Mit den oben genannten Eingrenzungen ergibt das für den Begriff \glqq Machine Learning\grqq~in Fachzeitschriften folgende Suchalgorithmen je Suchmaschine:
 
 \begin{description}
-	\item [WoS:] \begin{verbatim}
+	\item [\acs{WoS}:] \begin{verbatim}
 	(TS=("machine learning")) AND DOCUMENT TYPES: (Article)
 	\end{verbatim}
 
-	\item [IEEE:] \begin{verbatim}
+	\item [\acs{IEEE}:] \begin{verbatim}
 	("machine learning")
 	\end{verbatim}
 	Zusätzliche Filtereinstellungen:
@@ -86,7 +86,7 @@ Im ersten Schritt werden die Technologien aus Abschnitt \ref{sec:ghcet} unverän
 		\item Content Types: Journals \& Magazines
 	\end{itemize}
 
-	\item [ACM:] \begin{verbatim}
+	\item [\acs{ACM}:] \begin{verbatim}
 	acmdlTitle:(+"machine learning") OR
 	recordAbstract:(+"machine learning") OR
 	keywords.author.keyword:(+"machine learning")
@@ -105,20 +105,20 @@ Andersherum sind Begriffe auszuschließen, die für eine höhere Evolutionsstufe
 
 TODO: Suchalgorithmen
 
-Für die Auswertung wird die Menge der Publikationen pro Jahr und Filter benötigt. Dazu werden die entsprechenden Exportfunktionen der jeweiligen Suchmaschinen eingesetzt. Im WoS ist ein Export der Verteilung von Publikationen pro Jahr von maximal \numprint{200000} Datensätzen mit einer einzigen Anweisung im TSV-Format (Tabulator-Seperated Values) möglich.
+Für die Auswertung wird die Menge der Publikationen pro Jahr und Filter benötigt. Dazu werden die entsprechenden Exportfunktionen der jeweiligen Suchmaschinen eingesetzt. Im \ac{WoS} ist ein Export der Verteilung von Publikationen pro Jahr von maximal \numprint{200000} Datensätzen mit einer einzigen Anweisung im \acs{TSV}-Format (\acl{TSV}) möglich.
 
-Die anderen beiden Suchmaschinen erlauben lediglich einen Export von maximal \numprint{2000} Datensätzen der Metadaten -- inklusive Abstracts, Stichwörter etc. -- im CSV-Format (Comma-Seperated Values). Das bedeutet, dass für Suchergebnisse mit mehr als \numprint{2000} Ergebnissen mehrere Exportanweisungen mit jeweils abgrenzbaren Filterkriterien durchzuführen sind, um Redundanzen in einzelnen Exportvorgängen auszuschließen. Ein geeignetes Mittel dazu ist die Eingrenzung der Suchergebnisse nach Veröffentlichungs\-zeiträumen mit jeweils kleiner gleich \numprint{2000} Ergebnissen. Die einzelnen Dateien sind anschließend zusammenzuführen.
+Die anderen beiden Suchmaschinen erlauben lediglich einen Export von maximal \numprint{2000} Datensätzen der Metadaten -- inklusive Abstracts, Stichwörter etc. -- im \acs{CSV}-Format (\acl{CSV}). Das bedeutet, dass für Suchergebnisse mit mehr als \numprint{2000} Ergebnissen mehrere Exportanweisungen mit jeweils abgrenzbaren Filterkriterien durchzuführen sind, um Redundanzen in einzelnen Exportvorgängen auszuschließen. Ein geeignetes Mittel dazu ist die Eingrenzung der Suchergebnisse nach Veröffentlichungs\-zeiträumen mit jeweils kleiner gleich \numprint{2000} Ergebnissen. Die einzelnen Dateien sind anschließend zusammenzuführen.
 
-Für Technologien mit mehreren Tausend Such\-ergebnissen bedeutet dies allerdings, dass die zusammengeführten Dateien sehr groß werden. Der Export einer Datei mit \numprint{2000} Einträgen aus dem IEEE ist beispielsweise um die 4 Megabyte groß und dauert knapp eine Minute. Für den Begriff \glqq Machine Learning\grqq~mit mehr als \numprint{50000} Ergebnissen ist daher die genannte Vorgehensweise nicht praktikabel. Insbesondere auch deshalb, da aus den exportierten Daten allein die Veröffentlichungsjahre für die Analyse verwendet werden. In solchen Fällen wird der \glqq Query String\grqq~der URL des \glqq HTTP-Requests\grqq~modifiziert, um die Suche auf einzelne Jahre einzugrenzen und die Anzahl der Publikationen pro Jahr direkt abzulesen.
+Für Technologien mit mehreren Tausend Such\-ergebnissen bedeutet dies allerdings, dass die zusammengeführten Dateien sehr groß werden. Der Export einer Datei mit \numprint{2000} Einträgen aus dem \ac{IEEE} ist beispielsweise um die 4 Megabyte groß und dauert knapp eine Minute. Für den Begriff \glqq Machine Learning\grqq~mit mehr als \numprint{50000} Ergebnissen ist daher die genannte Vorgehensweise nicht praktikabel. Insbesondere auch deshalb, da aus den exportierten Daten allein die Veröffentlichungsjahre für die Analyse verwendet werden. In solchen Fällen wird der \glqq Query String\grqq~der \ac{URL} des \glqq \acs{HTTP}-Requests\grqq~modifiziert, um die Suche auf einzelne Jahre einzugrenzen und die Anzahl der Publikationen pro Jahr direkt abzulesen.
 
-Demgegenüber wird die Anzahl aller Publikationen in dem Betrachtungszeitreim pro Suchmaschine und Veröffentlichungsform ermittelt, um eine Vorstellung über die Dimension der Publikations\-aktivitäten zu gewinnen. Dies geschieht ebenfalls über URL-Modifikationen; das Ergebnis wird tabellarisch aufbereitet.
+Demgegenüber wird die Anzahl aller Publikationen in dem Betrachtungszeitreim pro Suchmaschine und Veröffentlichungsform ermittelt, um eine Vorstellung über die Dimension der Publikations\-aktivitäten zu gewinnen. Dies geschieht ebenfalls über \ac{URL}-Modifikationen; das Ergebnis wird tabellarisch aufbereitet.
 
 \subsection{Operationalisierung der Daten}
 Im nächsten Schritt werden die gewonnenen Daten strukturiert, um die Gegenüberstellung der Technologietrends in Wirtschaft und Wissenschaft im Hinblick auf die Beantwortung der Leitfragen zu ermöglichen.
 
 Da zur Trendbestimmung auf wissenschaftlicher Seite die Anzahl an Publikationen verwendet wird, sind auf Seiten des \glqq Hype Cycles\grqq~alle Indikatoren einzubeziehen, die das Skalenniveau daran angleichen.
 
-Der Trendverlauf in der akademischen Forschung wird maschinell ausgewertet, daher werden die Export-Dateien mithilfe von Python-Skripten in ein einheitliches CSV-Format überführt, welches aus den beiden Spalten \glqq Veröffentlichungsjahr\grqq~und \glqq Anzahl der Veröffentlichungen\grqq~besteht.
+Der Trendverlauf in der akademischen Forschung wird maschinell ausgewertet, daher werden die Export-Dateien mithilfe von Python-Skripten in ein einheitliches \acs{CSV}-Format überführt, welches aus den beiden Spalten \glqq Veröffentlichungsjahr\grqq~und \glqq Anzahl der Veröffentlichungen\grqq~besteht.
 
 Für die Darstellung im Text werden entsprechende Repräsentationsformen wie Diagramme und Tabellen verwendet.
 
@@ -128,9 +128,9 @@ Nachdem die zeitliche Verteilung der Technologien aus Abschnitt \ref{sec:ghcet} 
 Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungsjahr nicht vorkommt. Anderenfalls setzt sich der Eintrag prinzipiell aus zwei Teilen zusammen. Im ersten Teil wird das Kürzel der Phase des \glqq Hype Cyles\grqq~aufgeführt, in der die Technologie vorkommt. Für vorliegende Datenbasis werden folgende Kürzel benutzt:
 
 \begin{description}
-	\item[I:] Innovation Trigger
-	\item[P:] Peak of Inflated Expectations
-	\item[T:] Trough of Disillusionment
+	\item[\acs{I}:] Innovation Trigger
+	\item[\acs{P}:] Peak of Inflated Expectations
+	\item[\acs{T}:] Trough of Disillusionment
 \end{description}
 
 Die anderen beiden Phasen bleiben unberücksichtigt, da sie die zu untersuchenden Technologien in keiner Ausgabe enthalten. Der zweite Teil gibt die Position der Technologie unter allen anderen der jeweiligen Phase wieder. Technologien in Phase P sind zusätzlich gekennzeichnet, ob sie vor oder hinter dem Scheitelpunkt der Kurve liegen. Liegen sie davor, werden sie mit einem Minus~(-), dahinter mit einem Plus~(+) oder auf dem Scheitelpunkt mit einem Sternchen~(*) markiert.
@@ -148,17 +148,17 @@ Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw.,
 	\begin{tabularx}{\linewidth}{XXXXXXXX}
 		Techn. & 2010 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 \\
 		\hline
-		GCD &  &  &  &  &  & P 1/11\textsuperscript{-} &  \\
-		MDC &  &  &  &  & P 2/10\textsuperscript{-} & P 2/11\textsuperscript{-} &  \\
-		SR &  &  &  & I 13/17 & I 11/18 & P 3/11\textsuperscript{-} & P 3/13\textsuperscript{-} \\
-		B &  &  &  &  &  & P 4/11\textsuperscript{-} & P 12/13\textsuperscript{+} \\
-		CH &  &  &  & I 5/17 & I 13/18 & P 5/11\textsuperscript{-} & P 6/13\textsuperscript{-} \\
-		CEA &  &  &  &  &  & P 6/11\textsuperscript{-} & T 1/4 \\
-		ML &  &  &  &  & P 8/10\textsuperscript{+} & P 7/11\textsuperscript{*} & P 8/13\textsuperscript{+} \\
-		SDS &  &  &  &  & I 18/18 & P 8/11\textsuperscript{+} & T 3/4 \\
-		AV & I 7/12 & I 7/9 & I 12/14 & P 3/10\textsuperscript{-} & P 5/10\textsuperscript{*} & P 9/11\textsuperscript{+} & P 9/13\textsuperscript{+} \\
-		NE &  &  &  &  &  & P 10/11\textsuperscript{+} & P 10/13\textsuperscript{+} \\
-		SDx &  &  &  &  &  & P 11/11\textsuperscript{+} &  \\
+		\acs{GCD} &  &  &  &  &  & P 1/11\textsuperscript{-} &  \\
+		\acs{MDC} &  &  &  &  & P 2/10\textsuperscript{-} & P 2/11\textsuperscript{-} &  \\
+		\acs{SR} &  &  &  & I 13/17 & I 11/18 & P 3/11\textsuperscript{-} & P 3/13\textsuperscript{-} \\
+		\acs{B} &  &  &  &  &  & P 4/11\textsuperscript{-} & P 12/13\textsuperscript{+} \\
+		\acs{CH} &  &  &  & I 5/17 & I 13/18 & P 5/11\textsuperscript{-} & P 6/13\textsuperscript{-} \\
+		\acs{CEA} &  &  &  &  &  & P 6/11\textsuperscript{-} & T 1/4 \\
+		\acs{ML} &  &  &  &  & P 8/10\textsuperscript{+} & P 7/11\textsuperscript{*} & P 8/13\textsuperscript{+} \\
+		\acs{SDS} &  &  &  &  & I 18/18 & P 8/11\textsuperscript{+} & T 3/4 \\
+		\acs{AV} & I 7/12 & I 7/9 & I 12/14 & P 3/10\textsuperscript{-} & P 5/10\textsuperscript{*} & P 9/11\textsuperscript{+} & P 9/13\textsuperscript{+} \\
+		\acs{NE} &  &  &  &  &  & P 10/11\textsuperscript{+} & P 10/13\textsuperscript{+} \\
+		\acs{SDx} &  &  &  &  &  & P 11/11\textsuperscript{+} &  \\
 		\hline
 	\end{tabularx}
 \caption*{Quelle: Eigene Darstellung}
@@ -174,7 +174,7 @@ Um die Dimension der Kennzahlen von wissenschaftlichen Veröffentlichungen besse
 	\label{tab:dist_full_pub}
 \begin{tabularx}{\linewidth}{XXXXXXX}
 	\hline 
-	\multirow{2}{*}{Jahr} & \multicolumn{2}{c}{WoS} &  \multicolumn{2}{c}{IEEE}  &  \multicolumn{2}{c}{ACM}  \\ 
+	\multirow{2}{*}{Jahr} & \multicolumn{2}{c}{\acs{WoS}} &  \multicolumn{2}{c}{\acs{IEEE}}  &  \multicolumn{2}{c}{\acs{ACM}}  \\ 
 	& Artikel & Konf. & Artikel & Konf. & Artikel & Konf. \\ 
 	\hline 
 	2010 & \numprint{1186641} & \numprint{49975} & \numprint{36936} & \numprint{219692} & \numprint{57422} & \numprint{91322} \\ 
@@ -205,19 +205,19 @@ Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglic
 	\label{tab:dist_wos_exact}
 	\begin{tabularx}{\linewidth}{XXXXXXX}
 		\hline
-		Techn. & WoS (A) & WoS (KB) & IEEE (A) & IEEE (KB) & ACM (A) & ACM (KB) \\
+		Techn. & \acs{WoS} (\acs{A}) & \acs{WoS} (\acs{KB}) & \acs{IEEE} (\acs{A}) & \acs{IEEE} (\acs{KB}) & \acs{ACM} (\acs{A}) & \acs{ACM} (\acs{KB}) \\
 		\hline
-		GCD & 1 & 0 & 0 & 2 & 2 & 4 \\
-		MDC & 6 & 0 & 0 & 13 & 5 & 11 \\
-		SR & 38 & 3 & 5 & 63 & 9 & 17 \\
-		B & 336 & 6 & 147 & 524 & 57 & 285 \\
-		CH & 42 & 7 & 9 & 72 & 29 & 38 \\
-		CEA & 0 & 0 & 0 & 0 & 0 & 0 \\
-		ML & \numprint{33967} & \numprint{2893} & \numprint{5602} & \numprint{42172} & \numprint{14724} & \numprint{28191} \\
-		SDS & 9 & 1 & 1 & 23 & 4 & 4 \\
-		AV & \numprint{2102} & 142 & 714 & \numprint{3733} & 511 & 646 \\
-		NE & 143 & 17 & 11 & 27 & 15 & 3 \\
-		SDx & 1 & 0 & 1 & 1 & 0 & 0 \\
+		\acs{GCD} & 1 & 0 & 0 & 2 & 2 & 4 \\
+		\acs{MDC} & 6 & 0 & 0 & 13 & 5 & 11 \\
+		\acs{SR} & 38 & 3 & 5 & 63 & 9 & 17 \\
+		\acs{B} & 336 & 6 & 147 & 524 & 57 & 285 \\
+		\acs{CH} & 42 & 7 & 9 & 72 & 29 & 38 \\
+		\acs{CEA} & 0 & 0 & 0 & 0 & 0 & 0 \\
+		\acs{ML} & \numprint{33967} & \numprint{2893} & \numprint{5602} & \numprint{42172} & \numprint{14724} & \numprint{28191} \\
+		\acs{SDS} & 9 & 1 & 1 & 23 & 4 & 4 \\
+		\acs{AV} & \numprint{2102} & 142 & 714 & \numprint{3733} & 511 & 646 \\
+		\acs{NE} & 143 & 17 & 11 & 27 & 15 & 3 \\
+		\acs{SDx} & 1 & 0 & 1 & 1 & 0 & 0 \\
 		\hline
 	\end{tabularx}
 	\caption*{Quelle: Eigene Darstellung}
@@ -225,7 +225,7 @@ Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglic
 
 Somit entstehen zunächst einmal acht Tabellen. Eine für die Gesamtanzahl an Publikationen im Betrachtungszeitraum, eine Gesamtübersicht der Suchergebnisse bei einer exakten Suche der Technologien sowie sechs Tabellen zu den erweiterten Suchbegriffen, jeweils eine pro Suchmaschine und Veröffentlichungsform.
 
-Die Tabelle \ref{tab:dist_wos_exact} zeigt die Gesamtsumme der Publikationen für eine exakte Suche des Suchbegriffes inkl. etwaiger Pluralformen, wie er im entsprechenden \glqq Hype Cycle\grqq~erschienen ist. Bei den Spaltenüberschriften handelt es sich um die Abkürzungen der jeweiligen Suchmaschinen sowie die Aufteilung in Artikel (A) und Konferenzberichte~(KB).
+Die Tabelle \ref{tab:dist_wos_exact} zeigt die Gesamtsumme der Publikationen für eine exakte Suche des Suchbegriffes inkl. etwaiger Pluralformen, wie er im entsprechenden \glqq Hype Cycle\grqq~erschienen ist. Bei den Spaltenüberschriften handelt es sich um die Abkürzungen der jeweiligen Suchmaschinen sowie die Aufteilung in \ac{A} und \ac{KB}.
 
 In den folgenden sechs Tabellen ist die Mengenverteilung der jährlichen Publikationen von Artikeln bzw. Konferenzbeiträgen zu den entsprechenden Technologien zu sehen, die in der jeweiligen Suchmaschine gelistet wird.
 
@@ -241,17 +241,17 @@ Die Suchergebnisse des \glqq Web of Science\grqq~zu wissenschaftlichen Fachartik
 	\hline
 	Techn. & $\leq$~2009 & 2010 & 2011 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 \\
 	\hline
-	GCD & 8 & - & 1 & 5 & 3 & 11 & 16 & 23 & 16 & 6 \\
-	MDC & - & - & - & - & - & - & 2 & - & 4 & 4 \\
-	SR & 611 & 94 & 138 & 160 & 210 & 171 & 252 & 282 & 291 & 170 \\
-	B & - & - & - & - & - & - & 1 & 28 & 155 & 152 \\
-	CH & 219 & 48 & 72 & 96 & 120 & 140 & 203 & 244 & 370 & 242 \\
-	CEA & 2 & - & - & - & - & - & - & - & - & - \\
-	ML & \numprint{7241} & \numprint{1154} & \numprint{1366} & \numprint{1547} & \numprint{1990} & \numprint{2353} & \numprint{3232} & \numprint{4212} & \numprint{5580} & \numprint{4467} \\
-	SDS & - & - & - & - & - & 1 & 2 & 3 & 1 & 2 \\
-	AV & 587 & 80 & 80 & 113 & 91 & 117 & 176 & 237 & 361 & 260 \\
-	NE & 565 & 111 & 92 & 88 & 66 & 79 & 72 & 97 & 81 & 60 \\
-	SDx & - & - & - & - & - & - & - & - & - & 1 \\
+	\acs{GCD} & 8 & - & 1 & 5 & 3 & 11 & 16 & 23 & 16 & 6 \\
+	\acs{MDC} & - & - & - & - & - & - & 2 & - & 4 & 4 \\
+	\acs{SR} & 611 & 94 & 138 & 160 & 210 & 171 & 252 & 282 & 291 & 170 \\
+	\acs{B} & - & - & - & - & - & - & 1 & 28 & 155 & 152 \\
+	\acs{CH} & 219 & 48 & 72 & 96 & 120 & 140 & 203 & 244 & 370 & 242 \\
+	\acs{CEA} & 2 & - & - & - & - & - & - & - & - & - \\
+	\acs{ML} & \numprint{7241} & \numprint{1154} & \numprint{1366} & \numprint{1547} & \numprint{1990} & \numprint{2353} & \numprint{3232} & \numprint{4212} & \numprint{5580} & \numprint{4467} \\
+	\acs{SDS} & - & - & - & - & - & 1 & 2 & 3 & 1 & 2 \\
+	\acs{AV} & 587 & 80 & 80 & 113 & 91 & 117 & 176 & 237 & 361 & 260 \\
+	\acs{NE} & 565 & 111 & 92 & 88 & 66 & 79 & 72 & 97 & 81 & 60 \\
+	\acs{SDx} & - & - & - & - & - & - & - & - & - & 1 \\
 	\hline
 \end{tabularx}
 	\caption*{Quelle: Eigene Darstellung}
@@ -267,26 +267,26 @@ Die Suchergebnisse des \glqq Web of Science\grqq~zu wissenschaftlichen Fachartik
 	\hline
 	Techn. & $\leq$~2009 & 2010 & 2011 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 \\
 	\hline
-	GCD & 3 & - & - & - & - & 1 & - & - & - & 1 \\
-	MDC & - & - & - & - & - & - & - & - & - & - \\
-	SR & 203 & 3 & 7 & 4 & 1 & 4 & 10 & 7 & 5 & 8 \\
-	B & - & - & - & - & - & - & - & - & 5 & 1 \\
-	CH & 59 & 3 & 3 & 1 & 1 & 2 & 7 & 7 & 16 & 6 \\
-	CEA & - & - & - & - & - & - & - & - & - & - \\
-	ML & \numprint{2042} & 64 & 57 & 35 & 61 & 59 & 132 & 164 & 126 & 126 \\
-	SDS & - & - & - & - & - & 1 & - & - & - & - \\
-	AV & 103 & 4 & 3 & 5 & 1 & 1 & 4 & 4 & 8 & 9 \\
-	NE & 76 & 18 & 9 & 1 & 3 & 2 & 4 & 2 & - & - \\
-	SDx & - & - & - & - & - & - & - & - & - & - \\
+	\acs{GCD} & 3 & - & - & - & - & 1 & - & - & - & 1 \\
+	\acs{MDC} & - & - & - & - & - & - & - & - & - & - \\
+	\acs{SR} & 203 & 3 & 7 & 4 & 1 & 4 & 10 & 7 & 5 & 8 \\
+	\acs{B} & - & - & - & - & - & - & - & - & 5 & 1 \\
+	\acs{CH} & 59 & 3 & 3 & 1 & 1 & 2 & 7 & 7 & 16 & 6 \\
+	\acs{CEA} & - & - & - & - & - & - & - & - & - & - \\
+	\acs{ML} & \numprint{2042} & 64 & 57 & 35 & 61 & 59 & 132 & 164 & 126 & 126 \\
+	\acs{SDS} & - & - & - & - & - & 1 & - & - & - & - \\
+	\acs{AV} & 103 & 4 & 3 & 5 & 1 & 1 & 4 & 4 & 8 & 9 \\
+	\acs{NE} & 76 & 18 & 9 & 1 & 3 & 2 & 4 & 2 & - & - \\
+	\acs{SDx} & - & - & - & - & - & - & - & - & - & - \\
 	\hline
 \end{tabularx}
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
-In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind in der gleichen Reihenfolge die Ergebnisse der Suche im IEEE dargestellt.
+In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind in der gleichen Reihenfolge die Ergebnisse der Suche im \ac{IEEE} dargestellt.
 
 \begin{table}
-	\caption{Verteilung der Publikationen in Fachartikeln im \glqq IEEE\grqq}
+	\caption{Verteilung der Publikationen in Fachartikeln im \glqq \ac{IEEE}\grqq}
 	\fontfamily{pcr}\selectfont
 	\footnotesize
 	\centering
@@ -295,24 +295,24 @@ In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind
 	\hline
 	Techn. & $\leq$~2009 & 2010 & 2011 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 \\
 	\hline
-	GCD & - & - & - & 2 & - & 4 & 3 & 1 & 3 & - \\
-	MDC & - & - & - & - & - & - & - & - & 2 & 2 \\
-	SR & 311 & 58 & 39 & 43 & 51 & 70 & 72 & 92 & 121 & 104 \\
-	B & - & - & - & - & - & - & 5 & 9 & 42 & 93 \\
-	CH & 53 & 9 & 18 & 27 & 27 & 17 & 42 & 49 & 66 & 49 \\
-	CEA & - & - & - & - & - & - & - & - & - & - \\
-	ML & \numprint{1551} & 246 & 222 & 246 & 318 & 381 & 513 & 626 & 781 & 805 \\
-	SDS & - & - & - & - & - & - & - & 1 & - & - \\
-	AV & 193 & 17 & 29 & 37 & 21 & 36 & 43 & 73 & 139 & 134 \\
-	NE & 90 & 11 & 33 & 15 & 17 & 19 & 28 & 20 & 22 & 20 \\
-	SDx & - & - & - & - & - & - & - & - & - & 1 \\
+	\acs{GCD} & - & - & - & 2 & - & 4 & 3 & 1 & 3 & - \\
+	\acs{MDC} & - & - & - & - & - & - & - & - & 2 & 2 \\
+	\acs{SR} & 311 & 58 & 39 & 43 & 51 & 70 & 72 & 92 & 121 & 104 \\
+	\acs{B} & - & - & - & - & - & - & 5 & 9 & 42 & 93 \\
+	\acs{CH} & 53 & 9 & 18 & 27 & 27 & 17 & 42 & 49 & 66 & 49 \\
+	\acs{CEA} & - & - & - & - & - & - & - & - & - & - \\
+	\acs{ML} & \numprint{1551} & 246 & 222 & 246 & 318 & 381 & 513 & 626 & 781 & 805 \\
+	\acs{SDS} & - & - & - & - & - & - & - & 1 & - & - \\
+	\acs{AV} & 193 & 17 & 29 & 37 & 21 & 36 & 43 & 73 & 139 & 134 \\
+	\acs{NE} & 90 & 11 & 33 & 15 & 17 & 19 & 28 & 20 & 22 & 20 \\
+	\acs{SDx} & - & - & - & - & - & - & - & - & - & 1 \\
 	\hline
 \end{tabularx}
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
 \begin{table}
-	\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq IEEE\grqq}
+	\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq \ac{IEEE}\grqq}
 	\fontfamily{pcr}\selectfont
 	\footnotesize
 	\centering
@@ -321,26 +321,26 @@ In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind
 	\hline
 	Techn. & $\leq$~2009 & 2010 & 2011 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 \\
 	\hline
-	GCD & 23 & 4 & 11 & 23 & 27 & 22 & 21 & 25 & 14 & 6 \\
-	MDC & - & - & - & - & 1 & 3 & 10 & 12 & 9 & 3 \\
-	SR & \numprint{4288} & 647 & 685 & 833 & 910 & \numprint{1132} & \numprint{1233} & \numprint{1320} & \numprint{1274} & \numprint{199} \\
-	B & - & - & - & - & 2 & 1 & 9 & 46 & 267 & 220 \\
-	CH & 383 & 152 & 155 & 208 & 222 & 249 & 363 & 403 & 446 & 139 \\
-	CEA & 2 & - & - & - & - & - & - & - & - & - \\
-	ML & \numprint{16354} & \numprint{2685} & \numprint{2166} & \numprint{2326} & \numprint{2252} & \numprint{2387} & \numprint{3155} & \numprint{4118} & \numprint{5395} & \numprint{1415} \\
-	SDS & - & - & - & - & - & 1 & 3 & 7 & 10 & 2 \\
-	AV & \numprint{1251} & 168 & 188 & 171 & 190 & 262 & 266 & 403 & 675 & 177 \\
-	NE & 316 & 96 & 95 & 83 & 85 & 92 & 74 & 86 & 70 & 19 \\
-	SDx & - & - & - & - & - & - & - & - & 1 & - \\
+	\acs{GCD} & 23 & 4 & 11 & 23 & 27 & 22 & 21 & 25 & 14 & 6 \\
+	\acs{MDC} & - & - & - & - & 1 & 3 & 10 & 12 & 9 & 3 \\
+	\acs{SR} & \numprint{4288} & 647 & 685 & 833 & 910 & \numprint{1132} & \numprint{1233} & \numprint{1320} & \numprint{1274} & \numprint{199} \\
+	\acs{B} & - & - & - & - & 2 & 1 & 9 & 46 & 267 & 220 \\
+	\acs{CH} & 383 & 152 & 155 & 208 & 222 & 249 & 363 & 403 & 446 & 139 \\
+	\acs{CEA} & 2 & - & - & - & - & - & - & - & - & - \\
+	\acs{ML} & \numprint{16354} & \numprint{2685} & \numprint{2166} & \numprint{2326} & \numprint{2252} & \numprint{2387} & \numprint{3155} & \numprint{4118} & \numprint{5395} & \numprint{1415} \\
+	\acs{SDS} & - & - & - & - & - & 1 & 3 & 7 & 10 & 2 \\
+	\acs{AV} & \numprint{1251} & 168 & 188 & 171 & 190 & 262 & 266 & 403 & 675 & 177 \\
+	\acs{NE} & 316 & 96 & 95 & 83 & 85 & 92 & 74 & 86 & 70 & 19 \\
+	\acs{SDx} & - & - & - & - & - & - & - & - & 1 & - \\
 	\hline
 \end{tabularx}
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
-Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{tab:dist_acm_proc} die Ergebnisse der Suche im ACM zu finden.
+Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{tab:dist_acm_proc} die Ergebnisse der Suche im \ac{ACM} zu finden.
 
 \begin{table}
-	\caption{Verteilung der Publikationen in Fachartikeln im \glqq ACM\grqq}
+	\caption{Verteilung der Publikationen in Fachartikeln im \glqq \ac{ACM}\grqq}
 	\fontfamily{pcr}\selectfont
 	\footnotesize
 	\centering
@@ -349,24 +349,24 @@ Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{ta
 	\hline
 	Techn. & $\leq$2009 & 2010 & 2011 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 \\
 	\hline
-	GCD & 7 & 1 & 5 & 4 & 9 & 8 & 8 & 15 & 15 & 5 \\
-	MDC & - & - & - & - & - & - & 2 & 1 & 1 & 1 \\
-	SR & 256 & 55 & 54 & 58 & 58 & 49 & 71 & 70 & 76 & 16 \\
-	B & - & - & - & - & - & - & - & 8 & 18 & 32 \\
-	CH & 131 & 40 & 43 & 43 & 56 & 35 & 60 & 73 & 87 & 42 \\
-	CEA & 1 & - & - & - & - & - & - & - & - & - \\
-	ML & \numprint{5245} & 788 & 916 & 974 & 934 & 968 & \numprint{1160} & \numprint{1507} & \numprint{1615} & 611 \\
-	SDS & - & - & - & - & - & 1 & 2 & 3 & 1 & 2 \\
-	AV & 210 & 30 & 32 & 31 & 22 & 20 & 30 & 53 & 62 & 23 \\
-	NE & 44 & 10 & 11 & 11 & 14 & 11 & 10 & 14 & 11 & 7 \\
-	SDx & - & - & - & - & - & - & - & - & - & - \\
+	\acs{GCD} & 7 & 1 & 5 & 4 & 9 & 8 & 8 & 15 & 15 & 5 \\
+	\acs{MDC} & - & - & - & - & - & - & 2 & 1 & 1 & 1 \\
+	\acs{SR} & 256 & 55 & 54 & 58 & 58 & 49 & 71 & 70 & 76 & 16 \\
+	\acs{B} & - & - & - & - & - & - & - & 8 & 18 & 32 \\
+	\acs{CH} & 131 & 40 & 43 & 43 & 56 & 35 & 60 & 73 & 87 & 42 \\
+	\acs{CEA} & 1 & - & - & - & - & - & - & - & - & - \\
+	\acs{ML} & \numprint{5245} & 788 & 916 & 974 & 934 & 968 & \numprint{1160} & \numprint{1507} & \numprint{1615} & 611 \\
+	\acs{SDS} & - & - & - & - & - & 1 & 2 & 3 & 1 & 2 \\
+	\acs{AV} & 210 & 30 & 32 & 31 & 22 & 20 & 30 & 53 & 62 & 23 \\
+	\acs{NE} & 44 & 10 & 11 & 11 & 14 & 11 & 10 & 14 & 11 & 7 \\
+	\acs{SDx} & - & - & - & - & - & - & - & - & - & - \\
 	\hline
 \end{tabularx}
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
 \begin{table}
-	\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq ACM\grqq}
+	\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq \ac{ACM}\grqq}
 	\fontfamily{pcr}\selectfont
 	\footnotesize
 	\centering
@@ -375,17 +375,17 @@ Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{ta
 	\hline
 	Techn. & $\leq$2009 & 2010 & 2011 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 \\
 	\hline
-	GCD & 28 & 9 & 25 & 28 & 51 & 56 & 29 & 28 & 18 & 10 \\
-	MDC & - & - & 2 & 1 & 2 & - & 2 & 2 & 2 & - \\
-	SR & 433 & 85 & 75 & 94 & 99 & 70 & 72 & 65 & 40 & 38 \\
-	B & - & - & - & - & - & 1 & 4 & 29 & 103 & 126 \\
-	CH & 477 & 151 & 138 & 160 & 112 & 119 & 165 & 133 & 99 & 59 \\
-	CEA & - & - & - & - & - & 1 & - & - & - & - \\
-	ML & \numprint{11620} & \numprint{2027} & \numprint{1996} & \numprint{2350} & \numprint{2136} & \numprint{1854} & \numprint{2261} & \numprint{1536} & \numprint{1466} & 946 \\
-	SDS & - & - & - & - & - & 2 & 1 & - & 1 & 1 \\
-	AV & 225 & 31 & 28 & 45 & 19 & 40 & 59 & 54 & 101 & 49 \\
-	NE & 24 & 16 & 18 & 11 & 5 & 6 & 2 & 2 & - & 2 \\
-	SDx & - & - & - & - & - & - & - & - & - & - \\
+	\acs{GCD} & 28 & 9 & 25 & 28 & 51 & 56 & 29 & 28 & 18 & 10 \\
+	\acs{MDC} & - & - & 2 & 1 & 2 & - & 2 & 2 & 2 & - \\
+	\acs{SR} & 433 & 85 & 75 & 94 & 99 & 70 & 72 & 65 & 40 & 38 \\
+	\acs{B} & - & - & - & - & - & 1 & 4 & 29 & 103 & 126 \\
+	\acs{CH} & 477 & 151 & 138 & 160 & 112 & 119 & 165 & 133 & 99 & 59 \\
+	\acs{CEA} & - & - & - & - & - & 1 & - & - & - & - \\
+	\acs{ML} & \numprint{11620} & \numprint{2027} & \numprint{1996} & \numprint{2350} & \numprint{2136} & \numprint{1854} & \numprint{2261} & \numprint{1536} & \numprint{1466} & 946 \\
+	\acs{SDS} & - & - & - & - & - & 2 & 1 & - & 1 & 1 \\
+	\acs{AV} & 225 & 31 & 28 & 45 & 19 & 40 & 59 & 54 & 101 & 49 \\
+	\acs{NE} & 24 & 16 & 18 & 11 & 5 & 6 & 2 & 2 & - & 2 \\
+	\acs{SDx} & - & - & - & - & - & - & - & - & - & - \\
 	\hline
 \end{tabularx}
 \caption*{Quelle: Eigene Darstellung}
@@ -442,7 +442,6 @@ Für die deskriptive Auswertung wird für jede Technologie ein eigenes Kurvendia
 
 \subsubsection{Klassifizierung der Technologien}
 Durch die deskriptive Auswertung sind Erkenntnisse zu erwarten, die eine Klassifizierung der Technologien in unterschiedliche Kategorien ermöglichen.
-
 
 Dazu erfordert es zum einen die Betrachtung des Verlaufes einer Technologie aus den Perspektiven der Wirtschaft und Wissenschaft, vom initialen Erscheinen bis zum aktuellen Trendstatus. Zum anderen ist die Einordnung der Technologien in übergeordnete Fachbereiche nützlich, da sich diverse Technologiebegriffe des \glqq Gartner Hype Cycle\grqq~auf spezielle Anwendungen beziehen und in dem engeren Sinne kein direktes Pendant in der Wissenschaft zu besitzen scheinen.
 

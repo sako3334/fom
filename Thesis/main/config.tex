@@ -5,6 +5,7 @@
 \usepackage[top=4cm, bottom=2cm, left=4cm, right=2cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[hidelinks]{hyperref}
+\usepackage{acronym}
 \usepackage{apacite}
 \usepackage{amsmath}
 \usepackage{fancyhdr}
@@ -57,8 +58,10 @@
 	\listoffigures
 	\clearpage
 	\listoftables
-	\onehalfspacing
 	\clearpage
+	\include{y_acronyms}
+	\clearpage
+	\onehalfspacing
 	\pagenumbering{arabic}
 	\include{a_intro}
 	\include{b_econ_trends}
