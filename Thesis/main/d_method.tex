@@ -103,8 +103,21 @@ Im nächsten Schritt gilt es, alternative Bezeichnungen der Technologiebegriffe 
 
 Andersherum sind Begriffe auszuschließen, die für eine höhere Evolutionsstufe der ursprünglichen Technologie stehen, diese jedoch signifikant erweitern, so dass ein neuer Begriff einen neuen Kontext rechtfertigt. Ein Beispiel dafür sind die Technologien \glqq Machine Learning\grqq~und \glqq Deep Learning\grqq, welche jeweils ihre eigene Daseinsberechtigung haben und daher in der aktuellen Ausgabe des \glqq Hype Cycle for Emerging Technologies 2017\grqq~im \glqq Peak of Inflated Expectations\grqq~nebeneinander stehen.\footnote{\citeNP<Vgl.>[S.~45.]{ghc2017}} Da es sich bei \glqq Deep Learning\grqq~um die neuere Technologie handelt, wird sie mit dem exkludierenden Operator \glqq NOT\grqq~jeweils herausgenommen.
 
-TODO: Suchalgorithmen
-TODO: Eingrenzung auf Betrachtugszeitraum; aktuelles Jahr nicht abgeschlossen, verfälscht Statistik
+Im Folgenden werden die exakten Suchbegriffe je Technologie generisch aufgelistet. Die jeweiligen Suchalgorithmen für die verschiedenen Suchmaschinen lassen sich aus dem zuvor beschriebenen Beispiel rekonstruieren. Inkludierte Begriffe erhalten ein \glqq $+$\grqq, exkludierte Begriffe ein \glqq $-$\grqq~vor den Ausdruck.
+
+\begin{description}
+	\item[Gesture Control Devices:] $+$gesture control device $+$gesture control devices $+$natural user interface
+	\item[Micro Data Centers:] $+$micro data center $+$micro data centers $+$microdata center $+$microdata centers $+$micro datacenter $+$micro datacenters
+	\item[Smart Robots:] $+$smart robot $+$smart robots $+$cognitive robotic $+$cognitive robotics $+$humanoid robot  $+$humanoid robots $+$android robot $+$android robots
+	\item[Blockchain:] $+$blockchain $+$distributed ledger $+$distributed-ledger
+	\item[Connected Home:] $+$connected home $+$connected homes $+$smart home $+$smart homes
+	\item[Cognitive Expert Advisors:] $+$cognitive expert advisor $+$cognitive expert advisors $+$cognitive expert system $+$cognitive expert systems
+	\item[Maschine Learning:] $+$machine learning $-$deep learning
+	\item[Software Defined Security:] $+$software defined security $+$software-defined security
+	\item[Autonomous Vehicles:] $+$autonomous vehicle $+$autonomous vehicles
+	\item[Nanotube Electronics:] $+$nanotube electronic $+$nanotube electronics $+$carbon nanotube field effect $+$carbon nanotube field-effect $+$semiconductor nanotubes
+	\item[Software Defined Anything:] $+$software defined anything $+$software-defined anything
+\end{description}
 
 Für die Auswertung wird die Menge der Publikationen pro Jahr und Filter benötigt. Dazu werden die entsprechenden Exportfunktionen der jeweiligen Suchmaschinen eingesetzt. Im \ac{WoS} ist ein Export der Verteilung von Publikationen pro Jahr von maximal \numprint{200000} Datensätzen mit einer einzigen Anweisung im \acs{TSV}-Format (\acl{TSV}) möglich.
 
@@ -194,7 +207,8 @@ Um die Dimension der Kennzahlen von wissenschaftlichen Veröffentlichungen besse
 
 Die Übersicht der Verteilung zu vergleichender Technologien wird ebenfalls tabellarisch dargestellt. Eine Tabelle enthält Informationen zur eingesetzten Suchmaschine, Form der Veröffentlichung (Artikel oder Konferenzbericht) sowie der Anzahl an Veröffentlichungen.
 
-Zunächst einmal wird die Anzahl der Treffer bei einer exakten Suche der Technologie ermittelt und tabellarisch aufbereitet. Anschließend werden die Suchergebnisse mithilfe des in Abschnitt \ref{sec:lit_data} beschriebenen Vorgehens ermittelten Suchalgorithmen abgebildet. Die verwendeten Suchalgorithmen werden ebenfalls gesichert, um eine Reproduzierbarkeit der Analyse zu gewährleisten.
+Zunächst einmal wird die Anzahl der Treffer bei einer exakten Suche der Technologie ermittelt und tabellarisch aufbereitet.
+Anschließend werden die nach dem in Abschnitt \ref{sec:lit_data} beschriebenen Vorgehen ermittelten Suchergebnisse tabellarisch visualisiert.
 
 Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglichst identisch zur Vergleichsbasis aus Tabelle \ref{tab:dist_ghc} gehalten. Um dabei die Lesbarkeit zu wahren, werden zusätzliche Veröffentlichungsjahre der Vergangenheit an dieser Stelle kumuliert. Da die Zeitspanne der Veröffentlichungsjahre sich teilweise über mehrere Jahrzehnte erstreckt, wäre andernfalls ihre Darstellung in einer Zeile nicht möglich. Für die Analyse werden jedoch die Rohdaten verwendet, die in Anhang \ref{sec:sci_raw_dist} wiederzufinden sind. Die Zeilenüberschriften mit den abgekürzten Technologien bedürfen keiner Anpassung. In den Tabellenzellen wird die Anzahl der Suchergebnisse festgehalten.
 
@@ -404,6 +418,14 @@ In dem ursprünglichen Kurvendiagramm sind Abszisse und Ordinate sinngemäß mit
 
 Das resultierende Kurvendiagramm stellt das Verhältnis der Jahre von Vorkommen einer Technologie im \glqq Hype Cyle\grqq~zur entsprechenden Trendstärke dar. Somit lautet die Abszisse \glqq Veröffentlichungsjahr\grqq~und die Ordinate \glqq Trendstärke\grqq. Die Technologien der zu untersuchenden Daten befinden sich ausschließlich auf der genannten Parabel. Für die Ermittlung der Ordinate wird deshalb für jedes Jahr eine Parabel geformt, von der die jeweilige Koordinate unter Zuhilfenahme der Gewichtungsfaktoren übernommen wird. Die Berechnung der Koordinaten ist mathematisch nicht exakt und dient allein dem Zwecke der Veranschaulichung der Position im ursprünglichen \glqq Hype Cycle\grqq. Dies genügt jedoch für die Analyse, da dem \glqq Hype Cycle\grqq~keine genaueren Daten zu entnehmen sind und solange sich die Differenzen zwischen den Technologien ausreichend voneinander abheben. Ist eine Technologie in mehreren Ausgaben vertreten, werden die jeweiligen Punkte interpoliert. Die Koordinaten jeder Technologie werden durch die Kombination von Symbolen und Farben eindeutig gekennzeichnet und in einer Legende entschlüsselt.
 
+\begin{figure}
+	\centering
+	\caption{Grundgerüst für die Trenddarstellung der Technologien im \glqq Gartner Hype Cycle\grqq}
+	\includegraphics[width=\linewidth,height=\textheight/4]{pdf/ghc_plot.pdf}
+	\caption*{Quelle: Eigene Darstellung}
+	\label{fig:ghc_plot}
+\end{figure}
+
 In Abbildung \ref{fig:ghc_plot} ist das Grundgerüst für die Ermittlung der Position einer Technologie im entsprechenden Jahr der Veröffentlichung zu sehen. Für jedes Veröffentlichungsjahr, das für die Analyse von Bedeutung ist, wird eine Parabel geformt, die grob den \glqq Hype Cycle\grqq~der ersten drei Phasen abbildet. Sie schneidet die Abszisse im Veröffentlichungsjahr und dem Folgejahr. Die Skalierung der Trendstärke (Ordinate) befindet sich im Intervall $\interval{0}{100}$, wobei der Bereich $\interval[open left]{75}{100}$ beidseitig den \glqq Peak of Inflated Expectations\grqq~darstellt. Das Intervall $\interval[open left]{0}{75}$ links vom Scheitelpunkt bildet die Phase \glqq Innovation Trigger\grqq, das Intervall $\interval[open left]{75}{0}$ rechts vom Scheitelpunkt die Phase \glqq Trough of Disillusionment\grqq~ab. Die Formel für die Erzeugung der einzelnen Parabeln lautet wie folgt:
 
 \begin{align}
@@ -411,14 +433,6 @@ f(x) &= -400 \cdot \left( x - V_j - \frac{1}{2} \right)^2+100 \label{eq:parabel}
 \text{mit:}\nonumber\\
 V_j &= \text{Veröffentlichungsjahr}\nonumber
 \end{align}
-
-\begin{figure}
-	\centering
-	\caption{Grundgerüst für die Trenddarstellung der Technologien im \glqq Gartner Hype Cycle\grqq}
-	\includegraphics[width=\linewidth]{pdf/ghc_plot.pdf}
-	\caption*{Quelle: Eigene Darstellung}
-	\label{fig:ghc_plot}
-\end{figure}
 
 Als nächstes sind die Werte der Definitionsmenge zu bestimmen, welche für die einzelnen Technologien eine geeignete Trendstärke ergeben und gleichzeitig das richtige Verhältnis zueinander wahren. Dazu werden die in Tabelle \ref{tab:dist_ghc} aufgeführten Parameter verwendet.
 
@@ -441,19 +455,31 @@ Die Daten der Häufigkeiten von wissenschaftlichen Publikationen sind per se kar
 
 Für die deskriptive Auswertung wird für jede Technologie ein eigenes Kurvendiagramm erstellt. Die Abszisse stellt die Veröffentlichungsjahre und die Ordinate die Anzahl der Veröffentlichungen dar. Pro Suchmaschine und Veröffentlichungstyp wird eine Kurve erstellt, die sich durch Interpolation der jeweiligen Koordinatenpunkte ergibt. Dabei wird für jede Suchmaschine ein eigener Linientyp sowie für jede Veröffentlichungsform eine eigene Punktform verwendet. Damit die Kurven sich auch bei einer Überlagerung voneinander abheben, haben sie jeweils eine eigene Farbe, die jedoch keine zusätzliche Bedeutung, wie beim Linientyp bzw. der Punktform, haben.
 
+Der dargestellte Zeitraum wird auf den im \glqq Hype Cycle\grqq~gewählten Betrachtungszeitraum begrenzt. Das aktuelle Jahr wird, da es noch nicht abgeschlossen ist und deshalb den Trendverlauf verfälschen könnte, ausgenommen.
+
 \subsubsection{Klassifizierung der Technologien}
 Durch die deskriptive Auswertung sind Erkenntnisse zu erwarten, die eine Klassifizierung der Technologien in unterschiedliche Kategorien ermöglichen.
 
-Dazu erfordert es zum einen die Betrachtung des Verlaufes einer Technologie aus den Perspektiven der Wirtschaft und Wissenschaft, vom initialen Erscheinen bis zum aktuellen Trendstatus. Zum anderen ist die Einordnung der Technologien in übergeordnete Fachbereiche nützlich, da sich diverse Technologiebegriffe des \glqq Gartner Hype Cycle\grqq~auf spezielle Anwendungen beziehen und in dem engeren Sinne kein direktes Pendant in der Wissenschaft zu besitzen scheinen.
+Die erste Kategorie unterteilt die Technologien in ihre Trendstärke. Sie lässt sich durch die Auswertung der Publikationsmengen bilden. In Tabelle \ref{tab:class_trend_mt} sind die Trendkategorien zu den kumulierten Veröffentlichungen in der wissenschaftlichen Literatur abgebildet. Die Intervalle der einzelnen Gewichtungsfaktoren orientieren sich an den vorliegenden Daten und unterteilen die Technologien anhand nahe liegender Publikationsmengen.
 
-Die Klassifizierung soll letztlich Aufschluss darüber geben, welcher Domäne eine Technologie ursprünglich zuzurechnen ist und wo der Trend primär wahrzunehmen war. Daraus lassen sich wiederum Anhaltspunkte darüber ableiten, ob eine Beeinflussung in Richtung eines Trends stattgefunden hat.
+\begin{table}
+	\caption{Klassifizierung von Trendstufen}
+	\fontfamily{pcr}\selectfont
+	\footnotesize
+	\centering
+	\label{tab:class_trend_mt}
+	\begin{tabularx}{\linewidth}{XX}
+		Kategorie & Anzahl Publikationen pro Jahr \\
+		\hline
+		sehr starker Trend & $\geq$~2000 \\
+		starker Trend & 500-2000 \\
+		schwacher Trend & 100-500 \\
+		sehr schwacher Trend & 20-100 \\
+		kein Trend & $\leq$~20 \\
+	\end{tabularx}
+	\caption*{Quelle: Eigene Darstellung}
+\end{table}
 
-%Andere Bezeichnung in der Forschung? -> Hinweis auf Diskrepanzen
-%Theoretische vs. praktische Technologien. Theoretische Idee hinter einer kommerziellen Technologie herausfinden
-%CEA: machine learning, artificial intelligence
+Die nächste Möglichkeit der Kategorisierung ist durch die fachliche Abstraktion der Technologien gegeben. Dadurch werden semantische Abhängigkeiten offengelegt, die bei alleiniger Betrachtung von Quantitäten verborgen bleiben.
 
-%\subsubsection{Zeitreihenanalyse der Mengenverteilung von wissenschaftlichen Publikationen}
-% Die Daten 
-
-%einfacher gleitender mittelwert
-%Trendkomponente
+Die Klassifizierung soll letztlich Aufschluss darüber geben, welcher Domäne eine Technologie ursprünglich zuzurechnen und wo der Trend initial wahrzunehmen ist. Daraus lassen sich wiederum Anhaltspunkte darüber ableiten, ob eine Beeinflussung in Richtung eines Trends stattgefunden hat.

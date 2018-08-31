@@ -149,7 +149,7 @@ Der Trendverlauf der Technologie \glqq Autonomous Vehicles\grqq~ist Abbildung \r
 	\label{fig:av_pub}
 \end{figure}
 
-Schließlich zeigt Abbildung \ref{fig:ne_pub} die Trendentwicklung der Technologie \glqq Nanotube Electronics\grqq. Erneut ist zu sehen, dass Konferenzberichte im \ac{IEEE} und Fachartikel im \ac{WoS} die übrigen Publikationen dominieren. Sie bewegen sich im Betrachtungszeitraum um 100 Publikationen herum, allerdings mit einer leicht fallenden Tendenz. Im Jahre 2016 ist ein leichter Ausschlag nach oben zu erkennen. Konferenzberichte im \ac{Wos} sind wieder kaum vorhanden. Der Rest befindet sich relativ konstant bei etwas 20 Veröffentlichungen.
+Schließlich zeigt Abbildung \ref{fig:ne_pub} die Trendentwicklung der Technologie \glqq Nanotube Electronics\grqq. Erneut ist zu sehen, dass Konferenzberichte im \ac{IEEE} und Fachartikel im \ac{WoS} die übrigen Publikationen dominieren. Sie bewegen sich im Betrachtungszeitraum um 100 Publikationen herum, allerdings mit einer leicht fallenden Tendenz. Im Jahre 2016 ist ein leichter Ausschlag nach oben zu erkennen. Konferenzberichte im \ac{WoS} sind wieder kaum vorhanden. Der Rest befindet sich relativ konstant bei um die 20 Veröffentlichungen.
 
 \begin{figure}
 	\centering
@@ -159,7 +159,59 @@ Schließlich zeigt Abbildung \ref{fig:ne_pub} die Trendentwicklung der Technolog
 	\label{fig:ne_pub}
 \end{figure}
 
+Da die Technologien \glqq Cognitive Expert Advisors\grqq~und \glqq Software-Defined Anything\grqq~ -- auch über den Betrachtungszeitraum hinaus -- kaum nennenswert in wissenschaftlichen Publikationen vorkommen, werden sie nicht visualisiert.
+
 \subsection{Klassifizierung der Technologien}
-Durch die deskriptive Auswertung der Daten wurden Erkenntnisse gewonnen, die eine Klassifizierung der Technologien ermöglichen.
+Durch die deskriptive Auswertung der Daten sind Muster zu erkennen, die eine Klassifizierung der Technologien ermöglichen. Sie dient der besseren Vergleichbarkeit des Trendverhältnisses zwischen Wirtschaft und Wissenschaft.
 
+In Tabelle \ref{tab:class_trend_ev} sind die Technologien den Trendstufen zugeordnet. Die zeitliche Verteilung dazu ist in den Zellen durch die Angabe des entsprechenden Zeitraumes bzw.~-punktes abgebildet.
 
+\begin{table}
+	\caption{Zeitliche Zuordnung von Technologien zu Trendstufen}
+	\fontfamily{pcr}\selectfont
+	\footnotesize
+	\centering
+	\label{tab:class_trend_ev}
+	\begin{tabularx}{\linewidth}{p{2.2cm}|XXXXX}
+		Technologie & $>$ 2000 & $>$ 500 & $>$ 100 & $>$ 20 & $<$ 20 \\
+		\hline
+		\acs{GCD} & - & - & 2014 & 2011-2013 2015-2017 & 2010 \\
+		\acs{MDC} & - & - & - & - & 2011-2017 \\
+		\acs{SR} & - & 2010-2017 & - & - & - \\
+		\acs{B} & - & & 2016 & - & 2013-2015 \\
+		\acs{CH} & - & 2012-2017 & 2010-2011 & - & - \\
+		\acs{CEA} & - & - & - & - & 2017 \\
+		\acs{ML} & 2010-2017 & - & - & - & - \\
+		\acs{SDS} & - & - & - & - & 2014-2017 \\
+		\acs{AV} & - & 2015-2017 & 2010-2014 & - & - \\
+		\acs{NE} & - & - & 2010-2017 & - & - \\
+		\acs{SDx} & - & - & - & - & 2017 \\
+	\end{tabularx}
+	\caption*{Quelle: Eigene Darstellung}
+\end{table}
+
+Tabelle \ref{tab:class_tech} zeigt die Zuordnung der Technologien zu ihren Fachgebieten. Dabei kann eine Technologie gleichzeitig zu mehreren Fachgebieten zugehören.
+
+\begin{table}
+	\caption{Fachliche Klassifizierung der Technologien}
+	\fontfamily{pcr}\selectfont
+	\footnotesize
+	\centering
+	\label{tab:class_tech}
+	\begin{tabularx}{\linewidth}{XXXX}
+		Technologie & Elektrotechnik/ Ingenieurwesen & IT-Infrastruktur & Künstliche Intelligenz \\
+		\hline
+		\acs{GCD} & $\checkmark$ & & \\
+		\acs{MDC} & & $\checkmark$ & \\
+		\acs{SR} & $\checkmark$ & & $\checkmark$ \\
+		\acs{B} & & $\checkmark$ & \\
+		\acs{CH} & $\checkmark$ & $\checkmark$ & \\
+		\acs{CEA} & & & $\checkmark$ \\
+		\acs{ML} & $\checkmark$ & & $\checkmark$ \\
+		\acs{SDS} & & $\checkmark$ & \\
+		\acs{AV} & $\checkmark$ & & $\checkmark$ \\
+		\acs{NE} & $\checkmark$ & & \\
+		\acs{SDx} & & $\checkmark$ & \\
+	\end{tabularx}
+	\caption*{Quelle: Eigene Darstellung}
+\end{table}
