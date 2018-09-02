@@ -3,7 +3,7 @@ all_data_raw <- read.csv("D:/dev/fom/Thesis/data/structured/time_series_all.csv"
 str(all_data_raw)
 
 START <- 2010
-END <- 2018
+END <- 2017
 
 all_data <- all_data_raw[which(all_data_raw$years >= START & all_data_raw$years <= END),]
 
@@ -13,11 +13,11 @@ for(technology in unique(all_data[,"technology"])){
   technologies <- all_data[rows_technology,]
   
   par(ask = TRUE)
-  plot(x = technologies[,"years"], y = technologies[,"records"], main = technology, xlab = "Veröffentlichungsjahr", ylab = "Anzahl Publikationen", type = "n", ylim = c(min(technologies[,"records"]), max(technologies[,"records"])), xlim = c(min(technologies[,"years"]), max(technologies[,"years"])))
+  plot(x = technologies[,"years"], y = technologies[,"records"], main = technology, xlab = "Veröffentlichungsjahr", ylab = "Anzahl Publikationen", type = "n", ylim = c(min(technologies[,"records"]), max(technologies[,"records"])+max(technologies[,"records"])/10), xlim = c(min(technologies[,"years"]), max(technologies[,"years"])))
   legend_text <- character(0)
   # grid()
-  s <- 1
-  p <- 1
+  s <- 0
+  p <- 0
   for(search_engine in unique(technologies[,"search_engine"])){
     s <- s + 1
     rows_search <- which(technologies[,"search_engine"] == search_engine)
@@ -41,5 +41,5 @@ for(technology in unique(all_data[,"technology"])){
     }
   }
   legend("topleft", legend = legend_text, bty = "n", lwd = 1:length(legend_text), lty = 1:length(legend_text))
-  legend("topright", legend = c("A", "KB"), bty = "n", pch = c(20, 2))
+  legend("top", legend = c("A", "KB"), bty = "n", pch = c(20, 2))
 }
