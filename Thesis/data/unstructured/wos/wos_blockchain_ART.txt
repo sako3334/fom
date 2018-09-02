@@ -1,7 +1,7 @@
-﻿Publication Years	records	% of 336
-2018	152	45.238
-2017	155	46.131
-2016	28	8.333
-2015	1	0.298
+﻿Publication Years	records	% of 382
+2018	191	50.000
+2017	160	41.885
+2016	30	7.853
+2015	1	0.262
 (0 Publication Years {0} {1} value(s) outside display options.)
 (0 records (0.000%){0} records{1} do not contain data in the field being analyzed.)

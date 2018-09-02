@@ -5,8 +5,8 @@ data_dir = r'D:\dev\fom\Thesis\data'
 
 os.chdir(data_dir)
 
-data_file_pattern_wos = glob.glob(data_dir + r'./wos*ART.txt')
-data_file_pattern_wos.extend(glob.glob(data_dir + r'./wos*PROC.txt'))
+data_file_pattern_wos = glob.glob(data_dir + r'./unstructured/wos/wos*ART.txt')
+data_file_pattern_wos.extend(glob.glob(data_dir + r'./unstructured/wos/wos*PROC.txt'))
 
 for wos_file in data_file_pattern_wos:
     dict_year_record = {}
