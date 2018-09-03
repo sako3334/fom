@@ -41,5 +41,5 @@ for(technology in unique(all_data[,"technology"])){
     }
   }
   legend("topleft", legend = legend_text, bty = "n", lwd = 1:length(legend_text), lty = 1:length(legend_text))
-  legend("top", legend = c("A", "KB"), bty = "n", pch = c(20, 2))
+  legend("topright", legend = c("A", "KB"), bty = "n", pch = c(20, 2))
 }
