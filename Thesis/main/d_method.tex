@@ -2,7 +2,7 @@
 \subsection{Datenerhebung}
 Für die Gegenüberstellung der Technologietrends in der akademischen Forschung und praktizierenden Wirtschaft werden, wie bereits in Abschnitt \ref{sec:method} erwähnt, zwei Arten von Quellen herangezogen.
 
-\subsubsection{Gartner Hype Cycle for Emerging Technologies}\label{sec:ghcet}
+\subsubsection{Auswahl der Technologien aus dem \glqq Hype Cycle\grqq}\label{sec:ghcet}
 Der \glqq Gartner Hype Cycle for Emerging Technologies\grqq~repräsentiert als markt\-führendes Beratungsunternehmen für Technologieprognosen den Part der praktizierenden Wirtschaft. Dabei dienen die Technologien in der Phase \glqq Peak of Inflated Expectations\grqq~in vorliegender Reihenfolge als Datenbasis für die Analyse, da sie den Höhepunkt der Trendwahrnehmung darstellen.
 
 Eine komplette Ausgabe inklusive der Erläuterungen einzelner Phasen sowie der aufgeführten Technologien ist kostenpflichtig über den Webauftritt des Unternehmens: \url{https://www.gartner.com} erhältlich. Für die vorliegende Untersuchung ist sie jedoch nicht erforderlich, da die notwendigen Informationen in Unterpfaden der Webseite frei erhältlich sind.
@@ -10,7 +10,7 @@ Eine komplette Ausgabe inklusive der Erläuterungen einzelner Phasen sowie der a
 Die graphische Darstellung des \glqq Hype Cycle for Emerging Technologies\grqq~wird jährlich in Form eines Nachrichtenartikels frei veröffentlicht.\footnote{\citeNP<Vgl.>[o.S.]{ghcet2016}}
 Die genaue Aufteilung der Technologien in die fünf bekannten Phasen ist wiederum der Webseite, wo der Artikel gekauft und heruntergeladen werden kann, aus dem dort aufgeführten Inhaltsverzeichnis zu entnehmen.\footnote{\citeNP<Vgl.>[o.S.]{ghc2016}}
 
-Für die optimale Ausrichtung der Analyse an die Leitfragen ist es sinnvoll, eine relativ aktuelle Ausgabe des \glqq Hype Cycle\grqq~zu verwenden, nicht jedoch die neuste. Denn für die Leitfrage L3 wird mindestens eine neuere Ausgabe als die analysierte benötigt. Bei zu alten Publikationen besteht wiederum die Gefahr, dass durch gegenseitige Einflussnahme eine Angleichung bspw. der Begrifflichkeiten die Ergebnisse verfälschen könnte.
+Für die optimale Ausrichtung der Analyse an die Leitfragen ist es sinnvoll, eine relativ aktuelle Ausgabe des \glqq Hype Cycle\grqq~zu verwenden, nicht jedoch die neueste. Denn für die Leitfrage L3 wird mindestens eine neuere Ausgabe als die analysierte benötigt. Bei zu alten Publikationen besteht wiederum die Gefahr, dass durch gegenseitige Einflussnahme eine Angleichung bspw. der Begrifflichkeiten die Ergebnisse verfälschen könnte.
 
 Die aktuellste Ausgabe des \glqq Gartner Hype Cycle for Emerging Technologies\grqq~ ist im Juli 2017 erschienen.\footnote{\citeNP<Vgl.>[o.S.]{ghc2017}} Deshalb fällt die Wahl auf die unmittelbar vorausgegangene Veröffentlichung aus dem Jahre 2016. In der Phase \glqq Peak of Inflated Expecta\-tions\grqq~sind folgende Technologien aufgeführt:\footnote{\citeNP<Vgl.>[o.S.]{ghc2016}}
 
@@ -60,13 +60,13 @@ Demgegenüber wird die Datenbasis der akademischen Forschung aus Abfragen in rel
 	\item [\acs{ACM}:] The ACM Guide to Computing Literature - \url{https://dl.acm.org}
 \end{description}
 
-Diese enthalten neben den in Abschnitt \ref{sec:acad_pub} genannten Fachzeitschriften und Konferenzbeiträgen weitere Formen von Veröffentlichungen, wie beispielsweise Bücher oder Standards. Daher ist die Suche ausschließlich darauf einzugrenzen, wobei die Ergebnisse nach Veröffentlichungsform getrennt voneinander gehalten werden, da dies genauere Rückschlüsse über den tatsächliche Verlauf ermöglicht.
+Diese enthalten neben den in Abschnitt \ref{sec:acad_pub} genannten Fachzeitschriften und Konferenzbeiträgen weitere Formen von Veröffentlichungen, wie beispielsweise Bücher oder Standards. Daher ist die Suche ausschließlich darauf einzugrenzen, wobei die Ergebnisse nach Veröffentlichungsform getrennt voneinander gehalten werden, da dies genauere Rückschlüsse über den tatsächlichen Verlauf ermöglicht.
 
 Alle Suchmaschinen sind im erweiterten Suchmodus mit vergleichbarer Funktionalität zur Vergabe von Suchkriterien ausgestattet. Diese sind gezielt einzusetzen, damit das Suchergebnis einerseits möglichst vollständig ist und andererseits keine \glqq False Positives\grqq~liefert. Deshalb beschränkt sich die Suche der Technologien auf die Metadaten Titel, Stichwörter und Abstract einer Publikation.
 
 Der erweiterte Suchmodus bietet in allen Suchmaschinen die Möglichkeit, Suchanfragen mittels Kommandoanweisungen einzugeben. Die Operatoren zur Verknüpfung von Suchbegriffen sind nahezu identisch, wobei die Syntax einer Suchanweisung teilweise unterschiedlich ist. Somit sind die Querys untereinander nicht wahllos austauschbar.
 
-Bei \ac{IEEE} und \ac{ACM} können einige Suchkriterien wie beispielsweise die Ver\-öf\-fent\-li\-chungs\-form nicht als Teil des Querys formuliert werden. Es werden alternativ Bedienelemente in der Web\-oberfläche angeboten, mit denen die Suche entsprechend eingegrenzt werden kann. Da die Auswahl dieser Suchkriterien bei einem \glqq\acs{HTTP}-Request\grqq~(\acl{HTTP}) als \glqq Query Strings\grqq~an die \glqq GET-Methode\grqq~übergeben werden, ist die Eingrenzung auch über die Modifikation der \ac{URL} möglich.
+Bei den Suchmaschinen des \ac{IEEE} und \ac{ACM} können einige Suchkriterien wie beispielsweise die Ver\-öf\-fent\-li\-chungs\-form nicht als Teil des Querys formuliert werden. Es werden alternativ Bedienelemente in der Web\-oberfläche angeboten, mit denen die Suche entsprechend eingegrenzt werden kann. Da die Auswahl dieser Suchkriterien bei einem \glqq\acs{HTTP}-Request\grqq~(\acl{HTTP}) als \glqq Query Strings\grqq~an die \glqq GET-Methode\grqq~übergeben werden, ist die Eingrenzung auch über die Modifikation der \ac{URL} möglich.
 
 Im ersten Schritt werden die Technologien aus Abschnitt \ref{sec:ghcet} unverändert in die Suchmaschine eingegeben, um einen ersten Eindruck der Datenlage im Hinblick auf potentielle Unterschiede bei den Begrifflichkeiten zu erhalten. Mit den oben genannten Eingrenzungen ergibt das für den Begriff \glqq Machine Learning\grqq~in Fachzeitschriften folgende Suchalgorithmen je Suchmaschine:
 
@@ -242,7 +242,7 @@ Die Tabelle \ref{tab:dist_exact} zeigt die Gesamtsumme der Publikationen für ei
 
 In den folgenden sechs Tabellen ist die Mengenverteilung der jährlichen Publikationen von Artikeln bzw. Konferenzbeiträgen zu den entsprechenden Technologien zu sehen, die in der jeweiligen Suchmaschine gelistet wird.
 
-Die Suchergebnisse des \glqq Web of Science\grqq~zu wissenschaftlichen Fachartikeln sind in Tabelle \ref{tab:dist_wos_art} sowie zu Konferenzbeiträgen in Tabelle \ref{tab:dist_wos_proc} abgebildet.
+Die Suchergebnisse des \glqq Web of Science\grqq~zu wissenschaftlichen Fachartikeln sind in Tabelle \ref{tab:dist_wos_art} sowie zu Konferenzbeiträgen in Tabelle \ref{tab:dist_wos_proc} abgebildet. In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind in der gleichen Reihenfolge die Ergebnisse der Suche im \ac{IEEE} dargestellt. Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{tab:dist_acm_proc} die Ergebnisse der Suche im \ac{ACM} zu finden.
 
 \begin{table}
 	\caption{Verteilung der Publikationen in Fachartikeln im \glqq Web of Science\grqq}
@@ -296,10 +296,8 @@ Die Suchergebnisse des \glqq Web of Science\grqq~zu wissenschaftlichen Fachartik
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
-In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind in der gleichen Reihenfolge die Ergebnisse der Suche im \ac{IEEE} dargestellt.
-
 \begin{table}
-	\caption{Verteilung der Publikationen in Fachartikeln im \glqq \ac{IEEE}\grqq}
+	\caption{Verteilung der Publikationen in Fachartikeln im \glqq \acs{IEEE}\grqq}
 	\fontfamily{pcr}\selectfont
 	\footnotesize
 	\centering
@@ -325,7 +323,7 @@ In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind
 \end{table}
 
 \begin{table}
-	\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq \ac{IEEE}\grqq}
+	\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq \acs{IEEE}\grqq}
 	\fontfamily{pcr}\selectfont
 	\footnotesize
 	\centering
@@ -350,10 +348,8 @@ In der Tabelle \ref{tab:dist_ieee_art} und Tabelle \ref{tab:dist_ieee_proc} sind
 \caption*{Quelle: Eigene Darstellung}
 \end{table}
 
-Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{tab:dist_acm_proc} die Ergebnisse der Suche im \ac{ACM} zu finden.
-
 \begin{table}
-	\caption{Verteilung der Publikationen in Fachartikeln im \glqq \ac{ACM}\grqq}
+	\caption{Verteilung der Publikationen in Fachartikeln im \glqq \acs{ACM}\grqq}
 	\fontfamily{pcr}\selectfont
 	\footnotesize
 	\centering
@@ -379,7 +375,7 @@ Nach dem gleichem Muster sind in den Tabellen \ref{tab:dist_acm_art} und \ref{ta
 \end{table}
 
 \begin{table}
-	\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq \ac{ACM}\grqq}
+	\caption{Verteilung der Publikationen in Konferenzbeiträgen im \glqq \acs{ACM}\grqq}
 	\fontfamily{pcr}\selectfont
 	\footnotesize
 	\centering
