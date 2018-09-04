@@ -13,7 +13,7 @@ for(technology in unique(all_data[,"technology"])){
   technologies <- all_data[rows_technology,]
   
   par(ask = TRUE)
-  plot(x = technologies[,"years"], y = technologies[,"records"], main = technology, xlab = "Veröffentlichungsjahr", ylab = "Anzahl Publikationen", type = "n", ylim = c(min(technologies[,"records"]), max(technologies[,"records"])+max(technologies[,"records"])/10), xlim = c(min(technologies[,"years"]), max(technologies[,"years"])))
+  plot(x = technologies[,"years"], y = technologies[,"records"], main = technology, xlab = "Veroeffentlichungsjahr", ylab = "Anzahl Publikationen", type = "n", ylim = c(min(technologies[,"records"]), max(technologies[,"records"])+max(technologies[,"records"])/10), xlim = c(min(technologies[,"years"]), max(technologies[,"years"])))
   legend_text <- character(0)
   # grid()
   s <- 0

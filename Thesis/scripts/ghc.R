@@ -1,6 +1,6 @@
 ghc_trend <- read.csv("D:/dev/fom/Thesis/data/structured/ghc_trend.csv")
 
-plot(xaxt='n', yaxt='n', x = ghc_trend[, "year"], y = ghc_trend[, "trend"], xlab = "Veröffentlichungsjahr", ylab = "Trendstärke", type = "n", ylim = c(0,100), xlim = c(2010,2019))
+plot(xaxt='n', yaxt='n', x = ghc_trend[, "year"], y = ghc_trend[, "trend"], xlab = "Veroeffentlichungsjahr", ylab = "Trendstaerke", type = "n", ylim = c(0,100), xlim = c(2010,2019))
 axis(side = 1, xaxp=c(2010, 2018, 8))
 axis(side = 2, yaxp=c(0, 100, 10))
 grid()

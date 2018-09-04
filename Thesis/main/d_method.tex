@@ -130,7 +130,7 @@ Im nächsten Schritt werden die gewonnenen Daten strukturiert, um die Gegenüber
 
 Da zur Trendbestimmung auf wissenschaftlicher Seite die Anzahl an Publikationen verwendet wird, sind auf Seiten des \glqq Hype Cycles\grqq~alle Indikatoren einzubeziehen, die das Skalenniveau dem annähern.
 
-Der Trendverlauf in der akademischen Forschung wird maschinell ausgewertet. Daher werden die Export-Dateien mithilfe von Python-Skripten in ein einheitliches \acs{CSV}-Format überführt, welches aus den beiden Spalten \glqq Veröffentlichungsjahr\grqq~und \glqq Anzahl der Veröffentlichungen\grqq~besteht.
+Der Trendverlauf in der akademischen Forschung wird maschinell ausgewertet. Daher werden die Export-Dateien mithilfe von Python-Skripten in ein einheitliches \acs{CSV}-Format überführt, welches aus den beiden Spalten \glqq Veröffentlichungsjahr\grqq~und \glqq Anzahl der Veröffentlichungen\grqq~besteht. Da sich die Export-Formate der einzelnen Suchmaschinen voneinander unterscheiden, wurde jeweils ein eigenes Skript erstellt, welche in Anhang \ref{sec:python_ts_acm}-\ref{sec:python_ts_wos} wiederzufinden sind.
 
 Für die Darstellung im Text werden entsprechende Repräsentationsformen wie Diagramme und Tabellen verwendet.
 
@@ -145,7 +145,7 @@ Leere Zellen bedeuten, dass die Technologie im entsprechenden Veröffentlichungs
 	\item[\acs{T}:] Trough of Disillusionment
 \end{description}
 
-Die anderen beiden Phasen bleiben unberücksichtigt, da sie die zu untersuchenden Technologien in keiner Ausgabe enthalten. Der zweite Teil gibt die Position der Technologie unter allen anderen der jeweiligen Phase wieder. Technologien in Phase P sind zusätzlich gekennzeichnet, ob sie vor oder hinter dem Scheitelpunkt der Kurve liegen. Liegen sie davor, werden sie mit einem Minus~(-), dahinter mit einem Plus~(+) oder auf dem Scheitelpunkt mit einem Sternchen~(*) markiert.
+Die anderen beiden Phasen bleiben unberücksichtigt, da sie die zu untersuchenden Technologien in keiner Ausgabe enthalten. Der zweite Teil gibt die Position der Technologie unter allen anderen der jeweiligen Phase wieder. Technologien in Phase P sind zusätzlich gekennzeichnet, ob sie vor oder hinter dem Scheitelpunkt der Kurve liegen. Falls sie davor liegen, werden sie mit einem Minus~(-), dahinter mit einem Plus~(+) oder auf dem Scheitelpunkt mit einem Sternchen~(*) markiert.
 
 Durch Hinzunahme von Indikatoren zur Gewichtung wird somit das Skalenniveau der Daten erhöht, um sie mit den Daten der Forschung besser vergleichen zu können.
 
@@ -177,7 +177,7 @@ Für die Technologie \glqq Machine Learning\grqq~im Jahre 2016 heißt das bspw.,
 \end{table}
 
 \subsubsection{Verteilung der Technologietrends in der wissenschaftlichen Forschung}
-Um die Dimension der Kennzahlen von wissenschaftlichen Veröffentlichungen besser einordnen zu können, wird zunächst einmal eine tabellarische Übersicht über alle Veröffentlichungen des Betrachtungszeitraumes erstellt. Tabelle \ref{tab:dist_full_pub} stellt die Veröffentlichungsjahre mit den Suchmaschinen sowie Veröffentlichungsformen gegenüber und listet dazu die jeweilige Anzahl auf.
+Um die Dimension der Kennzahlen von wissenschaftlichen Veröffentlichungen besser einordnen zu können, wird zunächst einmal eine tabellarische Übersicht über alle Veröffentlichungen des Betrachtungszeitraumes erstellt. Tabelle \ref{tab:dist_full_pub} stellt die Veröffentlichungsjahre mit den Suchmaschinen sowie Veröffentlichungsformen gegenüber und listet dazu die jeweilige Anzahl auf. In Anhang \ref{sec:query_all} sind die dazu verwendeten Abfragen gelistet.
 
 \begin{table}
 	\caption{Gesamtveröffentlichungen von Artikeln und Konferenzbeiträgen der Jahre 2010-2018}
@@ -208,7 +208,7 @@ Die Übersicht der Verteilung zu vergleichender Technologien wird ebenfalls tabe
 Zunächst einmal wird die Anzahl der Treffer bei einer exakten Suche der Technologie ermittelt und tabellarisch aufbereitet.
 Anschließend werden die nach dem in Abschnitt \ref{sec:lit_data} beschriebenen Vorgehen ermittelten Suchergebnisse tabellarisch visualisiert.
 
-Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglichst identisch zur Vergleichsbasis aus Tabelle \ref{tab:dist_ghc} gehalten. Um dabei die Lesbarkeit zu wahren, werden zusätzliche Veröffentlichungsjahre der Vergangenheit an dieser Stelle kumuliert. Da die Zeitspanne der Veröffentlichungsjahre sich teilweise über mehrere Jahrzehnte erstreckt, wäre andernfalls ihre Darstellung in einer Zeile nicht möglich. Für die Analyse werden jedoch die Rohdaten verwendet, die in Anhang \ref{sec:sci_raw_dist} wiederzufinden sind. Die Zeilenüberschriften mit den abgekürzten Technologien bedürfen keiner Anpassung. In den Tabellenzellen wird die Anzahl der Suchergebnisse festgehalten.
+Der Vergleichbarkeit halber werden die Zeilen- und Spaltenüberschriften möglichst identisch zur Vergleichsbasis aus Tabelle \ref{tab:dist_ghc} gehalten. Um dabei die Lesbarkeit zu wahren, werden zusätzliche Veröffentlichungsjahre der Vergangenheit an dieser Stelle kumuliert. Da die Zeitspanne der Veröffentlichungsjahre sich teilweise über mehrere Jahrzehnte erstreckt, wäre andernfalls ihre Darstellung in einer Zeile nicht möglich. Die Zeilenüberschriften mit den abgekürzten Technologien bedürfen keiner Anpassung. In den Tabellenzellen wird die Anzahl der Suchergebnisse festgehalten.
 
 \begin{table}
 	\caption{Verteilung der Publikationen bei unveränderten Technologiebegriffen}
